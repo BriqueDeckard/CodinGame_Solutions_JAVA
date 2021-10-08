@@ -13,7 +13,10 @@ It's just a folder that I use as a "shortcut" to remember important or useful th
 
 <details>
  <summary>Languages : </summary>
+ <br/>
 The covered languages and technologies are:
+ <br/><br/>
+ 
 <details>
  <summary>.Net and C#</summary>
  <ul>
