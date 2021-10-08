@@ -1,0 +1,16 @@
+E:\GIT\Notes\DOT_NET_Notes\07_ Searchs\01_BinarySearch\01_AreaDisk\obj\Debug\net5.0\01_AreaDisk.csproj.AssemblyReference.cache
+E:\GIT\Notes\DOT_NET_Notes\07_ Searchs\01_BinarySearch\01_AreaDisk\obj\Debug\net5.0\01_AreaDisk.GeneratedMSBuildEditorConfig.editorconfig
+E:\GIT\Notes\DOT_NET_Notes\07_ Searchs\01_BinarySearch\01_AreaDisk\obj\Debug\net5.0\01_AreaDisk.AssemblyInfoInputs.cache
+E:\GIT\Notes\DOT_NET_Notes\07_ Searchs\01_BinarySearch\01_AreaDisk\obj\Debug\net5.0\01_AreaDisk.AssemblyInfo.cs
+E:\GIT\Notes\DOT_NET_Notes\07_ Searchs\01_BinarySearch\01_AreaDisk\obj\Debug\net5.0\01_AreaDisk.csproj.CoreCompileInputs.cache
+E:\GIT\Notes\DOT_NET_Notes\07_ Searchs\01_BinarySearch\01_AreaDisk\bin\Debug\net5.0\01_AreaDisk.exe
+E:\GIT\Notes\DOT_NET_Notes\07_ Searchs\01_BinarySearch\01_AreaDisk\bin\Debug\net5.0\01_AreaDisk.deps.json
+E:\GIT\Notes\DOT_NET_Notes\07_ Searchs\01_BinarySearch\01_AreaDisk\bin\Debug\net5.0\01_AreaDisk.runtimeconfig.json
+E:\GIT\Notes\DOT_NET_Notes\07_ Searchs\01_BinarySearch\01_AreaDisk\bin\Debug\net5.0\01_AreaDisk.runtimeconfig.dev.json
+E:\GIT\Notes\DOT_NET_Notes\07_ Searchs\01_BinarySearch\01_AreaDisk\bin\Debug\net5.0\01_AreaDisk.dll
+E:\GIT\Notes\DOT_NET_Notes\07_ Searchs\01_BinarySearch\01_AreaDisk\bin\Debug\net5.0\ref\01_AreaDisk.dll
+E:\GIT\Notes\DOT_NET_Notes\07_ Searchs\01_BinarySearch\01_AreaDisk\bin\Debug\net5.0\01_AreaDisk.pdb
+E:\GIT\Notes\DOT_NET_Notes\07_ Searchs\01_BinarySearch\01_AreaDisk\obj\Debug\net5.0\01_AreaDisk.dll
+E:\GIT\Notes\DOT_NET_Notes\07_ Searchs\01_BinarySearch\01_AreaDisk\obj\Debug\net5.0\ref\01_AreaDisk.dll
+E:\GIT\Notes\DOT_NET_Notes\07_ Searchs\01_BinarySearch\01_AreaDisk\obj\Debug\net5.0\01_AreaDisk.pdb
+E:\GIT\Notes\DOT_NET_Notes\07_ Searchs\01_BinarySearch\01_AreaDisk\obj\Debug\net5.0\01_AreaDisk.genruntimeconfig.cache
