@@ -1,0 +1,16 @@
+E:\GIT\Notes\DOT_NET_Notes\07_ Searchs\01_BinarySearch\bin\Debug\net5.0\01_BinarySearch.exe
+E:\GIT\Notes\DOT_NET_Notes\07_ Searchs\01_BinarySearch\bin\Debug\net5.0\01_BinarySearch.deps.json
+E:\GIT\Notes\DOT_NET_Notes\07_ Searchs\01_BinarySearch\bin\Debug\net5.0\01_BinarySearch.runtimeconfig.json
+E:\GIT\Notes\DOT_NET_Notes\07_ Searchs\01_BinarySearch\bin\Debug\net5.0\01_BinarySearch.runtimeconfig.dev.json
+E:\GIT\Notes\DOT_NET_Notes\07_ Searchs\01_BinarySearch\bin\Debug\net5.0\01_BinarySearch.dll
+E:\GIT\Notes\DOT_NET_Notes\07_ Searchs\01_BinarySearch\bin\Debug\net5.0\ref\01_BinarySearch.dll
+E:\GIT\Notes\DOT_NET_Notes\07_ Searchs\01_BinarySearch\bin\Debug\net5.0\01_BinarySearch.pdb
+E:\GIT\Notes\DOT_NET_Notes\07_ Searchs\01_BinarySearch\obj\Debug\net5.0\01_BinarySearch.csproj.AssemblyReference.cache
+E:\GIT\Notes\DOT_NET_Notes\07_ Searchs\01_BinarySearch\obj\Debug\net5.0\01_BinarySearch.GeneratedMSBuildEditorConfig.editorconfig
+E:\GIT\Notes\DOT_NET_Notes\07_ Searchs\01_BinarySearch\obj\Debug\net5.0\01_BinarySearch.AssemblyInfoInputs.cache
+E:\GIT\Notes\DOT_NET_Notes\07_ Searchs\01_BinarySearch\obj\Debug\net5.0\01_BinarySearch.AssemblyInfo.cs
+E:\GIT\Notes\DOT_NET_Notes\07_ Searchs\01_BinarySearch\obj\Debug\net5.0\01_BinarySearch.csproj.CoreCompileInputs.cache
+E:\GIT\Notes\DOT_NET_Notes\07_ Searchs\01_BinarySearch\obj\Debug\net5.0\01_BinarySearch.dll
+E:\GIT\Notes\DOT_NET_Notes\07_ Searchs\01_BinarySearch\obj\Debug\net5.0\ref\01_BinarySearch.dll
+E:\GIT\Notes\DOT_NET_Notes\07_ Searchs\01_BinarySearch\obj\Debug\net5.0\01_BinarySearch.pdb
+E:\GIT\Notes\DOT_NET_Notes\07_ Searchs\01_BinarySearch\obj\Debug\net5.0\01_BinarySearch.genruntimeconfig.cache
