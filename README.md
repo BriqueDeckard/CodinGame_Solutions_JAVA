@@ -39,7 +39,7 @@ The covered languages and technologies are:
  </ul>
 </details>
 <details>
- <summary>Python</summary>
+ <summary>Python / Pandas / Jupyter</summary>
  <ul>
   <li><a href="https://github.com/BriqueDeckard/Notes/tree/master/PYTHON_Notes/01_LinkedIn_Learning/LinkedIn">LinkedIn Learning</a></li>
   <li><a href="https://github.com/BriqueDeckard/Notes/tree/master/PYTHON_Notes/02_myPandasNotes">Pandas 01</a></li>
@@ -48,7 +48,7 @@ The covered languages and technologies are:
  </ul>
 </details>
 <details>
- <summary>Javascript / Typescript</summary>
+ <summary>Javascript / Typescript / Node</summary>
  <ul>
   <li><a href="https://github.com/BriqueDeckard/Notes/tree/master/ANGULAR_Notes/01_ANGULAR_typescript_tour-of-heroes">Tour of heroes</a></li>
   <li><a href="https://github.com/BriqueDeckard/Notes/tree/master/ANGULAR_Notes/04_ANGULAR_typescript_blogs">Blogging platform</a></li>
