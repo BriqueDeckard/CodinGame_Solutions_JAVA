@@ -1,40 +1,61 @@
 # Notes
 
-## About : 
-
+<details>
+ <summary>About : </summary>
 It's just a folder that I use as a "shortcut" to remember important or useful things, such as :
-* Design patterns implementation ;
-* APIs implementation ; 
-* Sorting methods implementations ;
-* Search methods implementation ; 
+ <ul>
+  <li>Design patterns implementation ;</li>
+  <li>APIs implementation ; </li>
+  <li>Sorting methods implementations ;</li>
+  <li>Search methods implementation ; </li>
+ </ul>
+</details>
 
-## Languages : 
-
+<details>
+ <summary>Languages : </summary>
 The covered languages and technologies are:
-* .Net and C#
-  * [Design patterns](https://github.com/BriqueDeckard/Notes/tree/master/DOT_NET_Notes/01_DesignPatterns)
-  * [Domain Driven Design implementation](https://github.com/BriqueDeckard/Notes/tree/master/DOT_NET_Notes/02_ProtoDDD)
-  * [Asp.Net + Docker + Azure](https://github.com/BriqueDeckard/Notes/tree/master/DOT_NET_Notes/04_ASPNetCore_Docker_Azure)
-  * [Microsoft GetStarted](https://github.com/BriqueDeckard/Notes/tree/master/DOT_NET_Notes/05_Microsoft-GetStarted)
-  * [Azure DevOps Pipelines](https://github.com/BriqueDeckard/Notes/tree/master/DOT_NET_Notes/06_Pipelines-dotnet-core)
-  * [Searchs](https://github.com/BriqueDeckard/Notes/tree/master/DOT_NET_Notes/07_%20Searchs)
-* Java
-  * [Areas calculation](https://github.com/BriqueDeckard/Notes/tree/master/JAVA_Notes/01_Areas)
-  * [Arrays manipulation](https://github.com/BriqueDeckard/Notes/tree/master/JAVA_Notes/02_Arrays)
-  * [Chars manipulation](https://github.com/BriqueDeckard/Notes/tree/master/JAVA_Notes/03_Chars)
-  * [List manipulation](https://github.com/BriqueDeckard/Notes/tree/master/JAVA_Notes/04_Lists)
-  * [Loops](https://github.com/BriqueDeckard/Notes/tree/master/JAVA_Notes/05_Loops)
-  * [Numbers](https://github.com/BriqueDeckard/Notes/tree/master/JAVA_Notes/06_Numbers)
-  * [Search methods](https://github.com/BriqueDeckard/Notes/tree/master/JAVA_Notes/07_Searchs)
-  * [String manipulation](https://github.com/BriqueDeckard/Notes/tree/master/JAVA_Notes/09_Strings)
-* Python
-  * [LinkedIn Learning](https://github.com/BriqueDeckard/Notes/tree/master/PYTHON_Notes/01_LinkedIn_Learning/LinkedIn)
-  * [Pandas 01](https://github.com/BriqueDeckard/Notes/tree/master/PYTHON_Notes/02_myPandasNotes)
-  * [Pandas 02](https://github.com/BriqueDeckard/Notes/tree/master/PYTHON_Notes/04_pandas_exercises)
-  * [NLP](https://github.com/BriqueDeckard/Notes/tree/master/PYTHON_Notes/03_Natural-Language-Processing)
-* Javascript / Typescript
-  * [Tour of heroes](https://github.com/BriqueDeckard/Notes/tree/master/ANGULAR_Notes/01_ANGULAR_typescript_tour-of-heroes)
-  * [Blogging platform](https://github.com/BriqueDeckard/Notes/tree/master/ANGULAR_Notes/04_ANGULAR_typescript_blogs)
-  * [Library management](https://github.com/BriqueDeckard/Notes/tree/master/ANGULAR_Notes/03_ANGULAR_typescript_library)
-  * [Bootstrap](https://github.com/BriqueDeckard/Notes/tree/master/ANGULAR_Notes/02_ANGULAR_typescript_bootstrap-tutorial)
-  * [OpenClassroom Tutorials](https://github.com/BriqueDeckard/Notes/tree/master/ANGULAR_Notes/05_ANGULAR_TypeScript_OpenClassroom)
+<details>
+ <summary>.Net and C#</summary>
+ <ul>
+  <li><a href="https://github.com/BriqueDeckard/Notes/tree/master/DOT_NET_Notes/01_DesignPatterns">Design patterns</a></li>
+  <li><a href="https://github.com/BriqueDeckard/Notes/tree/master/DOT_NET_Notes/02_ProtoDDD">Domain Driven Design implementation</a></li>
+  <li><a href="https://github.com/BriqueDeckard/Notes/tree/master/DOT_NET_Notes/04_ASPNetCore_Docker_Azure">Asp.Net + Docker + Azure</a></li>
+  <li><a href="https://github.com/BriqueDeckard/Notes/tree/master/DOT_NET_Notes/05_Microsoft-GetStarted">Microsoft GetStarted</a></li>
+  <li><a href="https://github.com/BriqueDeckard/Notes/tree/master/DOT_NET_Notes/06_Pipelines-dotnet-core">Azure DevOps Pipelines</a></li>
+  <li><a href="https://github.com/BriqueDeckard/Notes/tree/master/DOT_NET_Notes/07_%20Searchs">Searchs</a></li>
+ </ul>
+</details>
+<details>
+<summary>Java</summary>
+<ul>
+ <li><a href="https://github.com/BriqueDeckard/Notes/tree/master/JAVA_Notes/01_Areas">Areas calculation</a></li>
+ <li><a href="https://github.com/BriqueDeckard/Notes/tree/master/JAVA_Notes/02_Arrays">Arrays manipulation</a></li>
+ <li><a href="https://github.com/BriqueDeckard/Notes/tree/master/JAVA_Notes/03_Chars">Chars manipulation</a></li>
+ <li><a href="https://github.com/BriqueDeckard/Notes/tree/master/JAVA_Notes/04_Lists">List manipulation</a></li>
+ <li><a href="https://github.com/BriqueDeckard/Notes/tree/master/JAVA_Notes/05_Loops">Loops</a></li>
+ <li><a href="https://github.com/BriqueDeckard/Notes/tree/master/JAVA_Notes/06_Numbers">Numbers</a></li>
+ <li><a href="https://github.com/BriqueDeckard/Notes/tree/master/JAVA_Notes/07_Searchs">Search methods</a></li>
+ <li><a href="https://github.com/BriqueDeckard/Notes/tree/master/JAVA_Notes/09_Strings">String manipulation</a></li>
+ </ul>
+</details>
+<details>
+ <summary>Python</summary>
+ <ul>
+  <li><a href="https://github.com/BriqueDeckard/Notes/tree/master/PYTHON_Notes/01_LinkedIn_Learning/LinkedIn">LinkedIn Learning</a></li>
+  <li><a href="https://github.com/BriqueDeckard/Notes/tree/master/PYTHON_Notes/02_myPandasNotes">Pandas 01</a></li>
+  <li><a href="https://github.com/BriqueDeckard/Notes/tree/master/PYTHON_Notes/04_pandas_exercises">Pandas 02</a></li>
+  <li><a href="https://github.com/BriqueDeckard/Notes/tree/master/PYTHON_Notes/03_Natural-Language-Processing">NLP</a></li>
+ </ul>
+</details>
+<details>
+ <summary>Javascript / Typescript</summary>
+ <ul>
+  <li><a href="https://github.com/BriqueDeckard/Notes/tree/master/ANGULAR_Notes/01_ANGULAR_typescript_tour-of-heroes">Tour of heroes</a></li>
+  <li><a href="https://github.com/BriqueDeckard/Notes/tree/master/ANGULAR_Notes/04_ANGULAR_typescript_blogs">Blogging platform</a></li>
+  <li><a href="https://github.com/BriqueDeckard/Notes/tree/master/ANGULAR_Notes/03_ANGULAR_typescript_library">Library management</a></li>
+  <li><a href="https://github.com/BriqueDeckard/Notes/tree/master/ANGULAR_Notes/02_ANGULAR_typescript_bootstrap-tutorial">Bootstrap</a></li>
+  <li><a href="https://github.com/BriqueDeckard/Notes/tree/master/ANGULAR_Notes/05_ANGULAR_TypeScript_OpenClassroom">OpenClassroom Tutorials</a></li>
+  <li><a href="https://github.com/BriqueDeckard/Notes/tree/master/ANGULAR%20and%20NODES_Notes/06_NODE_API">Node API</a></li>
+ </ul>
+</details>
+ </details>
