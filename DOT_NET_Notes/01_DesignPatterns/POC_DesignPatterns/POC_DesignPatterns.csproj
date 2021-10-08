@@ -1,0 +1,39 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <OutputType>Exe</OutputType>
+    <TargetFramework>netcoreapp2.2</TargetFramework>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <PackageReference Include="CommonServiceLocator" Version="1.3.0" />
+    <PackageReference Include="POC_DesignPatterns.Core" Version="1.0.0" />
+    <PackageReference Include="POC_DesignPatterns.Logger" Version="1.0.0" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\1_Creational\POC_DesignPatterns.1_AbstractFactory\POC_DesignPatterns.1_AbstractFactory.csproj" />
+    <ProjectReference Include="..\1_Creational\POC_DesignPatterns.2_Builder\POC_DesignPatterns.2_Builder.csproj" />
+    <ProjectReference Include="..\1_Creational\POC_DesignPatterns.3_FactoryMethod\POC_DesignPatterns.3_FactoryMethod.csproj" />
+    <ProjectReference Include="..\1_Creational\POC_DesignPatterns.4_Prototype\POC_DesignPatterns.4_Prototype.csproj" />
+    <ProjectReference Include="..\1_Creational\POC_DesignPatterns.5_Singleton\POC_DesignPatterns.5_Singleton.csproj" />
+    <ProjectReference Include="..\2_Structural\POC_DesignPatterns.1_Adapter\POC_DesignPatterns.1_Adapter.csproj" />
+    <ProjectReference Include="..\2_Structural\POC_DesignPatterns.2_Bridge\POC_DesignPatterns.2_Bridge.csproj" />
+    <ProjectReference Include="..\2_Structural\POC_DesignPatterns.3_Composite\POC_DesignPatterns.3_Composite.csproj" />
+    <ProjectReference Include="..\2_Structural\POC_DesignPatterns.4_Decorator\POC_DesignPatterns.4_Decorator.csproj" />
+    <ProjectReference Include="..\2_Structural\POC_DesignPatterns.5_Facade\POC_DesignPatterns.5_Facade.csproj" />
+    <ProjectReference Include="..\2_Structural\POC_DesignPatterns.6_Flyweight\POC_DesignPatterns.6_Flyweight.csproj" />
+    <ProjectReference Include="..\2_Structural\POC_DesignPatterns.7_Proxy\POC_DesignPatterns.7_Proxy.csproj" />
+    <ProjectReference Include="..\3_Behavioral\POC_DesignPatterns.10_TemplateMethod\POC_DesignPatterns.10_TemplateMethod.csproj" />
+    <ProjectReference Include="..\3_Behavioral\POC_DesignPatterns.11_Visitor\POC_DesignPatterns.11_Visitor.csproj" />
+    <ProjectReference Include="..\3_Behavioral\POC_DesignPatterns.1_ChainOfResponsability\POC_DesignPatterns.1_ChainOfResponsability.csproj" />
+    <ProjectReference Include="..\3_Behavioral\POC_DesignPatterns.2_Command\POC_DesignPatterns.2_Command.csproj" />
+    <ProjectReference Include="..\3_Behavioral\POC_DesignPatterns.3_Interpreter\POC_DesignPatterns.3_Interpreter.csproj" />
+    <ProjectReference Include="..\3_Behavioral\POC_DesignPatterns.4_Iterator\POC_DesignPatterns.4_Iterator.csproj" />
+    <ProjectReference Include="..\3_Behavioral\POC_DesignPatterns.5_Mediator\POC_DesignPatterns.5_Mediator.csproj" />
+    <ProjectReference Include="..\3_Behavioral\POC_DesignPatterns.6_Memento\POC_DesignPatterns.6_Memento.csproj" />
+    <ProjectReference Include="..\3_Behavioral\POC_DesignPatterns.7_Observer\POC_DesignPatterns.7_Observer.csproj" />
+    <ProjectReference Include="..\3_Behavioral\POC_DesignPatterns.8_State\POC_DesignPatterns.8_State.csproj" />
+    <ProjectReference Include="..\3_Behavioral\POC_DesignPatterns.9_Strategy\POC_DesignPatterns.9_Strategy.csproj" />
+  </ItemGroup>
+</Project>

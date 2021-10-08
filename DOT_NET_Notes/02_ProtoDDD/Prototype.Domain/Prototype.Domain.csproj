@@ -1,0 +1,16 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>net5.0</TargetFramework>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <Folder Include="AggregatesModel\SampleEntityAggregate\" />
+    <Folder Include="SelectBuilders\" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\Prototype.Domain.Contracts\Prototype.Domain.Contracts.csproj" />
+  </ItemGroup>
+
+</Project>

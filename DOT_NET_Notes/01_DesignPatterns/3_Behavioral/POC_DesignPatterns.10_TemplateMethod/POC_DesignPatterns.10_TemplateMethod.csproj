@@ -1,0 +1,12 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>netcoreapp2.2</TargetFramework>
+    <RootNamespace>POC_DesignPatterns._10_TemplateMethod</RootNamespace>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <PackageReference Include="POC_DesignPatterns.Logger" Version="1.0.0" />
+  </ItemGroup>
+
+</Project>

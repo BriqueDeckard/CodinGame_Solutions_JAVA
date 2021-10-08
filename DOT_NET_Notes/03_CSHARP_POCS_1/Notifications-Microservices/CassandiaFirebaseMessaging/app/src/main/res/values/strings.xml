@@ -1,0 +1,8 @@
+<resources>
+    <string name="app_name">CassandiaFirebaseMessaging</string>
+    <string name="msg_subscribed">Subscribed to "cassandia" topic.</string>
+    <string name="msg_unsubscribed">Unsubscribed to "cassandia" topic.</string>
+    <string name="msg_token_fmt" translatable="false">InstanceID Token: %s</string>
+    <string name="msg_subscribe_failed">Failed to subscribe to weather topic</string>
+    <string name="msg_unsubscribe_failed">Failed to unsubscribe to "cassandia" topic.</string>
+</resources>

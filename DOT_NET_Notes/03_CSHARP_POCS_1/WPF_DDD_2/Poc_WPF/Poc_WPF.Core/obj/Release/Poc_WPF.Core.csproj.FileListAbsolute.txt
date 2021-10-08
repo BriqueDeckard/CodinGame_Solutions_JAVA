@@ -1,0 +1,15 @@
+C:\GIT\CSharp\POCs\PoC_WPF_2\Poc_WPF\Poc_WPF.Core\bin\Release\Poc_WPF.Core.dll
+C:\GIT\CSharp\POCs\PoC_WPF_2\Poc_WPF\Poc_WPF.Core\bin\Release\Poc_WPF.Core.pdb
+C:\GIT\CSharp\POCs\PoC_WPF_2\Poc_WPF\Poc_WPF.Core\bin\Release\Microsoft.Practices.ServiceLocation.dll
+C:\GIT\CSharp\POCs\PoC_WPF_2\Poc_WPF\Poc_WPF.Core\bin\Release\Prism.dll
+C:\GIT\CSharp\POCs\PoC_WPF_2\Poc_WPF\Poc_WPF.Core\bin\Release\Prism.Wpf.dll
+C:\GIT\CSharp\POCs\PoC_WPF_2\Poc_WPF\Poc_WPF.Core\bin\Release\System.Windows.Interactivity.dll
+C:\GIT\CSharp\POCs\PoC_WPF_2\Poc_WPF\Poc_WPF.Core\bin\Release\Microsoft.Practices.ServiceLocation.pdb
+C:\GIT\CSharp\POCs\PoC_WPF_2\Poc_WPF\Poc_WPF.Core\bin\Release\Microsoft.Practices.ServiceLocation.xml
+C:\GIT\CSharp\POCs\PoC_WPF_2\Poc_WPF\Poc_WPF.Core\bin\Release\Prism.xml
+C:\GIT\CSharp\POCs\PoC_WPF_2\Poc_WPF\Poc_WPF.Core\bin\Release\Prism.Wpf.xml
+C:\GIT\CSharp\POCs\PoC_WPF_2\Poc_WPF\Poc_WPF.Core\obj\Release\Poc_WPF.Core.csprojAssemblyReference.cache
+C:\GIT\CSharp\POCs\PoC_WPF_2\Poc_WPF\Poc_WPF.Core\obj\Release\Poc_WPF.Core.csproj.CoreCompileInputs.cache
+C:\GIT\CSharp\POCs\PoC_WPF_2\Poc_WPF\Poc_WPF.Core\obj\Release\Poc_WPF.Core.csproj.CopyComplete
+C:\GIT\CSharp\POCs\PoC_WPF_2\Poc_WPF\Poc_WPF.Core\obj\Release\Poc_WPF.Core.dll
+C:\GIT\CSharp\POCs\PoC_WPF_2\Poc_WPF\Poc_WPF.Core\obj\Release\Poc_WPF.Core.pdb

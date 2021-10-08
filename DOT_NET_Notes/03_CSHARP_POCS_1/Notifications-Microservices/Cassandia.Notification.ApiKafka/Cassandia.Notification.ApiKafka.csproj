@@ -1,0 +1,18 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <OutputType>Exe</OutputType>
+    <TargetFramework>netcoreapp2.1</TargetFramework>
+    <RestoreSources>http://nexus.modisfrance.fr/repository/cassandia-nuget/ ;https://api.nuget.org/v3/index.json </RestoreSources>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <PackageReference Include="Cassandia.ApiGateway.Kafka" Version="1.1.0" />
+    <PackageReference Include="Cassandia.Kafka" Version="1.1.1-final" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\Cassandia.Notification.ApplicationService.Contract\Cassandia.Notification.ApplicationService.Contract.csproj" />
+    <ProjectReference Include="..\Cassandia.Notification.Infrastructure.IoC\Cassandia.Notification.Infrastructure.IoC.csproj" />
+  </ItemGroup>
+</Project>

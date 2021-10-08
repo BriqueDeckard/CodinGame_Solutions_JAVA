@@ -1,0 +1,12 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>netcoreapp2.1</TargetFramework>
+    <RestoreSources>http://nexus.modisfrance.fr/repository/cassandia-nuget/ ;https://api.nuget.org/v3/index.json </RestoreSources>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <PackageReference Include="Cassandia.ApplicationService.Contract.Core" Version="2.1.0-final" />
+    <PackageReference Include="Cassandia.Domain.Core" Version="2.1.0-final" />
+  </ItemGroup>
+</Project>

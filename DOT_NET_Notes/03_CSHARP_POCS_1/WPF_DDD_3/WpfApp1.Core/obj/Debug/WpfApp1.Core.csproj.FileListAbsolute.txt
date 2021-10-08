@@ -1,0 +1,15 @@
+C:\Users\eric.blanchard\Documents\Visual Studio 2017\Projects\WpfApp1\WpfApp1.Core\bin\Debug\WpfApp1.Core.dll
+C:\Users\eric.blanchard\Documents\Visual Studio 2017\Projects\WpfApp1\WpfApp1.Core\bin\Debug\WpfApp1.Core.pdb
+C:\Users\eric.blanchard\Documents\Visual Studio 2017\Projects\WpfApp1\WpfApp1.Core\bin\Debug\Microsoft.Practices.ServiceLocation.dll
+C:\Users\eric.blanchard\Documents\Visual Studio 2017\Projects\WpfApp1\WpfApp1.Core\bin\Debug\Prism.dll
+C:\Users\eric.blanchard\Documents\Visual Studio 2017\Projects\WpfApp1\WpfApp1.Core\bin\Debug\Prism.Wpf.dll
+C:\Users\eric.blanchard\Documents\Visual Studio 2017\Projects\WpfApp1\WpfApp1.Core\bin\Debug\System.Windows.Interactivity.dll
+C:\Users\eric.blanchard\Documents\Visual Studio 2017\Projects\WpfApp1\WpfApp1.Core\bin\Debug\Microsoft.Practices.ServiceLocation.pdb
+C:\Users\eric.blanchard\Documents\Visual Studio 2017\Projects\WpfApp1\WpfApp1.Core\bin\Debug\Microsoft.Practices.ServiceLocation.xml
+C:\Users\eric.blanchard\Documents\Visual Studio 2017\Projects\WpfApp1\WpfApp1.Core\bin\Debug\Prism.xml
+C:\Users\eric.blanchard\Documents\Visual Studio 2017\Projects\WpfApp1\WpfApp1.Core\bin\Debug\Prism.Wpf.xml
+C:\Users\eric.blanchard\Documents\Visual Studio 2017\Projects\WpfApp1\WpfApp1.Core\obj\Debug\WpfApp1.Core.csprojAssemblyReference.cache
+C:\Users\eric.blanchard\Documents\Visual Studio 2017\Projects\WpfApp1\WpfApp1.Core\obj\Debug\WpfApp1.Core.csproj.CoreCompileInputs.cache
+C:\Users\eric.blanchard\Documents\Visual Studio 2017\Projects\WpfApp1\WpfApp1.Core\obj\Debug\WpfApp1.Core.csproj.CopyComplete
+C:\Users\eric.blanchard\Documents\Visual Studio 2017\Projects\WpfApp1\WpfApp1.Core\obj\Debug\WpfApp1.Core.dll
+C:\Users\eric.blanchard\Documents\Visual Studio 2017\Projects\WpfApp1\WpfApp1.Core\obj\Debug\WpfApp1.Core.pdb

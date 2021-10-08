@@ -1,0 +1,13 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>netcoreapp2.2</TargetFramework>
+    <RootNamespace>POC_DesignPatterns.2_Structural._7_Composite</RootNamespace>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <PackageReference Include="POC_DesignPatterns.Core" Version="1.0.0" />
+    <PackageReference Include="POC_DesignPatterns.Logger" Version="1.0.0" />
+  </ItemGroup>
+
+</Project>

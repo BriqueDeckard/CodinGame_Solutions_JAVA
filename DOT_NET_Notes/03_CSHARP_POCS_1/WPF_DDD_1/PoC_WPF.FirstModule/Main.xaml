@@ -1,0 +1,124 @@
+﻿<UserControl x:Class="PoC_WPF.FirstModule.Main"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+             xmlns:prism="http://prismlibrary.com/"
+             prism:ViewModelLocator.AutoWireViewModel="True"
+             xmlns:local="clr-namespace:PoC_WPF.FirstModule"
+             mc:Ignorable="d"
+             x:Name="MyWindow">
+
+    <UserControl.Resources>
+        <LinearGradientBrush x:Key="MyBrush" StartPoint="0,0" EndPoint="1,0">
+            <GradientStopCollection>
+                <GradientStop Color="#111111" Offset="0" />
+                <GradientStop Color="#333333" Offset="0.5" />
+                <GradientStop Color="#999999" Offset="1" />
+            </GradientStopCollection>
+        </LinearGradientBrush>
+        <RadialGradientBrush x:Key="MyRadialBrush" Center="1,0" RadiusX="1" RadiusY="1">
+            <RadialGradientBrush.GradientStops>
+                <GradientStop Color="#031111" Offset="0.2" />
+                <GradientStop Color="#035566" Offset="0.5" />
+                <GradientStop Color="#035333" Offset="0.5" />
+                <GradientStop Color="#035560" Offset="0.5" />
+            </RadialGradientBrush.GradientStops>
+        </RadialGradientBrush>
+
+        <ControlTemplate x:Key="templatedLabel"  TargetType="Label">
+            <Border BorderThickness="2px" BorderBrush="{StaticResource MyBrush}">
+                <ContentPresenter>
+                </ContentPresenter>
+            </Border>
+            <ControlTemplate.Triggers>
+                <Trigger Property="IsMouseOver" Value="True" />
+            </ControlTemplate.Triggers>
+        </ControlTemplate>
+    </UserControl.Resources>
+    <Grid
+        Background="White"
+        Height="100"
+        Width="100">
+
+        <Grid.RowDefinitions>
+            <RowDefinition />
+            <RowDefinition />
+            <RowDefinition />
+            <RowDefinition />
+        </Grid.RowDefinitions>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition />
+            <ColumnDefinition />
+            <ColumnDefinition />
+            <ColumnDefinition />
+        </Grid.ColumnDefinitions>
+        <!--
+        <Label
+            Grid.Row="0"
+            Grid.Column="2">
+            <Ellipse
+                Height="20px"
+                Width="20px"
+                Fill="{StaticResource MyBrush}"
+                Stroke="{StaticResource MyRadialBrush}" />
+        </Label>
+
+        <Label
+            x:Name="lbl"
+            Margin="2px"
+            Grid.Row="0"
+            Grid.Column="0"
+            Background="{StaticResource MyBrush}" />
+
+        <Label Margin="2px" Grid.Row="0" Grid.Column="1" Background="{StaticResource MyRadialBrush}" Template="{StaticResource templatedLabel}">
+            <Label.Style>
+                <Style TargetType="Label">
+                    <Setter Property="Background" Value="Brown" />
+                </Style>
+            </Label.Style>
+        </Label>
+
+        <Label Margin="2px" Grid.Row="0" Grid.Column="1">
+            <Label.Style>
+                <Style TargetType="Label">
+                    <Setter Property="Background" Value="Brown" />
+                    <Style.Triggers>
+                        <Trigger Property="IsMouseOver" Value="True">
+                            <Setter Property="Foreground" Value="Bisque" />
+                            <Setter Property="Background" Value="BlanchedAlmond" />
+                        </Trigger>
+                    </Style.Triggers>
+                </Style>
+            </Label.Style>
+        </Label>
+  -->
+        <ListBox
+            ItemsSource="{Binding sourceList}"
+            Grid.Row="0"
+            Grid.Column="0"
+            Grid.ColumnSpan="4"
+            Grid.RowSpan="4">
+            <ListBox.ItemTemplate>
+                <DataTemplate>
+                    <Grid>
+                        <Grid.ColumnDefinitions>
+                            <ColumnDefinition />
+                            <ColumnDefinition />
+                        </Grid.ColumnDefinitions>
+                        <Border BorderBrush="Brown" BorderThickness="2px">
+                            <Label Grid.Column="0" Content="{Binding DataContext.name, ElementName=MyWindow}" />
+                        </Border>
+                    </Grid>
+                </DataTemplate>
+            </ListBox.ItemTemplate>
+        </ListBox>
+        <!--
+        <Button
+            Margin="10px"
+            Content="Change"
+            Command="{Binding ChangeCommand}">
+        </Button>
+        -->
+    </Grid>
+</UserControl>

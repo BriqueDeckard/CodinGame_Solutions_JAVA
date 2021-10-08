@@ -1,0 +1,9 @@
+C:\GIT\CSharp\POCs\PoC_WPF_2\Poc_WPF\Poc_WPF.Domain\bin\Debug\Poc_WPF.Domain.dll
+C:\GIT\CSharp\POCs\PoC_WPF_2\Poc_WPF\Poc_WPF.Domain\bin\Debug\Poc_WPF.Domain.pdb
+C:\GIT\CSharp\POCs\PoC_WPF_2\Poc_WPF\Poc_WPF.Domain\obj\Debug\Poc_WPF.Domain.csproj.CoreCompileInputs.cache
+C:\GIT\CSharp\POCs\PoC_WPF_2\Poc_WPF\Poc_WPF.Domain\obj\Debug\Poc_WPF.Domain.dll
+C:\GIT\CSharp\POCs\PoC_WPF_2\Poc_WPF\Poc_WPF.Domain\obj\Debug\Poc_WPF.Domain.pdb
+C:\GIT\CSharp\POCs\PoC_WPF_2\Poc_WPF\Poc_WPF.Domain\obj\Debug\Poc_WPF.Domain.csprojAssemblyReference.cache
+C:\GIT\CSharp\POCs\PoC_WPF_2\Poc_WPF\Poc_WPF.Domain\bin\Debug\Poc_WPF.ApplicationServices.Contracts.dll
+C:\GIT\CSharp\POCs\PoC_WPF_2\Poc_WPF\Poc_WPF.Domain\bin\Debug\Poc_WPF.ApplicationServices.Contracts.pdb
+C:\GIT\CSharp\POCs\PoC_WPF_2\Poc_WPF\Poc_WPF.Domain\obj\Debug\Poc_WPF.Domain.csproj.CopyComplete

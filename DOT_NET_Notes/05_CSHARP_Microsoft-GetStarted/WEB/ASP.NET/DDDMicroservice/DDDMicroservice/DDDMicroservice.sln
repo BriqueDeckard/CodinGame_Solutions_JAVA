@@ -1,0 +1,55 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 15
+VisualStudioVersion = 15.0.28307.329
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "DDDMicroservice.ApplicationService", "DDDMicroservice.ApplicationService\DDDMicroservice.ApplicationService.csproj", "{1EDAAA61-E30F-45B2-A418-25DB88F1E24D}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "DDDMicroservice.Domain", "DDDMicroservice.Domain\DDDMicroservice.Domain.csproj", "{554381F7-F2A1-454B-BAB3-F930D0C9EBBD}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "DDDMicroservice.ApplicationService.Contract", "DDDMicroservice.ApplicationService.Contrac\DDDMicroservice.ApplicationService.Contract.csproj", "{D49D8A5C-2A9E-4D31-AA2C-E105E7102F3F}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "DDDMicroservice.Infrastructure.Data", "DDDMicroservice.Infrastructure.Data\DDDMicroservice.Infrastructure.Data.csproj", "{14F26EF6-478D-4A05-A880-BF81D23424A7}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "DDDMicroservice.Infrastructure.IoC", "DDDMicroservice.Infrastructure.IoC\DDDMicroservice.Infrastructure.IoC.csproj", "{476EB368-88A5-4EBD-A420-8E78D25B3646}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "DDDMicroservice.CrossCutting.Tests", "DDDMicroservice.CrossCutting.Tests\DDDMicroservice.CrossCutting.Tests.csproj", "{B48F0133-ED19-4974-B352-4C395D4E6592}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{1EDAAA61-E30F-45B2-A418-25DB88F1E24D}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{1EDAAA61-E30F-45B2-A418-25DB88F1E24D}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{1EDAAA61-E30F-45B2-A418-25DB88F1E24D}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{1EDAAA61-E30F-45B2-A418-25DB88F1E24D}.Release|Any CPU.Build.0 = Release|Any CPU
+		{554381F7-F2A1-454B-BAB3-F930D0C9EBBD}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{554381F7-F2A1-454B-BAB3-F930D0C9EBBD}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{554381F7-F2A1-454B-BAB3-F930D0C9EBBD}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{554381F7-F2A1-454B-BAB3-F930D0C9EBBD}.Release|Any CPU.Build.0 = Release|Any CPU
+		{D49D8A5C-2A9E-4D31-AA2C-E105E7102F3F}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{D49D8A5C-2A9E-4D31-AA2C-E105E7102F3F}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{D49D8A5C-2A9E-4D31-AA2C-E105E7102F3F}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{D49D8A5C-2A9E-4D31-AA2C-E105E7102F3F}.Release|Any CPU.Build.0 = Release|Any CPU
+		{14F26EF6-478D-4A05-A880-BF81D23424A7}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{14F26EF6-478D-4A05-A880-BF81D23424A7}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{14F26EF6-478D-4A05-A880-BF81D23424A7}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{14F26EF6-478D-4A05-A880-BF81D23424A7}.Release|Any CPU.Build.0 = Release|Any CPU
+		{476EB368-88A5-4EBD-A420-8E78D25B3646}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{476EB368-88A5-4EBD-A420-8E78D25B3646}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{476EB368-88A5-4EBD-A420-8E78D25B3646}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{476EB368-88A5-4EBD-A420-8E78D25B3646}.Release|Any CPU.Build.0 = Release|Any CPU
+		{B48F0133-ED19-4974-B352-4C395D4E6592}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{B48F0133-ED19-4974-B352-4C395D4E6592}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{B48F0133-ED19-4974-B352-4C395D4E6592}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{B48F0133-ED19-4974-B352-4C395D4E6592}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {57575079-91AF-4581-B99C-9CC8CD7D6F38}
+	EndGlobalSection
+EndGlobal

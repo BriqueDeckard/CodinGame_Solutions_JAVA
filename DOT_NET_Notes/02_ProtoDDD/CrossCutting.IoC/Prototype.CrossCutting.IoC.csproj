@@ -1,0 +1,25 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>net5.0</TargetFramework>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <PackageReference Include="Unity" Version="5.11.10" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Folder Include="IoCContainer\" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\Prototype.ApplicationServices.contract\Prototype.ApplicationServices.Contracts.csproj" />
+    <ProjectReference Include="..\Prototype.ApplicationServices\Prototype.ApplicationServices.csproj" />
+    <ProjectReference Include="..\Prototype.Domain.Contracts\Prototype.Domain.Contracts.csproj" />
+    <ProjectReference Include="..\Prototype.DomainServices.Contracts\Prototype.DomainServices.Contracts.csproj" />
+    <ProjectReference Include="..\Prototype.DomainServices\Prototype.DomainServices.csproj" />
+    <ProjectReference Include="..\Prototype.Domain\Prototype.Domain.csproj" />
+    <ProjectReference Include="..\Prototype.Infrastructure.Data\Prototype.Infrastructure.Data.csproj" />
+  </ItemGroup>
+
+</Project>

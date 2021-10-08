@@ -1,0 +1,9 @@
+C:\GIT\CSharp\POC_Prism\POC_Prism.Domain\bin\Debug\POC_Prism.Domain.dll
+C:\GIT\CSharp\POC_Prism\POC_Prism.Domain\bin\Debug\POC_Prism.Domain.pdb
+C:\GIT\CSharp\POC_Prism\POC_Prism.Domain\obj\Debug\POC_Prism.Domain.csprojAssemblyReference.cache
+C:\GIT\CSharp\POC_Prism\POC_Prism.Domain\obj\Debug\POC_Prism.Domain.csproj.CoreCompileInputs.cache
+C:\GIT\CSharp\POC_Prism\POC_Prism.Domain\obj\Debug\POC_Prism.Domain.dll
+C:\GIT\CSharp\POC_Prism\POC_Prism.Domain\obj\Debug\POC_Prism.Domain.pdb
+C:\GIT\CSharp\POC_Prism\POC_Prism.Domain\bin\Debug\POC_Prism.ApplicationService.Contract.dll
+C:\GIT\CSharp\POC_Prism\POC_Prism.Domain\bin\Debug\POC_Prism.ApplicationService.Contract.pdb
+C:\GIT\CSharp\POC_Prism\POC_Prism.Domain\obj\Debug\POC_Prism.Domain.csproj.CopyComplete

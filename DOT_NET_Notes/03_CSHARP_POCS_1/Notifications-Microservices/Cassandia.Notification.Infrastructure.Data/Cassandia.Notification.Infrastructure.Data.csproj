@@ -1,0 +1,26 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>netcoreapp2.1</TargetFramework>
+    <RestoreSources>http://nexus.modisfrance.fr/repository/cassandia-nuget/ ;https://api.nuget.org/v3/index.json </RestoreSources>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <None Remove="appsettings.Development.json" />
+    <None Remove="appsettings.json" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Content Include="appsettings.Development.json">
+      <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
+    </Content>
+  </ItemGroup>
+
+  <ItemGroup>
+    <PackageReference Include="Cassandia.Infrastructure.Data.Core.MongoDB" Version="2.1.0-final" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\Cassandia.Notification.Domain\Cassandia.Notification.Domain.csproj" />
+  </ItemGroup>
+</Project>

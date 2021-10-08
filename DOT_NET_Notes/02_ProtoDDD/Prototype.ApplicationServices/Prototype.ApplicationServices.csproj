@@ -1,0 +1,14 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>net5.0</TargetFramework>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\Prototype.ApplicationServices.contract\Prototype.ApplicationServices.Contracts.csproj" />
+    <ProjectReference Include="..\Prototype.DomainServices.Contracts\Prototype.DomainServices.Contracts.csproj" />
+    <ProjectReference Include="..\Prototype.Domain\Prototype.Domain.csproj" />
+    <ProjectReference Include="..\Prototype.Infrastructure.Data\Prototype.Infrastructure.Data.csproj" />
+  </ItemGroup>
+
+</Project>

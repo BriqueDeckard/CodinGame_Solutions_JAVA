@@ -1,0 +1,16 @@
+C:\GIT\CSharp\POC_Prism\POC_Prism.Infrastructure.data\bin\Debug\POC_Prism.Infrastructure.data.dll.config
+C:\GIT\CSharp\POC_Prism\POC_Prism.Infrastructure.data\bin\Debug\POC_Prism.Infrastructure.data.dll
+C:\GIT\CSharp\POC_Prism\POC_Prism.Infrastructure.data\bin\Debug\POC_Prism.Infrastructure.data.pdb
+C:\GIT\CSharp\POC_Prism\POC_Prism.Infrastructure.data\bin\Debug\EntityFramework.dll
+C:\GIT\CSharp\POC_Prism\POC_Prism.Infrastructure.data\bin\Debug\EntityFramework.SqlServer.dll
+C:\GIT\CSharp\POC_Prism\POC_Prism.Infrastructure.data\bin\Debug\POC_Prism.Domain.dll
+C:\GIT\CSharp\POC_Prism\POC_Prism.Infrastructure.data\bin\Debug\POC_Prism.Domain.pdb
+C:\GIT\CSharp\POC_Prism\POC_Prism.Infrastructure.data\bin\Debug\EntityFramework.xml
+C:\GIT\CSharp\POC_Prism\POC_Prism.Infrastructure.data\bin\Debug\EntityFramework.SqlServer.xml
+C:\GIT\CSharp\POC_Prism\POC_Prism.Infrastructure.data\obj\Debug\POC_Prism.Infrastructure.data.csprojAssemblyReference.cache
+C:\GIT\CSharp\POC_Prism\POC_Prism.Infrastructure.data\obj\Debug\POC_Prism.Infrastructure.data.csproj.CoreCompileInputs.cache
+C:\GIT\CSharp\POC_Prism\POC_Prism.Infrastructure.data\obj\Debug\POC_Prism.Infrastructure.data.csproj.CopyComplete
+C:\GIT\CSharp\POC_Prism\POC_Prism.Infrastructure.data\obj\Debug\POC_Prism.Infrastructure.data.dll
+C:\GIT\CSharp\POC_Prism\POC_Prism.Infrastructure.data\obj\Debug\POC_Prism.Infrastructure.data.pdb
+C:\GIT\CSharp\POC_Prism\POC_Prism.Infrastructure.data\bin\Debug\POC_Prism.ApplicationService.Contract.dll
+C:\GIT\CSharp\POC_Prism\POC_Prism.Infrastructure.data\bin\Debug\POC_Prism.ApplicationService.Contract.pdb

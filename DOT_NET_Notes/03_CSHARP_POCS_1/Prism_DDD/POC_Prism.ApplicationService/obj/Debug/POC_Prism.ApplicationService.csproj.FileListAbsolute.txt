@@ -1,0 +1,16 @@
+C:\GIT\CSharp\POC_Prism\POC_Prism.ApplicationService\bin\Debug\POC_Prism.ApplicationService.dll
+C:\GIT\CSharp\POC_Prism\POC_Prism.ApplicationService\bin\Debug\POC_Prism.ApplicationService.pdb
+C:\GIT\CSharp\POC_Prism\POC_Prism.ApplicationService\bin\Debug\POC_Prism.ApplicationService.Contract.dll
+C:\GIT\CSharp\POC_Prism\POC_Prism.ApplicationService\bin\Debug\POC_Prism.Domain.dll
+C:\GIT\CSharp\POC_Prism\POC_Prism.ApplicationService\bin\Debug\POC_Prism.Infrastructure.data.dll
+C:\GIT\CSharp\POC_Prism\POC_Prism.ApplicationService\bin\Debug\EntityFramework.dll
+C:\GIT\CSharp\POC_Prism\POC_Prism.ApplicationService\bin\Debug\POC_Prism.ApplicationService.Contract.pdb
+C:\GIT\CSharp\POC_Prism\POC_Prism.ApplicationService\bin\Debug\POC_Prism.Domain.pdb
+C:\GIT\CSharp\POC_Prism\POC_Prism.ApplicationService\bin\Debug\POC_Prism.Infrastructure.data.pdb
+C:\GIT\CSharp\POC_Prism\POC_Prism.ApplicationService\bin\Debug\POC_Prism.Infrastructure.data.dll.config
+C:\GIT\CSharp\POC_Prism\POC_Prism.ApplicationService\bin\Debug\EntityFramework.xml
+C:\GIT\CSharp\POC_Prism\POC_Prism.ApplicationService\obj\Debug\POC_Prism.ApplicationService.csprojAssemblyReference.cache
+C:\GIT\CSharp\POC_Prism\POC_Prism.ApplicationService\obj\Debug\POC_Prism.ApplicationService.csproj.CoreCompileInputs.cache
+C:\GIT\CSharp\POC_Prism\POC_Prism.ApplicationService\obj\Debug\POC_Prism.ApplicationService.csproj.CopyComplete
+C:\GIT\CSharp\POC_Prism\POC_Prism.ApplicationService\obj\Debug\POC_Prism.ApplicationService.dll
+C:\GIT\CSharp\POC_Prism\POC_Prism.ApplicationService\obj\Debug\POC_Prism.ApplicationService.pdb

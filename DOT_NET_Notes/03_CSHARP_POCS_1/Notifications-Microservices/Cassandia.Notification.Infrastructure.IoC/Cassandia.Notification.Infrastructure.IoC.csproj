@@ -1,0 +1,20 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>netcoreapp2.1</TargetFramework>
+    <RestoreSources>http://nexus.modisfrance.fr/repository/cassandia-nuget/ ;https://api.nuget.org/v3/index.json </RestoreSources>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <PackageReference Include="Cassandia.Infrastructure.Data.Core.MongoDB" Version="2.1.0-final" />
+    <PackageReference Include="Swashbuckle.AspNetCore" Version="4.0.1" />
+    <PackageReference Include="Microsoft.Extensions.DependencyInjection.Abstractions" Version="2.1.1" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\Cassandia.Notification.ApplicationService.Contract\\Cassandia.Notification.ApplicationService.Contract.csproj" />
+    <ProjectReference Include="..\Cassandia.Notification.ApplicationService\\Cassandia.Notification.ApplicationService.csproj" />
+    <ProjectReference Include="..\Cassandia.Notification.Domain\\Cassandia.Notification.Domain.csproj" />
+    <ProjectReference Include="..\Cassandia.Notification.Infrastructure.Data\\Cassandia.Notification.Infrastructure.Data.csproj" />
+  </ItemGroup>
+</Project>
