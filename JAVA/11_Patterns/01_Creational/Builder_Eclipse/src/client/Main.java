@@ -8,9 +8,9 @@ public class Main {
 		// TODO Auto-generated method stub
 
 		Director director = new Director();
-		
+
 		director.construct();
-		
+
 	}
 
 }

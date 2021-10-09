@@ -1,6 +1,6 @@
 package templateMethod;
 
-public class ConcreteClassA extends AbstractClass{
+public class ConcreteClassA extends AbstractClass {
 
 	@Override
 	void abstractMethod() {

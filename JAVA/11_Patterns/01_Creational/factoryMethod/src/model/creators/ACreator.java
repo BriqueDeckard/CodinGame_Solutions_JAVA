@@ -9,11 +9,9 @@ public abstract class ACreator {
 		Thing thing = makeThing();
 		return thing;
 	}
-	
-	protected Thing makeThing()
-	{
+
+	protected Thing makeThing() {
 		return new Thing();
 	}
-	
-	
+
 }

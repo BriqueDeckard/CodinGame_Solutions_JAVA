@@ -8,12 +8,11 @@ import interpreter.concretes.terminalExpression.Word;
 
 public class Client {
 
-	public static void operation()
-	{
+	public static void operation() {
 		var smile = new Smiley(":smile:");
 		var fear = new Smiley(":fear:");
 		var coma = new Coma(smile, fear);
 		var dot = new Dot(coma, coma);
-		System.out.print(dot.interpret());		
+		System.out.print(dot.interpret());
 	}
 }

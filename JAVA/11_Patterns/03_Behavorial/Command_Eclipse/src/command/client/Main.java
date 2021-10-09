@@ -7,8 +7,8 @@ public class Main {
 
 		Client client = new Client();
 
-		//client.aCommandDemo();
-		//client.iCommandDemo();
+		// client.aCommandDemo();
+		// client.iCommandDemo();
 		client.executorDemo();
 	}
 

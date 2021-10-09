@@ -8,30 +8,29 @@ public class NonSettablePerson {
 	@Override
 	public String toString() {
 		// TODO Auto-generated method stub
-		return this.get_name() + " " + this.get_age() +" " + this.get_birthDate(); 
+		return this.get_name() + " " + this.get_age() + " " + this.get_birthDate();
 	}
+
 	/**
 	 * Initializes a new instance of the "Person" class.
+	 * 
 	 * @param _children
 	 * @param _name
 	 * @param _age
 	 * @param _birthDate
 	 */
-	public NonSettablePerson(
-			ArrayList<Person> _children, 
-			String _name, 
-			int _age, 
-			Date _birthDate) {
-		
+	public NonSettablePerson(ArrayList<Person> _children, String _name, int _age, Date _birthDate) {
+
 		super();
 		this._children = _children;
 		this._name = _name;
 		this._age = _age;
 		this._birthDate = _birthDate;
 	}
-	
+
 	/**
 	 * Initializes a new instance of the "Person" class.
+	 * 
 	 * @param _name
 	 * @param _age
 	 * @param _dateOfBirth
@@ -41,30 +40,29 @@ public class NonSettablePerson {
 	}
 
 	/**
-	 * 	_children
+	 * _children
 	 * 
 	 */
-	private ArrayList<Person> _children ; 
+	private ArrayList<Person> _children;
 
 	/**
 	 * get_children
+	 * 
 	 * @return the _children
 	 */
 	public ArrayList<Person> get_children() {
-		if(this._children == null)
-		{
+		if (this._children == null) {
 			this._children = new ArrayList<Person>();
 		}
 		return _children;
 	}
 
-
 	/**
 	 * The name.
 	 * 
 	 */
-	private String _name ; 
-	
+	private String _name;
+
 	/**
 	 * @return the _name
 	 */
@@ -72,13 +70,12 @@ public class NonSettablePerson {
 		return _name;
 	}
 
-
 	/**
 	 * The age.
 	 * 
 	 */
-	private int _age ; 
-	
+	private int _age;
+
 	/**
 	 * @return the _age
 	 */
@@ -86,12 +83,11 @@ public class NonSettablePerson {
 		return _age;
 	}
 
-
 	/**
-	 * 	The Birth date
+	 * The Birth date
 	 * 
 	 */
-	private Date _birthDate ;
+	private Date _birthDate;
 
 	/**
 	 * @return the _birthDate
@@ -99,5 +95,5 @@ public class NonSettablePerson {
 	public Date get_birthDate() {
 		return _birthDate;
 	}
-	
+
 }

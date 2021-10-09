@@ -1,29 +1,26 @@
 package virtualProxy;
 
-public class GrosObjetProxy implements IGrosObjet{
-    // à compléter
+public class GrosObjetProxy implements IGrosObjet {
+	// ï¿½ complï¿½ter
 	private static GrosObjet _instance;
 
-	private static GrosObjet getInstance()
-	{
-		if(_instance == null)
-		{
+	private static GrosObjet getInstance() {
+		if (_instance == null) {
 			_instance = new GrosObjet();
 		}
 		return _instance;
 	}
-	
+
 	@Override
-	public void premièreMéthodeAyantVraimentBesoinDeGrosObjet() {
-		getInstance().premièreMéthodeAyantVraimentBesoinDeGrosObjet();
+	public void premiï¿½reMï¿½thodeAyantVraimentBesoinDeGrosObjet() {
+		getInstance().premiï¿½reMï¿½thodeAyantVraimentBesoinDeGrosObjet();
 		
 	}
 
 	@Override
-	public void secondeMéthodeAyantVraimentBesoinDeGrosObjet() {
-		getInstance().secondeMéthodeAyantVraimentBesoinDeGrosObjet();
+	public void secondeMï¿½thodeAyantVraimentBesoinDeGrosObjet() {
+		getInstance().secondeMï¿½thodeAyantVraimentBesoinDeGrosObjet();
 		
 	}
-	
-	
+
 }

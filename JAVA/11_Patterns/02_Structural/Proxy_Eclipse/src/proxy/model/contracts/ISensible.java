@@ -1,14 +1,13 @@
 package proxy.model.contracts;
 
 public interface ISensible {
-	
-    public  void rootMethod(String role);
-    
-    /** Méthode pouvant être exécutée par ADMIN et ROOT, pas par USER **/
-    public  void adminMethod(String role);
-    
-    /** Méthode pouvant être exécutée par tout le monde (USER, ADMIN, ROOT) **/
-    public  void userMethod(String role);
 
+    public void rootMethod(String role);
+
+    /** Mï¿½thode pouvant ï¿½tre exï¿½cutï¿½e par ADMIN et ROOT, pas par USER **/
+    public void adminMethod(String role);
+
+    /** Mï¿½thode pouvant ï¿½tre exï¿½cutï¿½e par tout le monde (USER, ADMIN, ROOT) **/
+    public void userMethod(String role);
 
 }

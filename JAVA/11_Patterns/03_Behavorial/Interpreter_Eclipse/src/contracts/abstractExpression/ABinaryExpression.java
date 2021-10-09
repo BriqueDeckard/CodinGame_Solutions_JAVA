@@ -2,23 +2,27 @@ package contracts.abstractExpression;
 
 import contracts.interfacesExpression.IAbstractExpression;
 
-/**Abstract binary expression
+/**
+ * Abstract binary expression
+ * 
  * @author pierre.antoine
  *
  */
-public abstract class ABinaryExpression implements IAbstractExpression{
-	
-	/** Expression's elements
+public abstract class ABinaryExpression implements IAbstractExpression {
+
+	/**
+	 * Expression's elements
 	 * 
 	 */
 	protected IAbstractExpression exp1, exp2;
 
-	/** Constructor
+	/**
+	 * Constructor
+	 * 
 	 * @param exp1
 	 * @param exp2
 	 */
-	public ABinaryExpression(IAbstractExpression exp1, IAbstractExpression exp2)
-	{
+	public ABinaryExpression(IAbstractExpression exp1, IAbstractExpression exp2) {
 		this.exp1 = exp1;
 		this.exp2 = exp2;
 	}

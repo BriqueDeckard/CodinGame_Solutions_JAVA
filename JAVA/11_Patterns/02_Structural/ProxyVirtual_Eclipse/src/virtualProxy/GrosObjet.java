@@ -1,17 +1,17 @@
 package virtualProxy;
 
-public class GrosObjet implements IGrosObjet{
+public class GrosObjet implements IGrosObjet {
 
-    public GrosObjet(){
-        System.out.println("    constructeur GrosObjet === Création très chère ===");
+    public GrosObjet() {
+        System.out.println("    constructeur GrosObjet === Crï¿½ation trï¿½s chï¿½re ===");
     }
-    
-    public void premièreMéthodeAyantVraimentBesoinDeGrosObjet(){
-        System.out.println("    premièreMéthodeAyantVraimentBesoinDeGrosObjet()");
+
+    public void premiï¿½reMï¿½thodeAyantVraimentBesoinDeGrosObjet(){
+        System.out.println("    premiï¿½reMï¿½thodeAyantVraimentBesoinDeGrosObjet()");
     }
-    
-    public void secondeMéthodeAyantVraimentBesoinDeGrosObjet(){
-        System.out.println("    secondeMéthodeAyantVraimentBesoinDeGrosObjet()");
+
+    public void secondeMï¿½thodeAyantVraimentBesoinDeGrosObjet(){
+        System.out.println("    secondeMï¿½thodeAyantVraimentBesoinDeGrosObjet()");
     }
-    
+
 }

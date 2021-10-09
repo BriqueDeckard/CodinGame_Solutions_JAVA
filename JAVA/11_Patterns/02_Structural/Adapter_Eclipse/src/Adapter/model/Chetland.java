@@ -1,6 +1,6 @@
 package Adapter.model;
 
-public class Chetland implements ICheval{
+public class Chetland implements ICheval {
 
 	@Override
 	public void hennir() {

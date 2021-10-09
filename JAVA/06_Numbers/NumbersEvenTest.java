@@ -9,11 +9,11 @@ public class NumbersEvenTest {
         Scanner sc = new Scanner(System.in);
         nbr = sc.nextInt();
 
-        if(nbr % 2 == 0){
+        if (nbr % 2 == 0) {
             System.out.println("Le nombre est pair");
-        }else{
+        } else {
             System.out.println("Le nombre est impair");
         }
     }
-    
+
 }

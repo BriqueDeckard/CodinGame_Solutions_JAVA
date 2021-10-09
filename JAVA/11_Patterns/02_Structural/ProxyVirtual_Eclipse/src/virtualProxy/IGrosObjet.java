@@ -1,8 +1,8 @@
 package virtualProxy;
 
-public interface IGrosObjet{
-    // à compléter
-	public void premièreMéthodeAyantVraimentBesoinDeGrosObjet();
-	
-	public void secondeMéthodeAyantVraimentBesoinDeGrosObjet();
+public interface IGrosObjet {
+	// ï¿½ complï¿½ter
+	public void premiï¿½reMï¿½thodeAyantVraimentBesoinDeGrosObjet();
+
+	public void secondeMï¿½thodeAyantVraimentBesoinDeGrosObjet();
 }

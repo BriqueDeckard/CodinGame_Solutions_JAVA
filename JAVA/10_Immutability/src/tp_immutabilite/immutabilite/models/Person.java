@@ -6,39 +6,41 @@ package tp_immutabilite.immutabilite.models;
 
 import java.sql.Date;
 import java.util.ArrayList;
-/** "Person" class to describe a person.
- * Called in demo to demonstrate mutability. 
+
+/**
+ * "Person" class to describe a person. Called in demo to demonstrate
+ * mutability.
+ * 
  * @author Pierre ANTOINE
  */
 public class Person {
-	
+
 	@Override
 	public String toString() {
 		// TODO Auto-generated method stub
-		return this.get_name() + " " + this.get_age() +" " + this.getDateOfBirth(); 
+		return this.get_name() + " " + this.get_age() + " " + this.getDateOfBirth();
 	}
+
 	/**
 	 * Initializes a new instance of the "Person" class.
+	 * 
 	 * @param _children
 	 * @param _name
 	 * @param _age
 	 * @param _birthDate
 	 */
-	public Person(
-			ArrayList<Person> _children, 
-			String _name, 
-			int _age, 
-			Date _birthDate) {
-		
+	public Person(ArrayList<Person> _children, String _name, int _age, Date _birthDate) {
+
 		super();
 		this._children = _children;
 		this._name = _name;
 		this._age = _age;
 		this._dateOfBirth = _birthDate;
 	}
-	
+
 	/**
 	 * Initializes a new instance of the "Person" class.
+	 * 
 	 * @param _name
 	 * @param _age
 	 * @param _dateOfBirth
@@ -48,18 +50,18 @@ public class Person {
 	}
 
 	/**
-	 * 	_children
+	 * _children
 	 * 
 	 */
-	private ArrayList<Person> _children ; 
+	private ArrayList<Person> _children;
 
 	/**
 	 * get_children
+	 * 
 	 * @return the _children
 	 */
 	public ArrayList<Person> get_children() {
-		if(this._children == null)
-		{
+		if (this._children == null) {
 			this._children = new ArrayList<Person>();
 		}
 		return _children;
@@ -67,6 +69,7 @@ public class Person {
 
 	/**
 	 * set_children
+	 * 
 	 * @param _children the _children to set
 	 */
 	public void set_children(ArrayList<Person> _children) {
@@ -77,8 +80,8 @@ public class Person {
 	 * The name.
 	 * 
 	 */
-	private String _name ; 
-	
+	private String _name;
+
 	/**
 	 * @return the _name
 	 */
@@ -97,8 +100,8 @@ public class Person {
 	 * The age.
 	 * 
 	 */
-	private int _age ; 
-	
+	private int _age;
+
 	/**
 	 * @return the _age
 	 */
@@ -114,10 +117,10 @@ public class Person {
 	}
 
 	/**
-	 * 	The Birth date
+	 * The Birth date
 	 * 
 	 */
-	private Date _dateOfBirth ;
+	private Date _dateOfBirth;
 
 	/**
 	 * @return the _birthDate
@@ -131,7 +134,6 @@ public class Person {
 	 */
 	public void setDateOfBirth(Date _birthDate) {
 		this._dateOfBirth = _birthDate;
-	} 
-	
-	
+	}
+
 }

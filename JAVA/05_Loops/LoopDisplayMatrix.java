@@ -1,11 +1,12 @@
 package Searchs;
+
 import java.util.Scanner;
 
 public class LoopDisplayMatrix {
 
     public static void main(String[] args) {
         int nbLigne = 0;
-        int nbColonnes =0;
+        int nbColonnes = 0;
 
         System.out.println("Nb lignes : ");
         Scanner sc = new Scanner(System.in);
@@ -19,13 +20,13 @@ public class LoopDisplayMatrix {
 
     private static void displayTheMatrix(int nbLigne, int nbColonnes) {
         // declarer la matrice
-        int [][] a = new int [nbLigne][nbColonnes];
+        int[][] a = new int[nbLigne][nbColonnes];
         Scanner sc = new Scanner(System.in);
         // --- Remplissage ---
         // Parcours des lignes
-        for(int i = 0; i < nbLigne; i++){
+        for (int i = 0; i < nbLigne; i++) {
             // Parcours des colonnes
-            for(int j = 0; j< nbColonnes; j++){
+            for (int j = 0; j < nbColonnes; j++) {
                 System.out.println(String.format("Entrez la valeur à [%d][%d] : ", i, j));
                 a[i][j] = sc.nextInt();
             }
@@ -33,9 +34,9 @@ public class LoopDisplayMatrix {
 
         // --- Affichage ---
         // Parcours des lignes
-        for(int i = 0; i < a.length; i++){
+        for (int i = 0; i < a.length; i++) {
             // Parcours des colonnes
-            for(int j = 0; j < a[0].length; j++){
+            for (int j = 0; j < a[0].length; j++) {
                 System.out.println(a[i][j] + "\t");
             }
             System.out.println();

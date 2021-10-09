@@ -9,17 +9,17 @@ public class Main {
 
 	public static void main(String[] args) {
 
-		//Observers initialization
+		// Observers initialization
 		IScreen screenOut = new ScreenOut();
 		IScreen screenErr = new ScreenErr();
-		
-		//observable initialization
+
+		// observable initialization
 		Worker worker = new Worker();
-		//adds observers
+		// adds observers
 		worker.addObserver(screenOut);
 		worker.addObserver(screenErr);
-		
-		//Start
+
+		// Start
 		worker.work();
 	}
 

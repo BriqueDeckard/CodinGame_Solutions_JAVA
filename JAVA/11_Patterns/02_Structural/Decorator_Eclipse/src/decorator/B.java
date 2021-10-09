@@ -1,6 +1,6 @@
 package decorator;
 
-public class B extends ADecorator{
+public class B extends ADecorator {
 
 	public B(TextI component) {
 		super(component);

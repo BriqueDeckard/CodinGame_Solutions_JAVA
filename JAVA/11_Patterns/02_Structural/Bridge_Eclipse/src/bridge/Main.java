@@ -19,19 +19,19 @@ public class Main {
 		AVehicle vehicle_2 = new Car(new ManualGear(), new FourWheels());
 		AVehicle vehicle_3 = new Truck(new AutomaticGear(), new TwoWheels());
 		AVehicle vehicle_4 = new Truck(new ManualGear(), new FourWheels());
-		
+
 		ArrayList<AVehicle> list = new ArrayList<AVehicle>();
-		
+
 		list.add(vehicle_1);
 		list.add(vehicle_2);
 		list.add(vehicle_3);
 		list.add(vehicle_4);
-		
+
 		for (AVehicle aVehicle : list) {
 			aVehicle.displayGear();
 			aVehicle.displayWheels();
 		}
-		
+
 	}
 
 }

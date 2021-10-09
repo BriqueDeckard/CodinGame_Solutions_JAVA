@@ -13,7 +13,7 @@ package Searchs;
 public class SearchBinary {
     /**
      * 
-     * @param array      : Le tableau dans lequel on cherche la valeur
+     * @param array    : Le tableau dans lequel on cherche la valeur
      * @param first    : premier element
      * @param last     : dernier element
      * @param searched : valeur recherchée
@@ -24,9 +24,9 @@ public class SearchBinary {
         System.out.println("f: " + first + ", l: " + last);
         System.out.println("Middle: " + middle);
 
-        // tant que le premier est plus petit que le dernier        
+        // tant que le premier est plus petit que le dernier
         while (first <= last) {
-            counter+=1;
+            counter += 1;
             // Si la valeur du milieu du tableau est plus petite ou egale a la valeur du
             // dernier,
             // on répète l'opération sur une nouvelle section allant du milieu à la fin
@@ -50,20 +50,20 @@ public class SearchBinary {
                 System.out.println("Last: " + last);
             }
             // on trouve le milieu de la nouvelle section
-            middle = (first + last)/2;
+            middle = (first + last) / 2;
             System.out.println("Middle: " + middle);
         }
 
-        if(first > last){
+        if (first > last) {
             System.out.println("L'élément n'existe pas.");
         }
     }
 
-    public static void main(String args[]){
+    public static void main(String args[]) {
         System.out.println("Hello ?");
-        int tab[] = {1,2,3,4,5,6,7,8,9,10};
+        int tab[] = { 1, 2, 3, 4, 5, 6, 7, 8, 9, 10 };
         int val = 4;
-        int l = tab.length-1;
+        int l = tab.length - 1;
         binarySearch(tab, 0, l, val);
     }
 

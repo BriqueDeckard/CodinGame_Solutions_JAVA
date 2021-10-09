@@ -1,9 +1,8 @@
 package model.products;
 
-public class ConcreteProduct extends AProduct{
+public class ConcreteProduct extends AProduct {
 
-	public ConcreteProduct()
-	{
+	public ConcreteProduct() {
 		this.name = this.name + "_concrete_";
 	}
 }

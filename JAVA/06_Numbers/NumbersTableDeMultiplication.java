@@ -8,7 +8,7 @@ public class NumbersTableDeMultiplication {
         System.out.println("Entrez la valeur :");
         int value = sc.nextInt();
 
-        for (int i=0; i <= 10; i++) {
+        for (int i = 0; i <= 10; i++) {
             System.out.println(value + "x" + i + " = " + (value * i));
         }
         sc.close();

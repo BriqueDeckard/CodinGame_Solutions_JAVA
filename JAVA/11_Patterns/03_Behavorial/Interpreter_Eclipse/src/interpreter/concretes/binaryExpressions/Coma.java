@@ -3,13 +3,17 @@ package interpreter.concretes.binaryExpressions;
 import contracts.abstractExpression.ABinaryExpression;
 import contracts.interfacesExpression.IAbstractExpression;
 
-/** Concrete binary expression
+/**
+ * Concrete binary expression
+ * 
  * @author pierre.antoine
  *
  */
 public class Coma extends ABinaryExpression {
 
-	/** Constructor
+	/**
+	 * Constructor
+	 * 
 	 * @param exp1
 	 * @param exp2
 	 */
@@ -18,8 +22,9 @@ public class Coma extends ABinaryExpression {
 		// TODO Auto-generated constructor stub
 	}
 
-	/* Specialized interpret method
-	 * (non-Javadoc)
+	/*
+	 * Specialized interpret method (non-Javadoc)
+	 * 
 	 * @see contracts.interfacesExpression.IAbstractExpression#interpret()
 	 */
 	@Override

@@ -7,7 +7,7 @@ public class TwoWheels implements IWheel {
 		// TODO Auto-generated method stub
 		return 2;
 	}
-	
+
 	@Override
 	public void display() {
 		// TODO Auto-generated method stub

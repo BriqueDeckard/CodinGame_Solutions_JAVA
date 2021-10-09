@@ -1,6 +1,6 @@
 package bridge.gear;
 
-public class ManualGear implements	IGear {
+public class ManualGear implements IGear {
 
 	@Override
 	public void display() {

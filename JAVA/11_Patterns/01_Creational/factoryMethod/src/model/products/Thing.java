@@ -1,5 +1,5 @@
 package model.products;
 
-public class Thing extends ConcreteProduct{
+public class Thing extends ConcreteProduct {
 
 }

@@ -2,13 +2,13 @@ package Searchs;
 
 import java.util.ArrayList;
 import java.util.List;
+
 /**
  * Calculer la moyenne d'une liste
  */
 public class ListMean {
 
-    
-    /** 
+    /**
      * @param args
      */
     public static void main(String[] args) {
@@ -24,17 +24,16 @@ public class ListMean {
 
     }
 
-    
-    /** 
+    /**
      * @param list
      * @return int
      */
-    private static  int getListMean(List<Integer> list){
+    private static int getListMean(List<Integer> list) {
 
         // Find the sum
-        int sum = 0;       
-        
-        for(int i = 0; i < list.size(); i++){
+        int sum = 0;
+
+        for (int i = 0; i < list.size(); i++) {
             sum += list.get(i);
         }
 
@@ -43,5 +42,5 @@ public class ListMean {
 
         return mean;
     }
-    
+
 }

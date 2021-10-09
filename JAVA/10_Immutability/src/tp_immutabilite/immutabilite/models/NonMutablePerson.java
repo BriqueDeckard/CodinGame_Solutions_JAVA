@@ -6,40 +6,40 @@ package tp_immutabilite.immutabilite.models;
 
 import java.sql.Date;
 import java.util.ArrayList;
-/** "Person" class.
+
+/**
+ * "Person" class.
  * 
  * @author Pierre ANTOINE
  */
 public class NonMutablePerson {
-	
+
 	@Override
 	public String toString() {
 		// TODO Auto-generated method stub
-		return this.get_name() + " " + this.get_age() +" " + this.get_birthDate(); 
+		return this.get_name() + " " + this.get_age() + " " + this.get_birthDate();
 	}
-	
+
 	/**
 	 * Initializes a new instance of the "Person" class.
+	 * 
 	 * @param _children
 	 * @param _name
 	 * @param _age
 	 * @param _birthDate
 	 */
-	public NonMutablePerson(
-			ArrayList<NonMutablePerson> _children, 
-			String _name, 
-			int _age, 
-			Date _birthDate) {
-		
+	public NonMutablePerson(ArrayList<NonMutablePerson> _children, String _name, int _age, Date _birthDate) {
+
 		super();
 		this._children = _children;
 		this._name = _name;
 		this._age = _age;
 		this._birthDate = _birthDate;
 	}
-	
+
 	/**
 	 * Initializes a new instance of the "Person" class.
+	 * 
 	 * @param _name
 	 * @param _age
 	 * @param _dateOfBirth
@@ -49,18 +49,18 @@ public class NonMutablePerson {
 	}
 
 	/**
-	 * 	_children
+	 * _children
 	 * 
 	 */
-	private ArrayList<NonMutablePerson> _children ; 
+	private ArrayList<NonMutablePerson> _children;
 
 	/**
 	 * get_children
+	 * 
 	 * @return the _children
 	 */
 	public ArrayList<NonMutablePerson> get_children() {
-		if(this._children == null)
-		{
+		if (this._children == null) {
 			this._children = new ArrayList<NonMutablePerson>();
 		}
 		return _children;
@@ -68,6 +68,7 @@ public class NonMutablePerson {
 
 	/**
 	 * set_children
+	 * 
 	 * @param _children the _children to set
 	 */
 	public void set_children(ArrayList<NonMutablePerson> _children) {
@@ -78,8 +79,8 @@ public class NonMutablePerson {
 	 * The name.
 	 * 
 	 */
-	private String _name ; 
-	
+	private String _name;
+
 	/**
 	 * @return the _name
 	 */
@@ -87,13 +88,12 @@ public class NonMutablePerson {
 		return _name;
 	}
 
-
 	/**
 	 * The age.
 	 * 
 	 */
-	private int _age ; 
-	
+	private int _age;
+
 	/**
 	 * @return the _age
 	 */
@@ -101,23 +101,21 @@ public class NonMutablePerson {
 		return _age;
 	}
 
-
-
 	/**
-	 * 	The Birth date
+	 * The Birth date
 	 * 
 	 */
-	private Date _birthDate ;
+	private Date _birthDate;
 
 	/**
 	 * retourne une copie de birthdate pour la proteger.
+	 * 
 	 * @return the _birthDate
 	 */
 	@SuppressWarnings("deprecation")
 	public Date get_birthDate() {
-		//	On retourne une copie de la date pour que la variable reste inchangeable
+		// On retourne une copie de la date pour que la variable reste inchangeable
 		return new Date(_birthDate.getDate());
 	}
-	
-	
+
 }

@@ -12,16 +12,16 @@ public class Main {
 		// TODO Auto-generated method stub
 
 		AFactory factory;
-		
-		factory= new ProductAFactory();
+
+		factory = new ProductAFactory();
 		IProduct productA = factory.CreateProduct();
-		
+
 		factory = new ProductBFactory();
 		IProduct productB = factory.CreateProduct();
-		
+
 		System.out.println(productA.getName());
 		System.out.println(productB.getName());
-		
+
 	}
 
 }

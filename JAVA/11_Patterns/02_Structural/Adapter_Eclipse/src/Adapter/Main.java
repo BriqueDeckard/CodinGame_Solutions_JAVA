@@ -9,16 +9,11 @@ public class Main {
 
 	public static void main(String[] args) {
 		// TODO Auto-generated method stub
-		
-		ICheval[] chevaux = {
-				new Chetland(),
-				new AneAdapter(),
-				new SecondAneAdapter()
-				};
+
+		ICheval[] chevaux = { new Chetland(), new AneAdapter(), new SecondAneAdapter() };
 		for (ICheval cheval : chevaux) {
 			cheval.hennir();
 		}
-		}
-
 	}
 
+}
