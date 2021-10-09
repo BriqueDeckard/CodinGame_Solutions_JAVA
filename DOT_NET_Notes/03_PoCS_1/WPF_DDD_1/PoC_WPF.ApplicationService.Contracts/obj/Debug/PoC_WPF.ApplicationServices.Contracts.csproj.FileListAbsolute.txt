@@ -1,9 +1,0 @@
-C:\GIT\CSharp\POCs\PoC_WPF\PoC_WPF.ApplicationService.Contracts\bin\Debug\PoC_WPF.ApplicationServices.Contracts.dll
-C:\GIT\CSharp\POCs\PoC_WPF\PoC_WPF.ApplicationService.Contracts\bin\Debug\PoC_WPF.ApplicationServices.Contracts.pdb
-C:\GIT\CSharp\POCs\PoC_WPF\PoC_WPF.ApplicationService.Contracts\obj\Debug\PoC_WPF.ApplicationServices.Contracts.csprojAssemblyReference.cache
-C:\GIT\CSharp\POCs\PoC_WPF\PoC_WPF.ApplicationService.Contracts\obj\Debug\PoC_WPF.ApplicationServices.Contracts.csproj.CoreCompileInputs.cache
-C:\GIT\CSharp\POCs\PoC_WPF\PoC_WPF.ApplicationService.Contracts\obj\Debug\PoC_WPF.ApplicationServices.Contracts.dll
-C:\GIT\CSharp\POCs\PoC_WPF\PoC_WPF.ApplicationService.Contracts\obj\Debug\PoC_WPF.ApplicationServices.Contracts.pdb
-C:\GIT\CSharp\POCs\PoC_WPF\PoC_WPF.ApplicationService.Contracts\bin\Debug\PoC_WPF.Domain.dll
-C:\GIT\CSharp\POCs\PoC_WPF\PoC_WPF.ApplicationService.Contracts\bin\Debug\PoC_WPF.Domain.pdb
-C:\GIT\CSharp\POCs\PoC_WPF\PoC_WPF.ApplicationService.Contracts\obj\Debug\PoC_WPF.ApplicationServices.Contracts.csproj.CopyComplete

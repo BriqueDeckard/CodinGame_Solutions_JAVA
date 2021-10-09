@@ -1,6 +1,0 @@
-C:\Users\eric.blanchard\Documents\Visual Studio 2017\Projects\WpfApp1\WpfApp1.Domain\bin\Debug\WpfApp1.Domain.dll
-C:\Users\eric.blanchard\Documents\Visual Studio 2017\Projects\WpfApp1\WpfApp1.Domain\bin\Debug\WpfApp1.Domain.pdb
-C:\Users\eric.blanchard\Documents\Visual Studio 2017\Projects\WpfApp1\WpfApp1.Domain\obj\Debug\WpfApp1.Domain.csprojAssemblyReference.cache
-C:\Users\eric.blanchard\Documents\Visual Studio 2017\Projects\WpfApp1\WpfApp1.Domain\obj\Debug\WpfApp1.Domain.csproj.CoreCompileInputs.cache
-C:\Users\eric.blanchard\Documents\Visual Studio 2017\Projects\WpfApp1\WpfApp1.Domain\obj\Debug\WpfApp1.Domain.dll
-C:\Users\eric.blanchard\Documents\Visual Studio 2017\Projects\WpfApp1\WpfApp1.Domain\obj\Debug\WpfApp1.Domain.pdb

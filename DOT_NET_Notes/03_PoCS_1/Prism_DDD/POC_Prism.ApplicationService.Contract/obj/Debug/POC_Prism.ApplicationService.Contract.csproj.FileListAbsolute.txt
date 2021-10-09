@@ -1,6 +1,0 @@
-C:\GIT\CSharp\POC_Prism\POC_Prism.ApplicationService.Contract\bin\Debug\POC_Prism.ApplicationService.Contract.dll
-C:\GIT\CSharp\POC_Prism\POC_Prism.ApplicationService.Contract\bin\Debug\POC_Prism.ApplicationService.Contract.pdb
-C:\GIT\CSharp\POC_Prism\POC_Prism.ApplicationService.Contract\obj\Debug\POC_Prism.ApplicationService.Contract.csprojAssemblyReference.cache
-C:\GIT\CSharp\POC_Prism\POC_Prism.ApplicationService.Contract\obj\Debug\POC_Prism.ApplicationService.Contract.csproj.CoreCompileInputs.cache
-C:\GIT\CSharp\POC_Prism\POC_Prism.ApplicationService.Contract\obj\Debug\POC_Prism.ApplicationService.Contract.dll
-C:\GIT\CSharp\POC_Prism\POC_Prism.ApplicationService.Contract\obj\Debug\POC_Prism.ApplicationService.Contract.pdb
