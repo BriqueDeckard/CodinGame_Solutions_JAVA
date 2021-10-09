@@ -39,6 +39,8 @@ The covered languages and technologies are:
  <li><a href="https://github.com/BriqueDeckard/Notes/tree/master/JAVA_Notes/06_Numbers">Numbers</a></li>
  <li><a href="https://github.com/BriqueDeckard/Notes/tree/master/JAVA_Notes/07_Searchs">Search methods</a></li>
  <li><a href="https://github.com/BriqueDeckard/Notes/tree/master/JAVA_Notes/09_Strings">String manipulation</a></li>
+ <li><a href="https://github.com/BriqueDeckard/Notes/tree/master/JAVA_Notes/10_Immutability">Immutability</a></li>
+ <li><a href="https://github.com/BriqueDeckard/Notes/tree/master/JAVA_Notes/11_Patterns">Design patterns</a></li>
  </ul>
 </details>
 <details>
@@ -73,3 +75,9 @@ The covered languages and technologies are:
    <li><a href="https://github.com/BriqueDeckard/Notes/tree/master/ANDROID_Notes/ANDROID_KOTLIN_poc-RoleGameAssistant">PoCs</a></li>
   </ul>
  </details>
+ <details>
+  <summary>SQL / PGSQL</summary>
+  <ul>
+   <li><a href="https://github.com/BriqueDeckard/Notes/tree/master/SQL_Notes/PG_GestionVols">SQL queries</a></li>
+  </ul>
+  </details>
