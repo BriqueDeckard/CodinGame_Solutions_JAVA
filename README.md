@@ -29,7 +29,7 @@ The covered languages and technologies are:
  </ul>
 </details>
 <details>
-<summary>Java</summary>
+<summary>Java SE/JEE</summary>
 <ul>
  <li><a href="https://github.com/BriqueDeckard/Notes/tree/master/JAVA_Notes/01_Areas">Areas calculation</a></li>
  <li><a href="https://github.com/BriqueDeckard/Notes/tree/master/JAVA_Notes/02_Arrays">Arrays manipulation</a></li>
@@ -61,4 +61,15 @@ The covered languages and technologies are:
   <li><a href="https://github.com/BriqueDeckard/Notes/tree/master/ANGULAR%20and%20NODES_Notes/06_NODE_API">Node API</a></li>
  </ul>
 </details>
+ <details>
+  <summary>Android / Java / Kotlin </summary>
+  <ul>
+   <li><a href="https://github.com/BriqueDeckard/Notes/tree/master/ANDROID_Notes/ANDROID_KOTLIN_Koin-DDD">DI with Koin </a></li>
+   <li><a href="https://github.com/BriqueDeckard/Notes/tree/master/ANDROID_Notes/ANDROID_KOTLIN_poc-BuildSrc">Dependencies management with BuildSrc</a></li>
+   <li><a href="https://github.com/BriqueDeckard/Notes/tree/master/ANDROID_Notes/ANDROID_KOTLIN_poc-modularization">Modularization</a></li>
+   <li><a href="https://github.com/BriqueDeckard/Notes/tree/master/ANDROID_Notes/Kotlin_poc_Room_relationship">Room-1</a></li>
+   <li><a href="https://github.com/BriqueDeckard/Notes/tree/master/ANDROID_Notes/ANDROID_KOTLIN_Room-Words">Room-2</a></li>
+   <li><a href="https://github.com/BriqueDeckard/Notes/tree/master/ANDROID_Notes/Kotlin_poc_database_singleton_inject_dao">Singleton DAO</a></li>
+   <li><a href="https://github.com/BriqueDeckard/Notes/tree/master/ANDROID_Notes/ANDROID_KOTLIN_poc-RoleGameAssistant">PoCs</a></li>
+  </ul>
  </details>
