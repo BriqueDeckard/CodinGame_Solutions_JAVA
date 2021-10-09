@@ -30,7 +30,7 @@ The covered languages and technologies are:
 </details>
  <!-- #### ALGORITHMIQUE #### -->
 <details>
- <summary>Algorithmique</summary>
+ <summary>Algorithmic</summary>
  <ul>
   <li><a href="https://github.com/BriqueDeckard/Notes/tree/master/ALGORITHMIQUE/01_interpreteurLisp">Interpreteur LISP</a></li>
  </ul>
