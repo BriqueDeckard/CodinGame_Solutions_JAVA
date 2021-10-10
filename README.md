@@ -26,6 +26,7 @@ The covered languages and technologies are:
   <li><a href="https://github.com/BriqueDeckard/Notes/tree/master/DOT_NET/05_Microsoft-GetStarted">Microsoft GetStarted</a></li>
   <li><a href="https://github.com/BriqueDeckard/Notes/tree/master/DOT_NET/06_Pipelines-dotnet-core">Azure DevOps Pipelines</a></li>
   <li><a href="https://github.com/BriqueDeckard/Notes/tree/master/DOT_NET/07_%20Searchs">Searchs</a></li>
+  <li><a href="https://github.com/BriqueDeckard/Notes/tree/master/DOT_NET/08_API">API</a></li>
  </ul>
 </details>
  <!-- #### ALGORITHMIQUE #### -->
@@ -67,6 +68,7 @@ The covered languages and technologies are:
  <li><a href="https://github.com/BriqueDeckard/Notes/tree/master/JAVA/09_Strings">String manipulation</a></li>
  <li><a href="https://github.com/BriqueDeckard/Notes/tree/master/JAVA/10_Immutability">Immutability</a></li>
  <li><a href="https://github.com/BriqueDeckard/Notes/tree/master/JAVA/11_Patterns">Design patterns</a></li>
+ <li><a href="https://github.com/BriqueDeckard/Notes/tree/master/JAVA/12_API">API</a></li>
  </ul>
 </details>
  <details>
