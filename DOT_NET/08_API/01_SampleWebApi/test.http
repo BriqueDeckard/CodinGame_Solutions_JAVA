@@ -1,0 +1,29 @@
+### First get
+GET https://localhost:5001/weatherforecast
+
+### Get all
+GET https://localhost:5001/api/superhero
+
+### Create one
+POST https://localhost:5001/api/superhero
+Content-Type: application/json
+
+{
+    "id":4,
+    "name":"Flash"
+}
+
+### Get one by ID
+GET https://localhost:5001/api/superhero/4
+
+### Update
+PUT https://localhost:5001/api/superhero
+Content-Type: application/json
+
+{
+    "id":4,
+    "name":"Aquaman"
+}
+
+### Delete one
+DELETE  https://localhost:5001/api/superhero/3

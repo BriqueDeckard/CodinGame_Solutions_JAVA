@@ -1,0 +1,15 @@
+COMMANDS : 
+==========
+
+- New console project: 
+  dotnet new console --name "NameOfTheProject"
+
+- New web api project:
+  dotnet new webapi -o NameOfTheApi
+
+- Run project:
+   dotnet run
+   dotnet watch run --> With swagger
+
+- Trusts certificate:
+   dotnet dev-certs https --trust
