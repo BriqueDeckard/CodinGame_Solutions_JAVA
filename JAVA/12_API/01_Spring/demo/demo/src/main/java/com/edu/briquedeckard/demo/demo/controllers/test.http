@@ -1,0 +1,24 @@
+### Get all
+GET http://localhost:8080/people
+
+### Create one
+POST http://localhost:8080/people
+Content-Type: application/json
+
+{
+    "name":"Pierre",
+    "age":42
+}
+
+### Get one by ID
+GET http://localhost:8080/people/1
+
+### Update
+PUT http://localhost:8080/people/1
+Content-Type: : application/json
+
+{
+    "id":1,
+    "name":"Brique",
+    "age":24
+}
