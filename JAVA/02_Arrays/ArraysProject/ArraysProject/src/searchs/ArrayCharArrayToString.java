@@ -1,4 +1,4 @@
-package Searchs;
+package searchs;
 
 public class ArrayCharArrayToString {
     public static void main(String[] args) {
