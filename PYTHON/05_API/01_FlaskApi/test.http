@@ -1,0 +1,15 @@
+### Get all
+GET http://10.0.2.15:5000/api/v1/user
+
+### Create one
+POST http://10.0.2.15:5000/api/v1/user
+Content-Type: application/json
+
+{
+    "nom":"ANTOINE",
+    "email":"mai@mail.fr",
+    "prenom":"pierre",
+    "ville":"nevers",
+    "telephone":1234567890
+
+}
