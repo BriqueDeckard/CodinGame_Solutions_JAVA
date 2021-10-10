@@ -58,6 +58,7 @@ The covered languages and technologies are:
 <details>
 <summary>Java SE/JEE</summary>
 <ul>
+ <li><a href="https://github.com/BriqueDeckard/Notes/blob/master/JAVA/README.md">Command lines</a></li>
  <li><a href="https://github.com/BriqueDeckard/Notes/tree/master/JAVA/01_Areas">Areas calculation</a></li>
  <li><a href="https://github.com/BriqueDeckard/Notes/tree/master/JAVA/02_Arrays">Arrays manipulation</a></li>
  <li><a href="https://github.com/BriqueDeckard/Notes/tree/master/JAVA/03_Chars">Chars manipulation</a></li>
