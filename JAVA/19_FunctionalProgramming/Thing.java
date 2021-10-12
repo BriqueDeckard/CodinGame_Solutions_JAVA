@@ -14,4 +14,8 @@ class Thing {
         this.name = name;
         this.value = value;
     }
+
+    public String toString() {
+        return this.name + ": " + this.value;
+    }
 }

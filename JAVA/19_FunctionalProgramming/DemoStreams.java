@@ -33,19 +33,38 @@ public class DemoStreams {
         // and the default result if the stream is empty
         // Accumulator – a function that takes two parameters: a partial result of the
         // reduction operation (subtotal) and the next element of the stream (element)
-        int result = things.stream()
-        .map(x -> x.getValue())
-        .reduce(0, // Identity
+        int result = things.stream().map(x -> x.getValue()).reduce(0, // Identity
                 (subtotal, element) -> subtotal + element); // Accumulator
         System.out.println("Result is : " + result);
 
         // Reduce with an array of char
-        List<String> wordAsArray = Arrays.asList("\"","h","e","l","l","o"," ","w","o","r","l","d","\"");
-        String word = wordAsArray.stream()
-        .reduce("", // Identity
-         (partialWord, letter)-> partialWord+letter);
-  
+        List<String> wordAsArray = Arrays.asList("\"", "h", "e", "l", "l", "o", " ", "w", "o", "r", "l", "d", "\"");
+        String word = wordAsArray.stream().reduce("", // Identity
+                (partialWord, letter) -> partialWord + letter);
+
         System.out.println("Word: " + word);
+
+        // Streams with complex things
+        List<ComplexThing> complexThingsList = Arrays.asList(new ComplexThing(new Thing("Brique", 45), "Deckard"),
+                new ComplexThing(new Thing("Broque", 54), "Deckird"),
+                new ComplexThing(new Thing("Braque", 45), "Dockerd"));
+
+        // Prints the names of the nested entities
+        complexThingsList.stream().map(x -> x.something.getName()).forEach(System.out::println);
+
+        // Gets the nested entities
+        List<Thing> lessComplexThingList = complexThingsList.stream().map(w -> w.something)
+                .collect(Collectors.toList());
+        for (Thing t : lessComplexThingList) {
+            System.out.println("t: " + t.getName());
+        }
+
+        // Get a new list of things with the name of the mother entity concatenated with
+        // the name of the child entity and its value
+        List<Thing> renamedThingList = complexThingsList.stream()
+                .map(x -> new Thing(x.getName() + "_" + x.something.getName(), x.something.getValue()))
+                .collect(Collectors.toList());
+        renamedThingList.stream().forEach(System.out::println);
 
     }
 }
