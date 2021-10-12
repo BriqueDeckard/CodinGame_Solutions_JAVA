@@ -49,11 +49,12 @@ class Lambda_01 {
         display_2.accept("Hello world");
 
         // ---- With multiple parameters ----
+        // Adder
         BiFunction<Integer, Integer, Long> add = (val1, val2) -> (long) val1 + val2;
-
-        Consumer<String> display = (param) -> System.out.println(param);
-
+        // Stringifier
         Function<Long, String> stringify = (val) -> "" + val;
+        // Displayer
+        Consumer<String> display = (param) -> System.out.println(param);
 
         display.accept(stringify.apply(add.apply(10, 12)));
 
