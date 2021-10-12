@@ -6,11 +6,11 @@ public class GrosObjet implements IGrosObjet {
         System.out.println("    constructeur GrosObjet === Cr�ation tr�s ch�re ===");
     }
 
-    public void premi�reM�thodeAyantVraimentBesoinDeGrosObjet(){
+    public void premiereMethodeAyantVraimentBesoinDeGrosObjet(){
         System.out.println("    premi�reM�thodeAyantVraimentBesoinDeGrosObjet()");
     }
 
-    public void secondeM�thodeAyantVraimentBesoinDeGrosObjet(){
+    public void secondeMethodeAyantVraimentBesoinDeGrosObjet(){
         System.out.println("    secondeM�thodeAyantVraimentBesoinDeGrosObjet()");
     }
 

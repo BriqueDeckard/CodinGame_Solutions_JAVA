@@ -12,14 +12,14 @@ public class GrosObjetProxy implements IGrosObjet {
 	}
 
 	@Override
-	public void premi�reM�thodeAyantVraimentBesoinDeGrosObjet() {
-		getInstance().premi�reM�thodeAyantVraimentBesoinDeGrosObjet();
+	public void premiereMethodeAyantVraimentBesoinDeGrosObjet() {
+		getInstance().premiereMethodeAyantVraimentBesoinDeGrosObjet();
 		
 	}
 
 	@Override
-	public void secondeM�thodeAyantVraimentBesoinDeGrosObjet() {
-		getInstance().secondeM�thodeAyantVraimentBesoinDeGrosObjet();
+	public void secondeMethodeAyantVraimentBesoinDeGrosObjet() {
+		getInstance().secondeMethodeAyantVraimentBesoinDeGrosObjet();
 		
 	}
 

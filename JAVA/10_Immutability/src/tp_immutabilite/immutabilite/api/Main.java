@@ -5,8 +5,6 @@
 package tp_immutabilite.immutabilite.api;
 
 import java.sql.Date;
-import java.util.ArrayList;
-import java.util.List;
 
 import tp_immutabilite.immutabilite.models.NonMutablePerson;
 import tp_immutabilite.immutabilite.models.NonSettablePerson;
