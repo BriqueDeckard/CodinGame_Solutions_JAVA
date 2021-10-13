@@ -60,6 +60,7 @@ The covered languages and technologies are:
 <ul>
  <!-- BASICS -->
  <li><b>BASICS: </b></li>
+ <ul>
  <li><a href="https://github.com/BriqueDeckard/Notes/blob/master/JAVA/README.md">Command lines</a></li>
  <li><a href="https://github.com/BriqueDeckard/Notes/tree/master/JAVA/01_Areas">Areas calculation</a></li>
  <li><a href="https://github.com/BriqueDeckard/Notes/tree/master/JAVA/06_Numbers">Numbers</a></li>
@@ -68,35 +69,52 @@ The covered languages and technologies are:
  <li><a href="https://github.com/BriqueDeckard/Notes/tree/master/JAVA/03_Chars">Chars manipulation</a></li>
  <li><a href="https://github.com/BriqueDeckard/Notes/tree/master/JAVA/04_Lists">List manipulation</a></li>
  <li><a href="https://github.com/BriqueDeckard/Notes/tree/master/JAVA/05_Loops">Loops</a></li> 
+ </ul>
  <!-- SEARCH METHODS -->
  <li><b>SEARCH METHODS: </b></li>
+ <ul>
  <li><a href="https://github.com/BriqueDeckard/Notes/tree/master/JAVA/07_Searchs">Search methods</a></li>
+ </ul>
  <!-- DESIGN PATTERNS --> 
  <li><b>DESIGN PATTERNS: </b></li>
+ <ul>
  <li><a href="https://github.com/BriqueDeckard/Notes/tree/master/JAVA/11_Patterns">Design patterns</a></li>
+ </ul>
  <!-- FUNCTIONAL PROGRAMMING -->
  <li><b>FUNCTIONAL PROGRAMMING: </b></li>
+ <ul>
  <li><a href="https://github.com/BriqueDeckard/Notes/tree/master/JAVA/19_FunctionalProgramming">Functional Programming</a></li>
  <li><a href="https://github.com/BriqueDeckard/Notes/tree/master/JAVA/10_Immutability">Immutability</a></li>
  <li><a href="https://github.com/BriqueDeckard/Notes/tree/master/JAVA/14_Lambdas">Lambdas usage</a></li>
  <li><a href="https://github.com/BriqueDeckard/Notes/tree/master/JAVA/16_Predicates">Usage of predicates</a></li>
+ </ul>
  <!-- SORTING -->
  <li><b>SORTING: </b></li>
+ <ul>
  <li><a href="https://github.com/BriqueDeckard/Notes/tree/master/JAVA/15_Sort">Misc sorting methods</a></li>
+ </ul>
  <!-- FILES -->
  <li><b>FILES: </b></li>
+ <ul>
  <li><a href="https://github.com/BriqueDeckard/Notes/tree/master/JAVA/13_Files/01_WriteFile/WriteAFile">Write in a file</a></li>
+ </ul>
  <!-- JSON -->
  <li><b>JSON: </b></li>
+ <ul>
  <li><a href="https://github.com/BriqueDeckard/Notes/tree/master/JAVA/17_JSON/JSON_Object/JSONObject/jsonconverter">JSON Converter</a></li>
+ </ul>
  <!-- APIs -->
  <li><b>APIs: </b></li>
+ <ul>
  <li><a href="https://github.com/BriqueDeckard/Notes/tree/master/JAVA/12_API">API</a></li>
+ </ul>
  <!-- FRAMEWORKS -->
  <li><b>FRAMEWORKS: </b></li>
+ <ul>
  <li><a href="https://github.com/BriqueDeckard/Notes/tree/master/JAVA/18_Maven">Maven</a></li>
  <li><a href="https://github.com/BriqueDeckard/Notes/tree/master/JAVA/20_Spring">Spring</a></li>
  <li><a href="https://github.com/BriqueDeckard/Notes/tree/master/JAVA/21_Strut">Strut</a></li>
+ </ul>
  </ul>
 </details>
  <details>
