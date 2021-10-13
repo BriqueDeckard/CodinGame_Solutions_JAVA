@@ -59,6 +59,7 @@ The covered languages and technologies are:
 <summary>Java SE/JEE</summary>
 <ul>
  <!-- BASICS -->
+ <li><b>BASICS: </b></li>
  <li><a href="https://github.com/BriqueDeckard/Notes/blob/master/JAVA/README.md">Command lines</a></li>
  <li><a href="https://github.com/BriqueDeckard/Notes/tree/master/JAVA/01_Areas">Areas calculation</a></li>
  <li><a href="https://github.com/BriqueDeckard/Notes/tree/master/JAVA/06_Numbers">Numbers</a></li>
@@ -68,23 +69,31 @@ The covered languages and technologies are:
  <li><a href="https://github.com/BriqueDeckard/Notes/tree/master/JAVA/04_Lists">List manipulation</a></li>
  <li><a href="https://github.com/BriqueDeckard/Notes/tree/master/JAVA/05_Loops">Loops</a></li> 
  <!-- SEARCH METHODS -->
+ <li><b>SEARCH METHODS: </b></li>
  <li><a href="https://github.com/BriqueDeckard/Notes/tree/master/JAVA/07_Searchs">Search methods</a></li>
  <!-- DESIGN PATTERNS --> 
+ <li><b>DESIGN PATTERNS: </b></li>
  <li><a href="https://github.com/BriqueDeckard/Notes/tree/master/JAVA/11_Patterns">Design patterns</a></li>
  <!-- FUNCTIONAL PROGRAMMING -->
+ <li><b>FUNCTIONAL PROGRAMMING: </b></li>
  <li><a href="https://github.com/BriqueDeckard/Notes/tree/master/JAVA/19_FunctionalProgramming">Functional Programming</a></li>
  <li><a href="https://github.com/BriqueDeckard/Notes/tree/master/JAVA/10_Immutability">Immutability</a></li>
  <li><a href="https://github.com/BriqueDeckard/Notes/tree/master/JAVA/14_Lambdas">Lambdas usage</a></li>
  <li><a href="https://github.com/BriqueDeckard/Notes/tree/master/JAVA/16_Predicates">Usage of predicates</a></li>
  <!-- SORTING -->
+ <li><b>SORTING: </b></li>
  <li><a href="https://github.com/BriqueDeckard/Notes/tree/master/JAVA/15_Sort">Misc sorting methods</a></li>
  <!-- FILES -->
+ <li><b>FILES: </b></li>
  <li><a href="https://github.com/BriqueDeckard/Notes/tree/master/JAVA/13_Files/01_WriteFile/WriteAFile">Write in a file</a></li>
  <!-- JSON -->
+ <li><b>JSON: </b></li>
  <li><a href="https://github.com/BriqueDeckard/Notes/tree/master/JAVA/17_JSON/JSON_Object/JSONObject/jsonconverter">JSON Converter</a></li>
  <!-- APIs -->
+ <li><b>APIs: </b></li>
  <li><a href="https://github.com/BriqueDeckard/Notes/tree/master/JAVA/12_API">API</a></li>
  <!-- FRAMEWORKS -->
+ <li><b>FRAMEWORKS: </b></li>
  <li><a href="https://github.com/BriqueDeckard/Notes/tree/master/JAVA/18_Maven">Maven</a></li>
  <li><a href="https://github.com/BriqueDeckard/Notes/tree/master/JAVA/20_Spring">Spring</a></li>
  <li><a href="https://github.com/BriqueDeckard/Notes/tree/master/JAVA/21_Strut">Strut</a></li>
