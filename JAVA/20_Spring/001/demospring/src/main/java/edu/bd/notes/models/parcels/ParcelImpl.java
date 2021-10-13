@@ -19,7 +19,9 @@ public class ParcelImpl implements Parcel {
 
     @Override
     public void listsPlants() {
-        plants.stream().forEach(System.out::println);
+        for (Plant p : plants) {
+            System.out.println(p.toString());
+        }
 
     }
 
@@ -31,13 +33,16 @@ public class ParcelImpl implements Parcel {
 
     @Override
     public void putFertilizer(int quantity) {
-        plants.stream().forEach(x -> x.feedFertilizer(quantity));
-
+        for (Plant p : plants) {
+            p.feedFertilizer(quantiry);
+        }
     }
 
     @Override
     public void water(int quantity) {
-        plants.stream().forEach(x -> x.feedWater(quantity));
+        for (Plant p : plants) {
+            p.feedWater(quantity);
+        }
 
     }
 
