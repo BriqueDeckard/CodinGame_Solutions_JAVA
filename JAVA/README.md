@@ -20,3 +20,7 @@
 **With packages**
 
 -> java com.full.packages.path.MyClass
+
+### Run a jar
+**Without the classpath**
+--> java -jar filename.jar
