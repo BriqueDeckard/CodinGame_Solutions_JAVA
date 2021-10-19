@@ -26,4 +26,4 @@
 --> java -jar filename.jar
 
 ## Collections usages : 
-[collections](resources/collectionsJava.png)
+![collections](resources/collectionsJava.png)
