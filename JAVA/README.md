@@ -24,3 +24,6 @@
 ### Run a jar
 **Without the classpath**
 --> java -jar filename.jar
+
+## Collections usages : 
+[collections](resources/collectionsJava.png)
