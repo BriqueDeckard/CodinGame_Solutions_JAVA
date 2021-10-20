@@ -2,15 +2,19 @@ package com.ecommerce.microcommerce.web.controller;
 
 import com.ecommerce.microcommerce.dao.ProductDao;
 import com.ecommerce.microcommerce.model.Product;
+import com.ecommerce.microcommerce.web.exceptions.ProduitInrouvableException;
 import com.fasterxml.jackson.databind.ser.FilterProvider;
 import com.fasterxml.jackson.databind.ser.impl.SimpleBeanPropertyFilter;
 import com.fasterxml.jackson.databind.ser.impl.SimpleFilterProvider;
+import io.swagger.annotations.Api;
+import io.swagger.annotations.ApiOperation;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.ResponseEntity;
 import org.springframework.http.converter.json.MappingJacksonValue;
 import org.springframework.web.bind.annotation.*;
 import org.springframework.web.servlet.support.ServletUriComponentsBuilder;
 
+import javax.validation.Valid;
 import java.net.URI;
 import java.util.List;
 
@@ -27,6 +31,7 @@ import java.util.List;
  * aussi que chaque méthode va renvoyer directement la réponse
  * JSON à l'utilisateur, donc pas de vue dans le circuit.
  */
+@Api( description="API pour es opérations CRUD sur les produits.")
 @RestController
 public class ProductController {
 
@@ -81,9 +86,13 @@ public class ProductController {
     // @GetMapping(value="/Produits/{id}")
     // Is equal to :
     // @RequestMapping(value = "/Produits/{id}", method = RequestMethod.GET)
+
+    @ApiOperation(value = "Récupère un produit grâce à son ID à condition que celui-ci soit en stock!")
     @GetMapping(value="/produits/{id}")
     public Product afficherUnProduit(@PathVariable int id){
-        return  productDao.findById(id);
+        Product product = productDao.findById(id);
+        if(product == null) throw new ProduitInrouvableException("Le produit avec l'id: " + id + " est introuvable");
+        return product;
     }
 
     /**
@@ -103,7 +112,7 @@ public class ProductController {
      * @param product
      */
     @PostMapping(value = "/produits")
-    public ResponseEntity<Void> ajouterProduit(@RequestBody Product product){
+    public ResponseEntity<Void> ajouterProduit(@Valid @RequestBody Product product){
         // Add the product
         Product productAdded = productDao.save(product);
         // Check if the product has been added
@@ -133,12 +142,12 @@ public class ProductController {
         return productDao.findByNomLike("%"+recherche+"%");
     }
 
-    @DeleteMapping (value = "/Produits/{id}")
+    @DeleteMapping (value = "/produits/{id}")
     public void supprimerProduit(@PathVariable int id) {
         productDao.deleteById(id);
     }
 
-    @PutMapping (value = "/Produits")
+    @PutMapping (value = "/produits")
     public void updateProduit(@RequestBody Product product) {
 
         productDao.save(product);
