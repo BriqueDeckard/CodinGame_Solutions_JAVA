@@ -42,7 +42,7 @@ public class ProductController {
     @RequestMapping(value="/produits", method= RequestMethod.GET)
     public MappingJacksonValue listeProduits(){
         // get all the entities
-        List<Product> produits =  productDao.findAll();
+        Iterable<Product> produits =  productDao.findAll();
         // create the filter
         /*
         SimpleBeanPropertyFilter est une implémentation de PropertyFilter qui permet d'établir les
@@ -121,5 +121,26 @@ public class ProductController {
                 .buildAndExpand(productAdded.getId())
                 .toUri();
         return ResponseEntity.created(location).build();
+    }
+
+    @GetMapping(value = "test/produits/{prixLimit}")
+    public List<Product> testeDeRequetes(@PathVariable int prixLimit) {
+        return productDao.findByPrixGreaterThan(400);
+    }
+
+    @GetMapping(value = "test/produits/{recherche}")
+    public List<Product> testeDeRequetes(@PathVariable String recherche) {
+        return productDao.findByNomLike("%"+recherche+"%");
+    }
+
+    @DeleteMapping (value = "/Produits/{id}")
+    public void supprimerProduit(@PathVariable int id) {
+        productDao.deleteById(id);
+    }
+
+    @PutMapping (value = "/Produits")
+    public void updateProduit(@RequestBody Product product) {
+
+        productDao.save(product);
     }
 }
