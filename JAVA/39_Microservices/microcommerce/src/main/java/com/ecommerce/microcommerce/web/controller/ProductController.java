@@ -32,7 +32,7 @@ public class ProductController {
      *  et la méthode listeProduits
      * @return
      */
-    @RequestMapping(value="/Produits", method= RequestMethod.GET)
+    @RequestMapping(value="/produits", method= RequestMethod.GET)
     public List<Product> listeProduits(){
         return productDao.findAll();
     }
@@ -48,7 +48,7 @@ public class ProductController {
     // @GetMapping(value="/Produits/{id}")
     // Is equal to :
     // @RequestMapping(value = "/Produits/{id}", method = RequestMethod.GET)
-    @GetMapping(value="/Produits/{id}")
+    @GetMapping(value="/produits/{id}")
     public Product afficherUnProduit(@PathVariable int id){
         return  productDao.findById(id);
     }
