@@ -7,39 +7,33 @@ import springfox.documentation.builders.RequestHandlerSelectors;
 import springfox.documentation.spi.DocumentationType;
 import springfox.documentation.spring.web.plugins.Docket;
 import springfox.documentation.swagger2.annotations.EnableSwagger2;
-/*
-L'annotation  @Configuration  appliquée à la classe permet de remplacer un fichier de configuration classique en XML.
-Elle nous donne accès à plusieurs méthodes très intéressantes pour la personnalisation de Swagger, grâce à la classe
-Docket qui gère toutes les configurations.
 
-On commence alors par initialiser un objet Docket en précisant que nous souhaitons utiliser swagger 2.
-
-select permet d'initialiser une classe du nom de ApiSelectorBuilder qui donne accès aux méthodes de personnalisation
-suivantes. Nous vous attardez pas sur cette méthode, elle n'est d'aucune utilité pour la suite.
-
-apis est la première méthode importante. Elle permet de filtrer la documentation à exposer selon les contrôleurs.
-Ainsi, vous pouvez cacher la documentation d'une partie privée ou interne de votre API. Dans ce cas, nous avons
-utilisé RequestHandlerSelectors.any().
-
-RequestHandlerSelectors est un prédicat (introduit depuis java 8) qui permet de retourner TRUE ou FALSE selon la
- conditions utilisée. Dans ce cas, nous avons utilisé any qui retournera toujours TRUE. En d'autres termes, nous
- indiquons vouloir documenter toutes les classes dans tous les packages. RequestHandlerSelectors offre plusieurs
- autres méthodes comme annotationPresent qui vous permet de définir une annotation en paramètre. Swagger ne
- documentera alors que les classes qu'il utilise. La plus utilisée est basePackage qui permet de trier
- selon le Package. Nous allons voir un exemple juste après.
-
-paths : cette méthode donne accès à une autre façon de filtrer : selon l'URI des requêtes. Ainsi, vous pouvez,
-par exemple, demander à Swagger de ne documenter que les méthodes qui répondent à des requêtes commençant
-par "/public" .
- */
+// @Configuration annotation applied to the class allows to replace a classic xml  configuration file.
+// Docket class, that manage all the configurations offers us to customize Swagger
 @Configuration
 @EnableSwagger2
 public class SwaggerConfig {
+    // Start with a Docket object initilization.
     @Bean
     public Docket api() {
         return new Docket(DocumentationType.SWAGGER_2)
+                // select initializes a class name ApiSelectorBuilder. This class offers access to
+                // the customization methods
                 .select()
+                // apis is the first notable method. It allows to filter the exposed documentation.
+                // by the controllers
+                // As it, you can hide the private documentation of your API.
+                //
+                // RequestHandlerSelectors is a predicate
+                // In this case, we use 'any' that will always return true. --> All the classes in all the packages
+                // RequestHandlerSelectors offers severals others methods like annotationPresent  that allows
+                // to define a parameter annotation
+                // Swagger will document only the used classes.
+                // The most used is  basePackage that allow to sort by the package.
                 .apis(RequestHandlerSelectors.basePackage("com.ecommerce.microcommerce.web"))
+                // Path : this method gives access to another way of filtering : by query URI. As it, you can
+                // ask to swagger to only document the methods that correspond to queries starting by
+                // a sequence like "/public"
                 .paths(PathSelectors.regex("/produits.*"))
                 .build();
     }

@@ -19,29 +19,28 @@ import java.net.URI;
 import java.util.List;
 
 /**
- * l'annotation @Controller de Spring
- * permet de désigner une classe comme contrôleur, lui conférant
- * la capacité de traiter les requêtes de type GET, POST, etc.
- * ensuite @ResponseBody sur les méthodes qui devront
- * répondre directement sans passer par une vue.
+ * @Controller annotation from Sprign allow to specify a class as a
+ * controller, giving it the ability to treat GET, POST, ... queries
+ * We then apply "@ResponseBody" on the methods that will have to
+ * answer directly without passing by the view.
  *
- * @RestController est simplement la combinaison des deux annotations
- * précédentes. Une fois ajouté, il indique que cette classe va
- * pouvoir traiter les requêtes que nous allons définir. Il indique
- * aussi que chaque méthode va renvoyer directement la réponse
- * JSON à l'utilisateur, donc pas de vue dans le circuit.
+ * @RestController is simply the combination of @Controller and @ResponseBody
+ * One added, it indicates that this class will process
+ * queries that we will define.
+ * It also indicates that each method will send directly the JSON answer
+ * to the uuser
  */
 @Api( description="API pour es opérations CRUD sur les produits.")
 @RestController
 public class ProductController {
 
-    // Autowired allow injection
+    // Autowired allows injection (like 'ejb')
     @Autowired
     private ProductDao productDao;
     /**
-     *  @RequestMapping permet de faire le lien entre
-     *  l'URI "/Produits", invoquée via GET,
-     *  et la méthode listeProduits
+     *  @RequestMapping allows to make the link between
+     *  the URI "/Produits", invoked via the GET,
+     *  and the listeProduits method
      * @return
      */
     @RequestMapping(value="/produits", method= RequestMethod.GET)
@@ -50,24 +49,28 @@ public class ProductController {
         Iterable<Product> produits =  productDao.findAll();
         // create the filter
         /*
-        SimpleBeanPropertyFilter est une implémentation de PropertyFilter qui permet d'établir les
-         règles de filtrage sur un Bean donné. Ici, nous avons choisi la règle serializeAllExcept
-         qui exclut uniquement les propriétés que nous souhaitons ignorer.
-         Inversement, vous pouvez procéder avec la méthode filterOutAllExcept qui marque toutes
-         les propriétés comme étant à ignorer sauf celles passées en argument.
+        SimpleBeanPropertyFilter is an implementation of PropertyFilter that allows
+         to establish the filtering rules for a given bean.
+          Her, we have chose the 'serializeAllExcept' rule, that only exclude
+          the property that we wish to ignore.
+          Inversely, you can proceed with filterOutAllExcept that
+          marks all the properties as "to ignore", exceppt those
+           passed as arguments.
          */
         SimpleBeanPropertyFilter monFiltre = SimpleBeanPropertyFilter.serializeAllExcept("prixAchat");
         // create the list of filters
         /*
-        la ligne suivante nous permet d'indiquer à Jackson à quel Bean l'appliquer.
-        Nous utilisons SimpleFilterProvider pour déclarer que les règles de filtrage que
-        nous avons créées (monFiltre) peuvent s'appliquer à tous les Bean qui sont annotés
-         avec monFiltreDynamique.
+        The following line allows us to indicate to Jackson to which bean
+        apply the filter.
+        We uuse SimpleFilterProvider to declare that the filtering rules
+         that we have created  (monFiltre) can be applied to all the beans
+          that are annotated with "monFiltreDynamique".
          */
         FilterProvider listeDeNosFiltres = new SimpleFilterProvider().addFilter("monFiltreDynamique", monFiltre);
         /*
-        nous les mettons au format MappingJacksonValue. Cela permet de donner accès aux méthodes qui nous
-        intéressent, comme setFilters qui applique les filtres que nous avons établis à la liste de Product.
+        We format it to "MappingJacksonValue"
+        This allows to give access to the methods that interest us.
+         Like  setFilters that applying filters to the product list.
          */
         MappingJacksonValue produitsFiltres = new MappingJacksonValue(produits);
         produitsFiltres.setFilters(listeDeNosFiltres);
@@ -76,10 +79,10 @@ public class ProductController {
     }
 
     /**
-     * ajout de {id} à l'URI. Cette notation permet d'indiquer
-     * que cette méthode doit répondre uniquement aux requêtes
-     * avec une URI de type /Produits/25 par exemple.
-     * id doit être un int (dans @PathVariable int id)
+     * {id} adding to the URI.
+     * This notation indicates that this method must only answer
+     * to queries presenting an URI like  /Produits/25 for example.
+     * id must be an int ( @PathVariable int id)
      * @param id
      * @return
      */
@@ -87,7 +90,8 @@ public class ProductController {
     // Is equal to :
     // @RequestMapping(value = "/Produits/{id}", method = RequestMethod.GET)
 
-    @ApiOperation(value = "Récupère un produit grâce à son ID à condition que celui-ci soit en stock!")
+    @ApiOperation(value = "Gets a product by its ID " +
+            "if it is in the stock!")
     @GetMapping(value="/produits/{id}")
     public Product afficherUnProduit(@PathVariable int id){
         Product product = productDao.findById(id);
@@ -129,7 +133,7 @@ public class ProductController {
                 .path("/{id}")
                 .buildAndExpand(productAdded.getId())
                 .toUri();
-        return ResponseEntity.created(location).build();
+        return ResponseEntity.crea0ted(location).build();
     }
 
     @GetMapping(value = "test/produits/{prixLimit}")
