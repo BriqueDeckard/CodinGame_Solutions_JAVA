@@ -1,4 +1,4 @@
-package edu.bd.notes.checkers;
+package edu.bd.notes.checkers.v1;
 
 import java.awt.BorderLayout;
 import java.awt.Color;
@@ -12,6 +12,7 @@ import javax.swing.JFrame;
 import javax.swing.JLabel;
 
 public class Checkers extends JFrame implements MouseListener {
+
 	private int board[][];
 	private int currentPlayer;
 	private int selectedPiece[];
@@ -51,17 +52,6 @@ public class Checkers extends JFrame implements MouseListener {
 	}
 
 	public Checkers() {
-		currentPlayer = 0;
-		board = new int[8][8];
-		for (int j = 0; j < 8; j++) {
-			for (int i = 0; i < 8; i++) {
-				board[i][j] = -1;
-			}
-		}
-		board[0][0] = board[2][0] = board[4][0] = board[6][0] = 0;
-		board[1][1] = board[3][1] = board[5][1] = board[7][1] = 0;
-		board[0][6] = board[2][6] = board[4][6] = board[6][6] = 1;
-		board[1][7] = board[3][7] = board[5][7] = board[7][7] = 1;
 
 		setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
 		setResizable(false);

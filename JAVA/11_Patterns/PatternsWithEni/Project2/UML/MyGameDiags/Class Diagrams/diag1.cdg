@@ -1,0 +1,113 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<ClassDiagram name="diag1" gettersGeneration="disabled" settersGeneration="disabled" showMembers="true" showAddMember="true">
+  <ClassDiagramComponents>
+    <Class name="Pacman" package="" visibility="public" gettersGeneration="auto" settersGeneration="auto" generation="auto" xPosition="94.0" yPosition="847.0" width="170" height="114">
+      <Fields>
+        <Field name="status" type="PacmanStatus" visibility="private" gettersGeneration="auto" settersGeneration="auto"/>
+      </Fields>
+      <Constructors/>
+      <Methods/>
+    </Class>
+    <Enum name="Direction" package="" visibility="public" generation="auto" xPosition="17.0" yPosition="652.0" width="170" height="179">
+      <Literals>
+        <Literal name="NORTH"/>
+        <Literal name="SOUTH"/>
+        <Literal name="EAST"/>
+        <Literal name="WEST"/>
+        <Literal name="NONE"/>
+      </Literals>
+    </Enum>
+    <Class name="Element" package="" visibility="protected" gettersGeneration="auto" settersGeneration="auto" generation="auto" xPosition="160.0" yPosition="190.0" width="170" height="133">
+      <Fields>
+        <Field name="x" type="int" visibility="protected" gettersGeneration="auto" settersGeneration="auto"/>
+        <Field name="y" type="int" visibility="protected" gettersGeneration="auto" settersGeneration="auto"/>
+      </Fields>
+      <Constructors/>
+      <Methods/>
+    </Class>
+    <Class name="MobileElement" package="" visibility="public" gettersGeneration="auto" settersGeneration="auto" generation="auto" xPosition="160.0" yPosition="370.0" width="199" height="171">
+      <Fields>
+        <Field name="direction" type="Direction" visibility="protected" gettersGeneration="auto" settersGeneration="auto"/>
+        <Field name="speed" type="int" visibility="protected" gettersGeneration="auto" settersGeneration="auto"/>
+        <Field name="position" type="int" visibility="protected" gettersGeneration="auto" settersGeneration="auto"/>
+        <Field name="statusTime" type="int" visibility="protected" gettersGeneration="auto" settersGeneration="auto"/>
+      </Fields>
+      <Constructors/>
+      <Methods/>
+    </Class>
+    <Class name="Ghost" package="" visibility="public" gettersGeneration="auto" settersGeneration="auto" generation="auto" xPosition="318.0" yPosition="847.0" width="170" height="133">
+      <Fields>
+        <Field name="status" type="GhostStatus" visibility="private" gettersGeneration="auto" settersGeneration="auto"/>
+        <Field name="color" type="int" visibility="private" gettersGeneration="auto" settersGeneration="auto"/>
+      </Fields>
+      <Constructors/>
+      <Methods/>
+    </Class>
+    <Enum name="PacmanStatus" package="" visibility="public" generation="auto" xPosition="94.0" yPosition="1027.0" width="170" height="141">
+      <Literals>
+        <Literal name="NORMAL"/>
+        <Literal name="SUPER"/>
+        <Literal name="DEAD"/>
+      </Literals>
+    </Enum>
+    <Enum name="GhostStatus" package="" visibility="public" generation="auto" xPosition="318.0" yPosition="1027.0" width="170" height="141">
+      <Literals>
+        <Literal name="TRACK"/>
+        <Literal name="EYE"/>
+        <Literal name="FLEE"/>
+      </Literals>
+    </Enum>
+    <Class name="StaticElement" package="" visibility="public" gettersGeneration="auto" settersGeneration="auto" generation="auto" xPosition="597.0" yPosition="209.0" width="170" height="95">
+      <Fields/>
+      <Constructors/>
+      <Methods/>
+    </Class>
+    <Class name="Wall" package="" visibility="public" gettersGeneration="auto" settersGeneration="auto" generation="auto" xPosition="439.0" yPosition="370.0" width="170" height="114">
+      <Fields>
+        <Field name="type" type="WallType" visibility="private" gettersGeneration="auto" settersGeneration="auto"/>
+      </Fields>
+      <Constructors/>
+      <Methods/>
+    </Class>
+    <Class name="Space" package="" visibility="public" gettersGeneration="auto" settersGeneration="auto" generation="auto" xPosition="755.0" yPosition="370.0" width="170" height="114">
+      <Fields>
+        <Field name="type" type="SpaceType" visibility="private" gettersGeneration="auto" settersGeneration="auto"/>
+      </Fields>
+      <Constructors/>
+      <Methods/>
+    </Class>
+    <Enum name="WallType" package="" visibility="public" generation="auto" xPosition="439.0" yPosition="556.0" width="170" height="198">
+      <Literals>
+        <Literal name="TOPLEFT"/>
+        <Literal name="TOPRIGHT"/>
+        <Literal name="BOTTOMLEFT"/>
+        <Literal name="BOTTOMRIGHT"/>
+        <Literal name="HORIZONTAL"/>
+        <Literal name="VERTICAL"/>
+      </Literals>
+    </Enum>
+    <Enum name="SpaceType" package="" visibility="public" generation="auto" xPosition="755.0" yPosition="556.0" width="170" height="179">
+      <Literals>
+        <Literal name="EMPTY"/>
+        <Literal name="SUPERGUM"/>
+        <Literal name="GUM"/>
+        <Literal name="GRAVEYARD"/>
+        <Literal name="START"/>
+      </Literals>
+    </Enum>
+  </ClassDiagramComponents>
+  <ClassDiagramRelations>
+    <HasRelation name="type" source="Wall" target="WallType" type="Default" sourceCardinality="0..1" targetCardinality="1..1"/>
+    <HasRelation name="direction" source="MobileElement" target="Direction" type="Default" sourceCardinality="0..1" targetCardinality="1..1"/>
+    <IsRelation name="is" source="Pacman" target="MobileElement"/>
+    <IsRelation name="is" source="Ghost" target="MobileElement"/>
+    <HasRelation name="status" source="Ghost" target="GhostStatus" type="Default" sourceCardinality="0..1" targetCardinality="1..1"/>
+    <IsRelation name="is" source="StaticElement" target="Element"/>
+    <HasRelation name="type" source="Space" target="SpaceType" type="Default" sourceCardinality="0..1" targetCardinality="1..1"/>
+    <IsRelation name="is" source="Wall" target="StaticElement"/>
+    <HasRelation name="status" source="Pacman" target="PacmanStatus" type="Default" sourceCardinality="0..1" targetCardinality="1..1"/>
+    <IsRelation name="is" source="Space" target="StaticElement"/>
+    <IsRelation name="is" source="MobileElement" target="Element"/>
+  </ClassDiagramRelations>
+</ClassDiagram>
