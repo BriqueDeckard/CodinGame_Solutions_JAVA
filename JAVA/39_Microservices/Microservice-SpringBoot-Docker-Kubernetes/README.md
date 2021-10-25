@@ -19,5 +19,16 @@ In terms of deployment and scaling, each of the microservices can be individuall
 However, because the microservices are individually deployed, there is a need to have a mechanism that allow each microservices to discovery the presence of other microservices. 
 Thus, in this guide, we will develop a simple e-commerce Spring Boot application adopting the Microservice architecture.
 
+## Microservices using Spring Boot
+The architectural of our simple e-commerce application is shown below. In our overly simplified example, we only have one customer, and all the payments and orders are made by him. There are three main components, namely API Gateway, Service Discovery Server, and Microservices.
+
 ![schema](schema.png "The architecture schema")
 
+### API Gateway
+API Gateway provides a single point-of-entry to the application. It redirects the request received to the appropriate microservices. This redirection is transparent to the user. Thus, allowing the user to use the application via the same host / url.
+
+### Service Discovery Server
+Service Discovery Server applies the service discovery mechanism to allow microservices to communicate with each other. Each microservices will register with the Service Discovery Server such that it can be discovered by other microservices.
+
+### Microservice
+Microservice is a component of the application. It usually contains the implementation details and logic of the application. It will register with the Service Discovery Server such that other microservices can call its APIs. Strictly speaking, the API Gateway and Service Discovery Server are microservice.
