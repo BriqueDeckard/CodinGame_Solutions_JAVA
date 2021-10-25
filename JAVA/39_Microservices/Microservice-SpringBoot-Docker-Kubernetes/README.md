@@ -10,4 +10,14 @@ Prior to Microservice architecture, most companies adopted the Monolithic archit
 
 ### Microservice architecture
 
-Microservice architecture provides highly extensible code base and clear segregation of the business logics. In Microservice architecture, the application is made up of multiple microservices. You can view each of these microservices as a component of your business logic. These components are identified by dividing the business logics using bounded context. These bounded contexts can be developed and viewed as a microservice. For instance, an e-commerce application can be divided into multiple microservices. These microservices include Payment, Order, Customer and more. Moreover, due to the recent popularity among companies in having smaller teams, each of these microservices can be developed by a small team. In terms of deployment and scaling, each of the microservices can be individually deployed and scaled based on business needs. However, because the microservices are individually deployed, there is a need to have a mechanism that allow each microservices to discovery the presence of other microservices. Thus, in this guide, we will develop a simple e-commerce Spring Boot application adopting the Microservice architecture.
+Microservice architecture provides highly extensible code base and clear segregation of the business logics. 
+In Microservice architecture, the application is made up of multiple microservices. You can view each of these microservices as a component of your business logic. 
+These components are identified by dividing the business logics using bounded context. These bounded contexts can be developed and viewed as a microservice. For instance, an e-commerce application can be divided into multiple microservices. 
+These microservices include Payment, Order, Customer and more. 
+Moreover, due to the recent popularity among companies in having smaller teams, each of these microservices can be developed by a small team. 
+In terms of deployment and scaling, each of the microservices can be individually deployed and scaled based on business needs. 
+However, because the microservices are individually deployed, there is a need to have a mechanism that allow each microservices to discovery the presence of other microservices. 
+Thus, in this guide, we will develop a simple e-commerce Spring Boot application adopting the Microservice architecture.
+
+![schema](schema.png "The architecture schema")
+
