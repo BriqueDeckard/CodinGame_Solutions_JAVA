@@ -1,8 +1,8 @@
 spring:
   application:
-    name: payment-service
+    name: order-service
 server:
-  port: 8081
+  port: 8082
   forward-headers-strategy: framework
 eureka:
   client:
