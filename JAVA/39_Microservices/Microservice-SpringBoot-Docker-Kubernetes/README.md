@@ -3,7 +3,7 @@
 [here](https://lauweitang.medium.com/microservices-with-spring-boot-docker-and-kubernetes-part-1-3f50bfca582e)
 
 ## Notes:
-
+<details>
 ### Build the Gradle Wrapper: 
 ```
 gradle wrapper --gradle-version [gradle version]
@@ -24,7 +24,7 @@ docker build -t name-of-the-service .
 ```
 docker run -d -p [port]:[port] --name="name-of-the-service" name-of-the-container
 ```
-
+</details>
 
 ## Microservice over Monolithic:
 
