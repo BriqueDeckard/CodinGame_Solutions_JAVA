@@ -77,3 +77,7 @@ Docker and Kubernetes handle the hassle for us.
 	<li><b>COPY</b> — Copy the variable into the directory ./app.jar in the container</li>
 	<li><b>CMD</b> — The command to be run</li>
 </ul>
+
+## Build the Gradle Wrapper : 
+
+gradle wrapper --gradle-version [gradle version]
