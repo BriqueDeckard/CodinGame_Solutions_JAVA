@@ -167,3 +167,5 @@ spec:
   type: LoadBalancer
 
 ```
+
+For the other services that does not need to perform Load Balancing, simply change spec.type under Service into NodePort .
