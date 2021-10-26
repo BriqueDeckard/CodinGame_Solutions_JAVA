@@ -4,7 +4,9 @@
 
 
 <details>
-	<summary>## Notes:</summary>
+	<summary>
+	## Notes:
+	</summary>
 
 ### Build the Gradle Wrapper: 
 ```
