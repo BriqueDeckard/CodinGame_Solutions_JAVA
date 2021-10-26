@@ -2,6 +2,13 @@
 
 [here](https://lauweitang.medium.com/microservices-with-spring-boot-docker-and-kubernetes-part-1-3f50bfca582e)
 
+## Notes :
+
+### Build the Gradle Wrapper : 
+
+gradle wrapper --gradle-version [gradle version]
+
+
 ## Microservice over Monolithic
 
 ### Monolithic Architecture
@@ -68,7 +75,8 @@ Docker and Kubernetes handle the hassle for us.
 
 ![schema](schemaDocker.png "The docker architecture schema")
 
-## Dockerfile :
+## Docker :
+### Dockerfile :
 
 <ul>
 	<li><b>FROM</b> — The base image of the build process. The image will be built onto of this base image</li>
@@ -78,6 +86,14 @@ Docker and Kubernetes handle the hassle for us.
 	<li><b>CMD</b> — The command to be run</li>
 </ul>
 
-## Build the Gradle Wrapper : 
 
-gradle wrapper --gradle-version [gradle version]
+### Build the docker image
+```
+docker build -t name-of-the-service .
+```
+### Run the docker image
+```
+docker run -d -p [port]:[port] --name="name-of-the-service" name-of-the-container
+```
+
+
