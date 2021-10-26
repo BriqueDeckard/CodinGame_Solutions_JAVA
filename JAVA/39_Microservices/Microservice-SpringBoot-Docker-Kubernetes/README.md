@@ -44,3 +44,13 @@ Docker and Kubernetes handle the hassle for us.
 - Kubernetes is a tool that allows developers to manage and scale these containers easily.
 
 ![schema](schemaDocker.png "The docker architecture schema")
+
+## Dockerfile : 
+
+<ul>
+	<li><b>FROM</b> — The base image of the build process. The image will be built onto of this base image</li>
+	<li><b>EXPOSE</b> — Exposing the container via this port</li>
+	<li><b>ARG</b> — The argument of the file. You can think of it as variable of the Dockerfile</li>
+	<li><b>COPY</b> — Copy the variable into the directory ./app.jar in the container</li>
+	<li><b>CMD</b> — The command to be run</li>
+</ul>
