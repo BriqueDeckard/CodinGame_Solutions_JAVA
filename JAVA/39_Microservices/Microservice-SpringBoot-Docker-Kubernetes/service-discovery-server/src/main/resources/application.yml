@@ -1,6 +1,9 @@
 spring:
   application:
     name: service-discovery-server
+  cloud:
+    kubernetes:
+      enabled: false
 server:
   port: 8761
 eureka:

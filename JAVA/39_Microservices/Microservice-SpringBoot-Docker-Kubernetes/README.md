@@ -119,3 +119,51 @@ From the architectural diagram below, now the whole application lives within the
 
 Furthermore, kKubernetes has a component called pod, which is the smallest deployable units in Kubernetes. A pod contains one or more instance of container. As you can see from the diagram, our Payment pod contains two payment microservice instances.
 ![schema](schemaKubernetes.png "The kubernetes integration")
+
+When the application is deployed on Kubernetes, we would like to have the Kubernetes settings and configurations. This can be achieved using Spring Profiles. 
+Furthermore, since Kubernetes comes with default service discovery mechanism, we will be disabling Eureka when deployed on Kubernetes.
+
+In api-gateway.yml file, copy the configuration below. In our example, we are using two types of Kubernetes recources, Deployment and Service .
+- Deployment: Creates the pod with the relevant metadata and based on the template specified. This is where we can specify the number of containers in the pod.
+- Service: Exposes the deployment such that it can be reached by other pods in the cluster.
+
+```
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: api-gateway
+  labels:
+    app: api-gateway
+  namespace: default
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: api-gateway
+  template:
+    metadata:
+      labels:
+        app: api-gateway
+    spec:
+      containers:
+        - name: api-gateway
+          image: api-gateway:latest
+          imagePullPolicy: IfNotPresent
+          ports:
+            - containerPort: 8080
+---
+apiVersion: v1
+kind: Service
+metadata:
+  name: api-gateway
+  namespace: default
+spec:
+  selector:
+    app: api-gateway
+  ports:
+    - protocol: TCP
+      port: 8080
+      targetPort: 8080
+  type: LoadBalancer
+
+```
