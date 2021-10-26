@@ -2,9 +2,14 @@
 
 [here](https://lauweitang.medium.com/microservices-with-spring-boot-docker-and-kubernetes-part-1-3f50bfca582e)
 
-## Notes:
+
 <details>
-	
+	<summary>
+
+		## Notes:
+		
+	</summary>
+
 ### Build the Gradle Wrapper: 
 ```
 gradle wrapper --gradle-version [gradle version]
