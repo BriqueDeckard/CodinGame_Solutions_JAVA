@@ -114,3 +114,8 @@ With the docker images built, we are ready to compose the construction of contai
 In the code below (see docker-compose.yml), you can see that we have multiple services. Each service contains the relevant information of the service. The important part is to contain the links and depends_on fields to indicate the dependencies between microservices.
 
 ## Kubernetes: 
+Kubernetes is a technology that supports automating deployment, scaling, and management of containerized applications.
+From the architectural diagram below, now the whole application lives within the Kubernetes cluster. 
+
+Furthermore, kKubernetes has a component called pod, which is the smallest deployable units in Kubernetes. A pod contains one or more instance of container. As you can see from the diagram, our Payment pod contains two payment microservice instances.
+![schema](schemaKubernetes.png "The kubernetes integration")
