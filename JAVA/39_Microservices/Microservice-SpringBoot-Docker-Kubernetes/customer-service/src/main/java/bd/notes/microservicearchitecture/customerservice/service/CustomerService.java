@@ -22,6 +22,9 @@ public class CustomerService {
     @Autowired
     private RestTemplate restTemplate;
 
+    //  our customer-service interacts with order-service and payment-service.
+    //  Thus, we have to adjust our customer-service to send the REST request
+    //  to the relevant microservices.
     public Customer getCustomerDetails() {
         OrderList orders = restTemplate.getForObject("http://order-service/api/order", OrderList.class);
         PaymentList payments = restTemplate.getForObject("http://payment-service/api/payment", PaymentList.class);
