@@ -16,7 +16,14 @@ docker kill $(docker container ls -q)
 ```
 docker-compose up
 ```
-
+### Build the docker image:
+```
+docker build -t name-of-the-service .
+```
+### Run the docker image:
+```
+docker run -d -p [port]:[port] --name="name-of-the-service" name-of-the-container
+```
 
 
 ## Microservice over Monolithic:
@@ -95,16 +102,6 @@ Docker and Kubernetes handle the hassle for us.
 	<li><b>COPY</b> — Copy the variable into the directory ./app.jar in the container</li>
 	<li><b>CMD</b> — The command to be run</li>
 </ul>
-
-
-### Build the docker image:
-```
-docker build -t name-of-the-service .
-```
-### Run the docker image:
-```
-docker run -d -p [port]:[port] --name="name-of-the-service" name-of-the-container
-```
 
 ### Docker-Compose: 
 With the docker images built, we are ready to compose the construction of containers. There are two ways to start the containers. The first way is via the command line using the docker run command. However, command line is not ideal if you have multiple containers and with complex instructions. The second way is to use Docker-Compose. Docker-Compose is a file that contains a set of instructions in starting the applications.
