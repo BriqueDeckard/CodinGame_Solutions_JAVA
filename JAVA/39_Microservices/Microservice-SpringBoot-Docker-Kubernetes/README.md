@@ -43,4 +43,4 @@ Docker and Kubernetes handle the hassle for us.
 - Docker is a technology that containerise applications such that these containers can be deployed regardless of platform (Windows, Mac or Linux) without installing the relevant dependencies.
 - Kubernetes is a tool that allows developers to manage and scale these containers easily.
 
-
+![schema](schemaDocker.png "The docker architecture schema")
