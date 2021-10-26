@@ -1,17 +1,27 @@
-# Microservices with Spring Boot, Docker and Kubernetes
+# Microservices with Spring Boot, Docker and Kubernetes: 
 
 [here](https://lauweitang.medium.com/microservices-with-spring-boot-docker-and-kubernetes-part-1-3f50bfca582e)
 
-## Notes :
+## Notes:
 
-### Build the Gradle Wrapper : 
-
+### Build the Gradle Wrapper: 
+```
 gradle wrapper --gradle-version [gradle version]
+```
+### Kill all the containers: 
+```
+docker kill $(docker container ls -q)
+```
+### Docker compose: 
+```
+docker-compose up
+```
 
 
-## Microservice over Monolithic
 
-### Monolithic Architecture
+## Microservice over Monolithic:
+
+### Monolithic Architecture:
 
 Prior to Microservice architecture, most companies adopted the Monolithic architecture. Monolithic architecture provides
 a centralised code base which is easy to develop and test. Furthermore, it provides ease in deployment as we are dealing
@@ -20,7 +30,7 @@ as codebase grows and during scaling of the application. Monolithic applications
 deployment time and scaling of multiple instances of the application. The analogy that I like to use to describe
 Monolithic applications is having one superhero to save the world.
 
-### Microservice architecture
+### Microservice architecture:
 
 Microservice architecture provides highly extensible code base and clear segregation of the business logics. In
 Microservice architecture, the application is made up of multiple microservices. You can view each of these
@@ -33,7 +43,7 @@ and scaled based on business needs. However, because the microservices are indiv
 have a mechanism that allow each microservices to discovery the presence of other microservices. Thus, in this guide, we
 will develop a simple e-commerce Spring Boot application adopting the Microservice architecture.
 
-## Microservices using Spring Boot
+## Microservices using Spring Boot:
 
 The architectural of our simple e-commerce application is shown below. In our overly simplified example, we only have
 one customer, and all the payments and orders are made by him. There are three main components, namely API Gateway,
@@ -41,19 +51,19 @@ Service Discovery Server, and Microservices.
 
 ![schema](schema.png "The architecture schema")
 
-### API Gateway
+### API Gateway:
 
 API Gateway provides a single point-of-entry to the application. It redirects the request received to the appropriate
 microservices. This redirection is transparent to the user. Thus, allowing the user to use the application via the same
 host / url.
 
-### Service Discovery Server
+### Service Discovery Server: 
 
 Service Discovery Server applies the service discovery mechanism to allow microservices to communicate with each other.
 Each microservices will register with the Service Discovery Server such that it can be discovered by other
 microservices.
 
-### Microservice
+### Microservice: 
 
 Microservice is a component of the application. It usually contains the implementation details and logic of the
 application. It will register with the Service Discovery Server such that other microservices can call its APIs.
@@ -75,8 +85,8 @@ Docker and Kubernetes handle the hassle for us.
 
 ![schema](schemaDocker.png "The docker architecture schema")
 
-## Docker :
-### Dockerfile :
+## Docker:
+### Dockerfile:
 
 <ul>
 	<li><b>FROM</b> — The base image of the build process. The image will be built onto of this base image</li>
@@ -87,13 +97,18 @@ Docker and Kubernetes handle the hassle for us.
 </ul>
 
 
-### Build the docker image
+### Build the docker image:
 ```
 docker build -t name-of-the-service .
 ```
-### Run the docker image
+### Run the docker image:
 ```
 docker run -d -p [port]:[port] --name="name-of-the-service" name-of-the-container
 ```
 
+### Docker-Compose: 
+With the docker images built, we are ready to compose the construction of containers. There are two ways to start the containers. The first way is via the command line using the docker run command. However, command line is not ideal if you have multiple containers and with complex instructions. The second way is to use Docker-Compose. Docker-Compose is a file that contains a set of instructions in starting the applications.
 
+In the code below (see docker-compose.yml), you can see that we have multiple services. Each service contains the relevant information of the service. The important part is to contain the links and depends_on fields to indicate the dependencies between microservices.
+
+## Kubernetes: 
