@@ -1,12 +1,13 @@
 # Microservices with Spring Boot, Docker and Kubernetes: 
 
-[here](https://lauweitang.medium.com/microservices-with-spring-boot-docker-and-kubernetes-part-1-3f50bfca582e)
+Source [here](https://lauweitang.medium.com/microservices-with-spring-boot-docker-and-kubernetes-part-1-3f50bfca582e)
 
 
-<details>
+<details>	
 	<summary>
-	## Notes:
+		Notes:
 	</summary>
+	
 
 ### Build the Gradle Wrapper: 
 ```
