@@ -5,7 +5,8 @@ import java.util.List;
 public class PaymentList {
     private List<Payment> payments;
 
-    public PaymentList() {}
+    public PaymentList() {
+    }
 
     public PaymentList(List<Payment> payments) {
         this.payments = payments;

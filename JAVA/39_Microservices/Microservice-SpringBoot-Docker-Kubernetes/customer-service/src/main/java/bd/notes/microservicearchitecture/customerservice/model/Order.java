@@ -4,7 +4,8 @@ public class Order {
     private int id;
     private double value;
 
-    public Order() {}
+    public Order() {
+    }
 
     public Order(int id, double value) {
         this.id = id;

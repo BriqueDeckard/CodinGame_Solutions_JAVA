@@ -13,7 +13,7 @@ public class OrderController {
     private OrderService orderService;
 
     @GetMapping("/api/order")
-    public OrderList getAllOrders(){
+    public OrderList getAllOrders() {
         return orderService.getAllOrders();
     }
 }

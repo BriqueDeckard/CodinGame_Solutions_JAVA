@@ -4,7 +4,8 @@ public class Payment {
     private int id;
     private double value;
 
-    public Payment() {}
+    public Payment() {
+    }
 
     public Payment(int id, double value) {
         this.id = id;

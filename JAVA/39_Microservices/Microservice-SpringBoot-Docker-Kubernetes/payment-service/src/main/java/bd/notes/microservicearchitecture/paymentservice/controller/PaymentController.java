@@ -12,7 +12,7 @@ public class PaymentController {
     private PaymentService paymentService;
 
     @GetMapping("/api/payment")
-    public PaymentList getAllPayments(){
+    public PaymentList getAllPayments() {
         return paymentService.getAllPayments();
     }
 }

@@ -12,7 +12,7 @@ public class CustomerController {
     private CustomerService customerService;
 
     @GetMapping("/api/customer")
-    public Customer getCustomerDetails(){
+    public Customer getCustomerDetails() {
         return customerService.getCustomerDetails();
     }
 }
