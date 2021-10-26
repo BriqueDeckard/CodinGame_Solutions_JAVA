@@ -4,6 +4,7 @@
 
 ## Notes:
 <details>
+	
 ### Build the Gradle Wrapper: 
 ```
 gradle wrapper --gradle-version [gradle version]
