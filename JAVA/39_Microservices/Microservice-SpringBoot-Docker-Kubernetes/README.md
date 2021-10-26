@@ -32,3 +32,15 @@ Service Discovery Server applies the service discovery mechanism to allow micros
 
 ### Microservice
 Microservice is a component of the application. It usually contains the implementation details and logic of the application. It will register with the Service Discovery Server such that other microservices can call its APIs. Strictly speaking, the API Gateway and Service Discovery Server are microservice.
+
+## Why Docker and Kubernetes for Microservices?
+
+Manual management and scaling of microservices is tedious and manual application start up can be time-consuming (even in our small example).
+
+Furthermore, we were unable to start up multiple instances of the same microservices due to port conflict, unless we modified the port before starting up.
+
+Docker and Kubernetes handle the hassle for us.
+- Docker is a technology that containerise applications such that these containers can be deployed regardless of platform (Windows, Mac or Linux) without installing the relevant dependencies.
+- Kubernetes is a tool that allows developers to manage and scale these containers easily.
+
+
