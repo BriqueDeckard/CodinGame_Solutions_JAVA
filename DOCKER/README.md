@@ -1,8 +1,8 @@
-# WSL+Docker: Kubernetes on the Windows Desktop
+# WSL+Docker: Kubernetes on the Windows Desktop: 
 
-Source [here](https://kubernetes.io/blog/2020/05/21/wsl-docker-kubernetes-on-the-windows-desktop/)
+**Source [here](https://kubernetes.io/blog/2020/05/21/wsl-docker-kubernetes-on-the-windows-desktop/)**
 
-## Prerequisites
+## Prerequisites: 
 
 Since we will explain how to install KinD, we won't go into too much detail around the installation of KinD's dependencies.
 
@@ -19,7 +19,7 @@ Windows Store Terminal
 
 And that's actually it. For Docker Desktop for Windows, no need to configure anything yet as we will explain it in the next section.
 
-## WSL2: First contact
+## WSL2: First contact: 
 
 Once everything is installed, we can launch the WSL2 terminal from the Start menu, and type "Ubuntu" for searching the applications and documents:
 
@@ -27,7 +27,7 @@ Once found, click on the name and it will launch the default Windows console wit
 
 Like for any normal Linux distro, you need to create a user and set a password:
 
-## Update Ubuntu
+## Update Ubuntu: 
 
 Before we move to the Docker Desktop settings, let's update our system and ensure we start in the best conditions:
 
@@ -39,7 +39,7 @@ sudo apt update
 sudo apt upgrade -y
 ```
 
-## Docker Desktop: faster with WSL2
+## Docker Desktop: faster with WSL2: 
 Before we move into the settings, let's do a small test, it will display really how cool the new integration with Docker Desktop is:
 
 ```
@@ -51,7 +51,7 @@ kubectl version
 
 You got an error? Perfect! It's actually good news, so let's now move on to the settings
 
-## Docker Desktop settings: enable WSL2 integration
+## Docker Desktop settings: enable WSL2 integration: 
 
 First let's start Docker Desktop for Windows if it's not still the case. Open the Windows start menu and type "docker", click on the name to start the application.
 
@@ -61,5 +61,31 @@ What this feature did behind the scenes was to create two new distros in WSL2, c
 
 Still, this first setting is still not enough to run the commands inside our distro. If we try, we will have the same error as before.
 
-In order to fix it, and finally be able to use the commands, we need to tell the Docker Desktop to "attach" itself to our distro also:
+In order to fix it, and finally be able to use the commands, we need to tell the Docker Desktop to "attach" itself to our distro also.
+
+Let's now switch back to our WSL2 terminal and see if we can (finally) launch the commands:
+```
+# Try to see if the docker cli and daemon are installed
+docker version
+# Same for kubectl
+kubectl version
+```
+
+### Answer for Docker: 
+```
+Client: Docker Engine - Community
+ Cloud integration: 1.0.17
+ Version:           20.10.8
+ API version:       1.41
+ Go version:        go1.16.6
+ Git commit:        3967b7d
+ Built:             Fri Jul 30 19:54:22 2021
+ OS/Arch:           linux/amd64
+ Context:           default
+ Experimental:      true
+
+Server: Docker Engine - Community
+```
+### Answer for Kubectl:
+
 
