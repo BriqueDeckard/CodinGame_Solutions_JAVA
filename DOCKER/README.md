@@ -48,3 +48,18 @@ docker version
 # Same for kubectl
 kubectl version
 ```
+
+You got an error? Perfect! It's actually good news, so let's now move on to the settings
+
+## Docker Desktop settings: enable WSL2 integration
+
+First let's start Docker Desktop for Windows if it's not still the case. Open the Windows start menu and type "docker", click on the name to start the application.
+
+One in the application, click on "settings" and click the "Enable the experimental WSL 2 based engine" and click "Apply & Restart".
+
+What this feature did behind the scenes was to create two new distros in WSL2, containing and running all the needed backend sockets, daemons and also the CLI tools (read: docker and kubectl command).
+
+Still, this first setting is still not enough to run the commands inside our distro. If we try, we will have the same error as before.
+
+In order to fix it, and finally be able to use the commands, we need to tell the Docker Desktop to "attach" itself to our distro also:
+
