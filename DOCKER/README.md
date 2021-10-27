@@ -1,6 +1,12 @@
 # WSL+Docker: Kubernetes on the Windows Desktop: 
+<details>
+	<summary>
+		Source: 
+	</summary>
 
-**Source [here](https://kubernetes.io/blog/2020/05/21/wsl-docker-kubernetes-on-the-windows-desktop/)**
+	[here](https://kubernetes.io/blog/2020/05/21/wsl-docker-kubernetes-on-the-windows-desktop/)
+</details>
+
 
 ## Prerequisites: 
 
