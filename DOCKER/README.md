@@ -45,10 +45,13 @@ sudo apt upgrade -y
 ## Docker Desktop: faster with WSL2: 
 Before we move into the settings, let's do a small test, it will display really how cool the new integration with Docker Desktop is:
 
+Try to see if the docker cli and daemon are installed
 ```
-# Try to see if the docker cli and daemon are installed
 docker version
-# Same for kubectl
+```
+
+Same for kubectl
+```
 kubectl version
 ```
 
@@ -67,14 +70,13 @@ Still, this first setting is still not enough to run the commands inside our dis
 In order to fix it, and finally be able to use the commands, we need to tell the Docker Desktop to "attach" itself to our distro also.
 
 Let's now switch back to our WSL2 terminal and see if we can (finally) launch the commands:
-```
-# Try to see if the docker cli and daemon are installed
-docker version
-# Same for kubectl
-kubectl version
-```
 
-### Answer for Docker: 
+### Try to see if the docker cli and daemon are installed
+#### Docker : 
+```
+docker version
+```
+##### Answer for Docker: 
 ```
 Client: Docker Engine - Community
  Cloud integration: 1.0.17
@@ -89,6 +91,12 @@ Client: Docker Engine - Community
 
 Server: Docker Engine - Community
 ```
+Same for kubectl
+```
+kubectl version
+```
+
+
 ### Answer for Kubectl:
 ```
 Client Version: version.Info{Major:"1", Minor:"21", GitVersion:"v1.21.5", GitCommit:"aea7bbadd2fc0cd689de94a54e5b7b758869d691", GitTreeState:"clean", BuildDate:"2021-09-15T21:10:45Z", GoVersion:"go1.16.8", Compiler:"gc", Platform:"linux/amd64"}
