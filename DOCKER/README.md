@@ -32,11 +32,13 @@ Like for any normal Linux distro, you need to create a user and set a password:
 
 Before we move to the Docker Desktop settings, let's update our system and ensure we start in the best conditions:
 
+Update the repositories and list of the packages available :
 ```
-# Update the repositories and list of the packages available
 sudo apt update
+```
 
-# Update the system based on the packages installed > the "-y" will approve the change automatically
+Update the system based on the packages installed > the "-y" will approve the change automatically :
+```
 sudo apt upgrade -y
 ```
 
@@ -88,5 +90,45 @@ Client: Docker Engine - Community
 Server: Docker Engine - Community
 ```
 ### Answer for Kubectl:
+```
+Client Version: version.Info{Major:"1", Minor:"21", GitVersion:"v1.21.5", GitCommit:"aea7bbadd2fc0cd689de94a54e5b7b758869d691", GitTreeState:"clean", BuildDate:"2021-09-15T21:10:45Z", GoVersion:"go1.16.8", Compiler:"gc", Platform:"linux/amd64"}
+The connection to the server localhost:8080 was refused - did you specify the right host or port?
+```
+
+## KinD: Kubernetes made easy in a container
+
+Right now, we have Docker that is installed, configured and the last test worked fine.
+
+However, if we look carefully at the kubectl command, it found the "Client Version" (1.15.5), but it didn't find any server.
+
+This is normal as we didn't enable the Docker Kubernetes cluster. So let's install KinD and create our first cluster.
+
+And as sources are always important to mention, we will follow (partially) the how-to on the official KinD website:
+
+```
+# Download the latest version of KinD
+curl -Lo ./kind https://github.com/kubernetes-sigs/kind/releases/download/v0.7.0/kind-linux-amd64
+# Make the binary executable
+chmod +x ./kind
+# Move the binary to your executable path
+sudo mv ./kind /usr/local/bin/
+```
+
+### KinD: the first cluster
+
+We are ready to create our first cluster:
 
 
+Check if the KUBECONFIG is not set : 
+```
+echo $KUBECONFIG
+```
+Check if the .kube directory is created > if not, no need to create it : 
+```
+ls $HOME/.kube
+```
+# Create the cluster and give it a name (optional)
+kind create cluster --name wslkind
+# Check if the .kube has been created and populated with files
+ls $HOME/.kube
+```
