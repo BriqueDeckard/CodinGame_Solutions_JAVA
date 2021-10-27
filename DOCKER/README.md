@@ -235,6 +235,13 @@ Check how many nodes it created
 ```
 kubectl get nodes
 ```
+Answer:
+```
+NAME                              STATUS   ROLES    AGE    VERSION
+wslkindmultinodes-control-plane   Ready    master   103s   v1.17.0
+wslkindmultinodes-worker          Ready    <none>   58s    v1.17.0
+wslkindmultinodes-worker2         Ready    <none>   58s    v1.17.0
+```
 
 And that's it, we have created a three-node cluster, and if we look at the services one more time, we will see several that have now three replicas:
 
@@ -265,3 +272,66 @@ Start a kubectl proxy:
 kubectl proxy
 ```
 
+Finally to login, we can either enter a Token, which we didn't create, or enter the kubeconfig file from our Cluster.
+
+If we try to login with the kubeconfig, we will get the error "Internal error (500): Not enough data to create auth info structure". This is due to the lack of credentials in the kubeconfig file.
+
+So to avoid you ending with the same error, let's follow the recommended RBAC approach.
+
+Let's open a new WSL2 session:
+
+Create a new ServiceAccount
+```
+kubectl apply -f - <<EOF
+apiVersion: v1
+kind: ServiceAccount
+metadata:
+  name: admin-user
+  namespace: kubernetes-dashboard
+EOF
+```
+Create a ClusterRoleBinding for the ServiceAccount
+```
+kubectl apply -f - <<EOF
+apiVersion: rbac.authorization.k8s.io/v1
+kind: ClusterRoleBinding
+metadata:
+  name: admin-user
+roleRef:
+  apiGroup: rbac.authorization.k8s.io
+  kind: ClusterRole
+  name: cluster-admin
+subjects:
+- kind: ServiceAccount
+  name: admin-user
+  namespace: kubernetes-dashboard
+EOF
+```
+
+Get the Token for the ServiceAccount
+```
+kubectl -n kubernetes-dashboard describe secret $(kubectl -n kubernetes-dashboard get secret | grep admin-user | awk '{print $1}')
+```
+Then copy the token and copy it into the Dashboard login and press "Sign in"
+
+## Minikube: Kubernetes from everywhere
+Right now, we have Docker that is installed, configured and the last test worked fine.
+
+However, if we look carefully at the kubectl command, it found the "Client Version" (1.15.5), but it didn't find any server.
+
+This is normal as we didn't enable the Docker Kubernetes cluster. So let's install Minikube and create our first cluster.
+
+And as sources are always important to mention, we will follow (partially) the how-to from the Kubernetes.io website:
+
+Download the latest version of Minikube
+```
+curl -Lo minikube https://storage.googleapis.com/minikube/releases/latest/minikube-linux-amd64
+```
+Make the binary executable
+```
+chmod +x ./minikube
+```
+Move the binary to your executable path
+```
+sudo mv ./minikube /usr/local/bin/
+```
