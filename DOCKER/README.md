@@ -72,11 +72,12 @@ In order to fix it, and finally be able to use the commands, we need to tell the
 Let's now switch back to our WSL2 terminal and see if we can (finally) launch the commands:
 
 ### Try to see if the docker cli and daemon are installed
-#### Docker : 
+#### Docker: 
+##### Command: 
 ```
 docker version
 ```
-##### Answer for Docker: 
+##### Answer: 
 ```
 Client: Docker Engine - Community
  Cloud integration: 1.0.17
@@ -91,13 +92,12 @@ Client: Docker Engine - Community
 
 Server: Docker Engine - Community
 ```
-Same for kubectl
+#### Kubectl:
+##### Command: 
 ```
 kubectl version
 ```
-
-
-### Answer for Kubectl:
+##### Answer:
 ```
 Client Version: version.Info{Major:"1", Minor:"21", GitVersion:"v1.21.5", GitCommit:"aea7bbadd2fc0cd689de94a54e5b7b758869d691", GitTreeState:"clean", BuildDate:"2021-09-15T21:10:45Z", GoVersion:"go1.16.8", Compiler:"gc", Platform:"linux/amd64"}
 The connection to the server localhost:8080 was refused - did you specify the right host or port?
