@@ -113,12 +113,19 @@ This is normal as we didn't enable the Docker Kubernetes cluster. So let's insta
 
 And as sources are always important to mention, we will follow (partially) the how-to on the official KinD website:
 
+
+Download the latest version of KinD
 ```
-# Download the latest version of KinD
 curl -Lo ./kind https://github.com/kubernetes-sigs/kind/releases/download/v0.7.0/kind-linux-amd64
-# Make the binary executable
+```
+
+Make the binary executable
+```
 chmod +x ./kind
-# Move the binary to your executable path
+```
+
+Move the binary to your executable path
+```
 sudo mv ./kind /usr/local/bin/
 ```
 
@@ -131,10 +138,18 @@ Check if the KUBECONFIG is not set:
 ```
 echo $KUBECONFIG
 ```
+Answer: 
+```
+
+```
 
 Check if the .kube directory is created > if not, no need to create it: 
 ```
 ls $HOME/.kube
+```
+Answer: 
+```
+ls: cannot access '/home/brique/.kube': No such file or directory
 ```
 
 Create the cluster and give it a name (optional): 
@@ -146,3 +161,107 @@ Check if the .kube has been created and populated with files:
 ```
 ls $HOME/.kube
 ```
+
+Check if the .kube directory is created > if not, no need to create it: 
+```
+ls $HOME/.kube
+```
+
+Create the cluster and give it a name (optional)
+```
+kind create cluster --name wslkind
+```
+If something turn wrong and you have to delete the cluster, the command is: 
+```
+kind delete cluster --name wslkind
+```
+Finally, check if the .kube has been created and populated with files: 
+```
+ls $HOME/.kube
+```
+
+The cluster has been successfully created, and because we are using Docker Desktop, the network is all set for us to use "as is".
+
+### KinD: counting 1 - 2 - 3
+
+Our first cluster was created and it's the "normal" one node cluster:
+
+Check how many nodes it created:
+```
+kubectl get nodes
+```
+Answer: 
+```
+NAME                    STATUS   ROLES    AGE     VERSION
+wslkind-control-plane   Ready    master   4m59s   v1.17.0
+```
+
+Check the services for the whole cluster: 
+```
+kubectl get all --all-namespaces
+```
+Answer:
+```
+NAMESPACE            NAME                                                READY   STATUS    RESTARTS   AGE
+kube-system          pod/coredns-6955765f44-hvb9w                        1/1     Running   0          5m14s
+kube-system          pod/coredns-6955765f44-vtfz4                        1/1     Running   0          5m14s
+kube-system          pod/etcd-wslkind-control-plane                      1/1     Running   0          5m9s
+...
+```
+
+Delete the existing cluster
+```
+kind delete cluster --name wslkind
+```
+
+Create a config file for a 3 nodes cluster
+```
+cat << EOF > kind-3nodes.yaml
+kind: Cluster
+apiVersion: kind.x-k8s.io/v1alpha4
+nodes:
+  - role: control-plane
+  - role: worker
+  - role: worker
+EOF
+```
+
+Create a new cluster with the config file
+```
+kind create cluster --name wslkindmultinodes --config ./kind-3nodes.yaml
+```
+
+Check how many nodes it created
+```
+kubectl get nodes
+```
+
+And that's it, we have created a three-node cluster, and if we look at the services one more time, we will see several that have now three replicas:
+
+Check the services for the whole cluster
+```
+kubectl get all --all-namespaces
+```
+
+### KinD: can I see a nice dashboard?
+
+Working on the command line is always good and very insightful. However, when dealing with Kubernetes we might want, at some point, to have a visual overview.
+
+For that, the Kubernetes Dashboard project has been created. The installation and first connection test is quite fast, so let's do it:
+
+Install the Dashboard application into our cluster: 
+```
+kubectl apply -f https://raw.githubusercontent.com/kubernetes/dashboard/v2.0.0-rc6/aio/deploy/recommended.yaml
+```
+Check the resources it created based on the new namespace created
+```
+kubectl get all -n kubernetes-dashboard
+```
+
+As it created a service with a ClusterIP (read: internal network address), we cannot reach it if we type the URL in our Windows browser. That's because we need to create a temporary proxy:
+
+Start a kubectl proxy: 
+```
+kubectl proxy
+```
+
