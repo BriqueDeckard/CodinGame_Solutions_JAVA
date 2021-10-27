@@ -34,6 +34,17 @@ Before we move to the Docker Desktop settings, let's update our system and ensur
 ```
 # Update the repositories and list of the packages available
 sudo apt update
+
 # Update the system based on the packages installed > the "-y" will approve the change automatically
 sudo apt upgrade -y
+```
+
+## Docker Desktop: faster with WSL2
+Before we move into the settings, let's do a small test, it will display really how cool the new integration with Docker Desktop is:
+
+```
+# Try to see if the docker cli and daemon are installed
+docker version
+# Same for kubectl
+kubectl version
 ```
