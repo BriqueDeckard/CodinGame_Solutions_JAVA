@@ -14,11 +14,10 @@ However, here is the list of the prerequisites needed and their version/lane:
 OS: Windows 10 version 2004, Build 19041
 WSL2 enabled
 In order to install the distros as WSL2 by default, once WSL2 installed, run the command wsl.exe --set-default-version 2 in Powershell
-WSL2 distro installed from the Windows Store - the distro used is Ubuntu-18.04
-Docker Desktop for Windows, stable channel - the version used is 2.2.0.4
+- WSL2 distro installed from the Windows Store - the distro used is Ubuntu-18.04 
+- Docker Desktop for Windows, stable channel - the version used is 2.2.0.4
 [Optional] Microsoft Terminal installed from the Windows Store
 Open the Windows store and type "Terminal" in the search, it will be (normally) the first option
-Windows Store Terminal
 
 And that's actually it. For Docker Desktop for Windows, no need to configure anything yet as we will explain it in the next section.
 
@@ -343,5 +342,4 @@ sudo mv ./minikube /usr/local/bin/
 If we follow the how-to, it states that we should use the --driver=none flag in order to run Minikube directly on the host and Docker.
 
 Unfortunately, we will get an error about "conntrack" being required to run Kubernetes v 1.18:
-
 
