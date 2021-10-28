@@ -36,9 +36,14 @@ A stream of messages belonging to a particular category is called a topic. Data 
 
 Topics are split into partitions. For each topic, Kafka keeps a mini-mum of one partition. Each such partition contains messages in an immutable ordered sequence. A partition is implemented as a set of segment files of equal sizes.
 
-Create a topic : 
+#### Create a topic : 
 ```
 ./bin/kafka-topics.sh  --create --zookeeper localhost:2181 --replication-factor 1 --partitions 1 --topic blabla 
+```
+
+#### Describe a topic:
+```
+./bin/kafka-topics.sh --describe --zookeeper localhost:2181 --topic blabla
 ```
 
 ### Partition and partition offset: 
@@ -64,9 +69,17 @@ Kafka's having more than one broker are called "kafka cluster". A kafka cluster 
 
 ### Producers: 
 Producers = publishers of messages. Producers send data to kafka brokers. Everytime a porducer publishes a message to a broker, the broker simply appends the message to the last segment file. Actually, the message will be appended to a partition. Producer can also send messages to a partition of their choice.
+#### Create a producer:
+```
+./bin/kafka-console-producer.sh --broker-list localhost:9092 --topic blabla
+```
 
 ### Consumers:
 Consumers read data from brokers. Consumers subscribe to one or more topics and consume published messages py pulling data from the brokers.
+#### Create a consumer: 
+```
+./bin/kafka-console-consumer.sh --bootstrap-server localhost:9092 --topic blabla
+```
 
 ### Leader:
 The Leader is the node responsible for all reads and writes for the given partition. Every partition has one server acting as a leader.
