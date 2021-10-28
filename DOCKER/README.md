@@ -1,6 +1,8 @@
 # WSL+Docker: Kubernetes on the Windows Desktop: 
 <details>
 	<summary>Sources:</summary>https://kubernetes.io/blog/2020/05/21/wsl-docker-kubernetes-on-the-windows-desktop/</details>
+<details>
+  <summary>Notes: </summary>Eventually disable your firewall</details>
 
 
 ## Prerequisites: 
@@ -335,3 +337,11 @@ Move the binary to your executable path
 ```
 sudo mv ./minikube /usr/local/bin/
 ```
+
+### Minikube: updating the host
+
+If we follow the how-to, it states that we should use the --driver=none flag in order to run Minikube directly on the host and Docker.
+
+Unfortunately, we will get an error about "conntrack" being required to run Kubernetes v 1.18:
+
+
