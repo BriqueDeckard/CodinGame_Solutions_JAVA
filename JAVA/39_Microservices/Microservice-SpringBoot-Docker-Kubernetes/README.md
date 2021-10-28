@@ -169,3 +169,48 @@ spec:
 ```
 
 For the other services that does not need to perform Load Balancing, simply change spec.type under Service into NodePort .
+
+Creating the Kubernetes resources is as simple as entering the command below. Make sure that you cd into the Kubernetes folder.
+kubectl create -f api-gateway.yml -f customer-service.yml -f order-service.yml -f payment-service.yml
+
+Now you should be able to see the result when you enter http://localhost:8080/api/customer . If you try other ports, you will realise that those ports are not exposed outside of the Kubernetes cluster. This provides a layer of security and a single entry point (API Gateway).
+
+You can view the resources by running ```kubectl get all``` . This will return all the resources that are running in the cluster.
+
+answer:
+```
+NAME                                    READY   STATUS    RESTARTS   AGE
+pod/api-gateway-7f8dc55ccf-c2vzc        1/1     Running   0          2m50s
+pod/customer-service-5598dc987f-kzmfp   1/1     Running   0          2m50s
+pod/order-service-84dfbdfbd4-mrxmg      1/1     Running   0          2m50s
+pod/payment-service-75bb4b785-9kx9b     1/1     Running   0          2m50s
+
+NAME                       TYPE           CLUSTER-IP       EXTERNAL-IP   PORT(S)          AGE
+service/api-gateway        LoadBalancer   10.104.123.2     localhost     8080:30893/TCP   2m50s
+service/customer-service   NodePort       10.107.76.70     <none>        8083:30286/TCP   2m50s
+service/kubernetes         ClusterIP      10.96.0.1        <none>        443/TCP          3m5s
+service/order-service      NodePort       10.101.86.98     <none>        8082:32636/TCP   2m50s
+service/payment-service    NodePort       10.100.240.204   <none>        8081:30129/TCP   2m50s
+
+NAME                               READY   UP-TO-DATE   AVAILABLE   AGE
+deployment.apps/api-gateway        1/1     1            1           2m50s
+deployment.apps/customer-service   2/2     2            2           2m50s
+deployment.apps/order-service      1/1     1            1           2m50s
+deployment.apps/payment-service    1/1     1            1           2m50s
+
+NAME                                          DESIRED   CURRENT   READY   AGE
+replicaset.apps/api-gateway-7f8dc55ccf        1         1         1       2m50s
+replicaset.apps/customer-service-5598dc987f   2         2         2       2m50s
+replicaset.apps/order-service-84dfbdfbd4      1         1         1       2m50s
+replicaset.apps/payment-service-75bb4b785     1         1         1       2m50s
+```
+
+Scaling is extremely simple. Simply change the value of replicas under Deployment and run kubectl apply -f FILE_NAME . For example, I want to scale customer-service to two instances. I have modified the replicas to 2 and run ```kubectl apply -f customer-service.yml``` . You will see two customer-service pods and in deployment.apps/customer-service.
+
+So ```kubectl get all``` gives : 
+```
+...
+pod/customer-service-5598dc987f-kzmfp   1/1     Running   0          2m50s
+pod/customer-service-5598dc987f-q9dr4   1/1     Running   0          13s
+...
+```
