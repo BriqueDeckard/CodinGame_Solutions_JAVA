@@ -4,6 +4,8 @@
 
 [source: https://www.confluent.io/blog/set-up-and-run-kafka-on-windows-linux-wsl-2/](https://www.confluent.io/blog/set-up-and-run-kafka-on-windows-linux-wsl-2/)
 
+[download Kafka](https://kafka.apache.org/downloads)
+
 
 ## Introduction: 
 
@@ -40,7 +42,26 @@ bin/zookeeper-server-start.sh config/zookeeper.properties
 Apache Kafka is a distributed publish-subscribe messaging system, and a robust queue that can handle a high volume of data and enables you to pass messages from one end-point to another.
 Kafka is suitable for both offline and online message consumption. Kafka messages are persisted on the disk and replicated within the cluster to prevent data loss. Kafka is built on top of the ZooKeeper synchornization service. It integrates very well with Apache Storm and Spark for real-time streaming data analysis.
 
+There are lots of Kafka-on-Windows tutorials, but most make the mistake of running Kafka directly on the JVM on Windows. Superficially, this appears to work, but there are limitations: Kafka uses specific features of POSIX to achieve high performance, so emulations—which happen on WSL 1—are insufficient. For example, the broker will crash when it rolls a segment file. Always run Kafka on Windows in a Linux environment backed by WSL 2.
+
+Another approach that works well is to run Kafka in Docker containers. Docker Desktop for Windows has been updated to use the WSL 2 back end, so Docker works exactly as it does on native Linux, without needing to spin up an entire VM.
+
+
 ### Components: 
+
+#### Brokers:
+- Brokers are the components that are responsible for maintaining the pub-lished data. Each broker hae zero or more partitions per topic. Assume, if there are N partitions in a topic and N number of brokers, each broker will have one partition.
+- If there are N partitions put more than N brokers (n + m), the first N brokers will have one partition and the next M brokers will not have any partition for that topic.
+- If there are N partitions in a topic and less than N brokers (n-m), each broker will have one or more partition sharing among them. But this scenario is not recommended due to inequal load distribution among the broker.
+
+### Start Kafka broker: 
+```
+bin/kafka-server-start.sh config/server.properties
+```
+
+#### Kafka cluster: 
+Kafka's having more than one broker are called "kafka cluster". A kafka cluster can be expanded without downtime. These clusters are used to manage the persistence and replication of message data.
+
 #### Topics: 
 
 A stream of messages belonging to a particular category is called a topic. Data is stored in topics.
@@ -75,13 +96,6 @@ Each partitioned message has a unique sequence id called as offset.
 
 Replicas are nothing but backups of a partition. Replicas are never read or write data. They are used to prevent data loss.
 
-#### Brokers:
-- Brokers are the components that are responsible for maintaining the pub-lished data. Each broker hae zero or more partitions per topic. Assume, if there are N partitions in a topic and N number of brokers, each broker will have one partition.
-- If there are N partitions put more than N brokers (n + m), the first N brokers will have one partition and the next M brokers will not have any partition for that topic.
-- If there are N partitions in a topic and less than N brokers (n-m), each broker will have one or more partition sharing among them. But this scenario is not recommended due to inequal load distribution among the broker.
-
-#### Kafka cluster: 
-Kafka's having more than one broker are called "kafka cluster". A kafka cluster can be expanded without downtime. These clusters are used to manage the persistence and replication of message data.
 
 #### Producers: 
 Producers = publishers of messages. Producers send data to kafka brokers. Everytime a porducer publishes a message to a broker, the broker simply appends the message to the last segment file. Actually, the message will be appended to a partition. Producer can also send messages to a partition of their choice.
@@ -107,5 +121,8 @@ The Leader is the node responsible for all reads and writes for the given partit
 #### Follower:
 Node which follows leader instructions are called as follower. If the leader fails, one of the follower will automatically become the new leader. As follower act as normal consumer, pulls messages and updates its own data store.
 
-
-
+<details>
+	<summary>Screenshots: </summary>
+	
+	![BROKER](BROKER.png)
+</details>
