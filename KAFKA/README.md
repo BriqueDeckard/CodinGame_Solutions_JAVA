@@ -21,13 +21,22 @@ One a consumer reads a message in the queue, it disappears from that queue.
 In the Pub-Sub messaging system, messages are persisted in a topic. Unlike point-to-point system, consumers can subscribe to one or more topic and consume all the messages in that topic.
 In the Pub-Sub system, messages producers are callde **publishers** and messages consumers are called **subscribers**.
 
+## What is ZooKeeper?
+ZooKeeper is a centralized service for maintaining configuration information, naming, providing distributed synchronization, and providing group services. All of these kinds of services are used in some form or another by distributed applications. Each time they are implemented there is a lot of work that goes into fixing the bugs and race conditions that are inevitable. Because of the difficulty of implementing these kinds of services, applications initially usually skimp on them, which make them brittle in the presence of change and difficult to manage. Even when done correctly, different implementations of these services lead to management complexity when the applications are deployed.
+** Start Zookeeper: **
+```
+bin/zookeeper-server-start.sh config/zookeeper.properties
+
+```
+
 ## What is kafka ?
 
 Apache Kafka is a distributed publish-subscribe messaging system, and a robust queue that can handle a high volume of data and enables you to pass messages from one end-point to another.
 Kafka is suitable for both offline and online message consumption. Kafka messages are persisted on the disk and replicated within the cluster to prevent data loss. Kafka is built on top of the ZooKeeper synchornization service. It integrates very well with Apache Storm and Spark for real-time streaming data analysis.
 
-**What is ZooKeeper?**
-***ZooKeeper is a centralized service for maintaining configuration information, naming, providing distributed synchronization, and providing group services. All of these kinds of services are used in some form or another by distributed applications. Each time they are implemented there is a lot of work that goes into fixing the bugs and race conditions that are inevitable. Because of the difficulty of implementing these kinds of services, applications initially usually skimp on them, which make them brittle in the presence of change and difficult to manage. Even when done correctly, different implementations of these services lead to management complexity when the applications are deployed.***
+
+
+
 
 ## Components: 
 ### Topics: 
@@ -39,6 +48,11 @@ Topics are split into partitions. For each topic, Kafka keeps a mini-mum of one 
 #### Create a topic : 
 ```
 ./bin/kafka-topics.sh  --create --zookeeper localhost:2181 --replication-factor 1 --partitions 1 --topic blabla 
+```
+
+#### Alter a topic to ad partitions : 
+```
+./bin/kafka-topics.sh --alter --zookeeper localhost:2181 --topic blabla --partitions 2
 ```
 
 #### Describe a topic:
@@ -79,6 +93,10 @@ Consumers read data from brokers. Consumers subscribe to one or more topics and 
 #### Create a consumer: 
 ```
 ./bin/kafka-console-consumer.sh --bootstrap-server localhost:9092 --topic blabla
+```
+#### With a group id:
+```
+$ ./bin/kafka-console-consumer.sh --bootstrap-server localhost:9092 --topic blabla --consumer-property group.id=mygroup
 ```
 
 ### Leader:
