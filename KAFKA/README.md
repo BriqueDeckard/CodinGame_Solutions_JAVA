@@ -1,8 +1,8 @@
 # Apache KAFKA
 
-[source: https://www.tutorialspoint.com/apache_kafka/index.htm](https://www.tutorialspoint.com/apache_kafka/index.htm)
+[tutorialspoint.com](https://www.tutorialspoint.com/apache_kafka/index.htm)
 
-[source: https://www.confluent.io/blog/set-up-and-run-kafka-on-windows-linux-wsl-2/](https://www.confluent.io/blog/set-up-and-run-kafka-on-windows-linux-wsl-2/)
+[Confluent](https://www.confluent.io/blog/set-up-and-run-kafka-on-windows-linux-wsl-2/)
 
 [source: https://www.confluent.io/blog/kafka-client-cannot-connect-to-broker-on-aws-on-docker-etc/](https://www.confluent.io/blog/kafka-client-cannot-connect-to-broker-on-aws-on-docker-etc/)
 __
