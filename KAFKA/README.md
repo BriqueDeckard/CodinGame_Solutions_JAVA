@@ -1,7 +1,8 @@
 # Apache KAFKA
 
-[source:https://www.tutorialspoint.com/apache_kafka/index.htm](https://www.tutorialspoint.com/apache_kafka/index.htm)
-[source:https://www.confluent.io/blog/set-up-and-run-kafka-on-windows-linux-wsl-2/](https://www.confluent.io/blog/set-up-and-run-kafka-on-windows-linux-wsl-2/)
+[source: https://www.tutorialspoint.com/apache_kafka/index.htm](https://www.tutorialspoint.com/apache_kafka/index.htm)
+
+[source: https://www.confluent.io/blog/set-up-and-run-kafka-on-windows-linux-wsl-2/](https://www.confluent.io/blog/set-up-and-run-kafka-on-windows-linux-wsl-2/)
 
 
 ## Introduction: 
