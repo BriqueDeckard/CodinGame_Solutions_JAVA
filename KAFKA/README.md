@@ -123,6 +123,5 @@ Node which follows leader instructions are called as follower. If the leader fai
 
 <details>
 	<summary>Screenshots: </summary>
-	
-	![BROKER](BROKER.png)
+	<img src="BROKER.png" alt="Broker">
 </details>
