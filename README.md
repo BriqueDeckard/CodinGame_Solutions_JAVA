@@ -124,6 +124,10 @@ The covered languages and technologies are:
  </ul>
 </details>
  <details>
+  <summary>Kafka: </summary>
+  <ul><li><a href="https://github.com/BriqueDeckard/Notes/tree/master/KAFKA">Readme</a></li></ul>
+ </details>
+ <details>
  <summary>Javascript / Typescript / Node</summary>
  <ul>
   <li><a href="https://github.com/BriqueDeckard/Notes/tree/master/ANGULAR%20and%20NODES/01_ANGULAR_typescript_tour-of-heroes">Tour of heroes</a></li>
