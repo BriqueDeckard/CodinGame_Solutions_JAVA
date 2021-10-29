@@ -127,4 +127,10 @@ Node which follows leader instructions are called as follower. If the leader fai
 	<img src="ZOOKEEPER.png" alt="Zookeeper">
 	<h2>BROKER: </h2>
 	<img src="BROKER.png" alt="Broker">
+	<h2>TOPIC CREATION: </h2>
+	<img src="topic.png" alt="Topic">
+	<h2>PRODUCER: </h2>
+	<img src="producer.png" alt="producer">
+	<h2>CONSUMER: </h2>
+	<img src="consumer.png" alt consumer>
 </details>
