@@ -26,3 +26,9 @@ APIs are RESTful only if they respect the six RESTful system's designing contrai
 - Uniform interface:
   - resources identification in query 
 
+### Authent: 
+
+The user logs in with a POST request containing his username and password,
+The server returns a temporary / permanent authentication token,
+The user sends the token within each HTTP request via an HTTP header Authorization: Bearer TOKEN.
+When the user logs out, the token is cleared on server-side. 
