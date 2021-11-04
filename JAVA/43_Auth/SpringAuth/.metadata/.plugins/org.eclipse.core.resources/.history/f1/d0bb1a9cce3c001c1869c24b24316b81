@@ -1,0 +1,25 @@
+package com.bd.notes.framework.spring;
+
+import java.util.Optional;
+
+public class InMemoryUsers implements UserCrudService {
+
+	@Override
+	public User save(User user) {
+		// TODO Auto-generated method stub
+		return null;
+	}
+
+	@Override
+	public Optional<User> find(String id) {
+		// TODO Auto-generated method stub
+		return null;
+	}
+
+	@Override
+	public Optional<User> findByUsername(String userName) {
+		// TODO Auto-generated method stub
+		return null;
+	}
+
+}
