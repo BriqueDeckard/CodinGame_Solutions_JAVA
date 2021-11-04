@@ -27,4 +27,6 @@ public class SpringAndKafkaApplication {
 		System.out.println(in);
 	}
 
+	
+
 }

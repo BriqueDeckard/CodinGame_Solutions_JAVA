@@ -26,3 +26,7 @@ The software component is difficult to test.
 If two tasks access, by strong coupling, a common resource (critical resource) and they execute in mutual exclusion, then if one of the tasks remains blocked in critical section, it automatically blocks the other:
 Risk of deadlock.
 The components lose their autonomy. It is difficult to replace one component with another. The structures operating with strong coupling are therefore not very flexible and not very open.
+
+# Interfaces: 
+- découplage très fort
+- permet d'appeler un repo ou un service en fonction d'un environnement grâce a l'injection par exemple

@@ -9,3 +9,13 @@
 ## Principle
 
 The microservice architecture proposes to divide an application into small services, called "microservices", fully self-contained services that expose a REST API that other microservices can consume.
+
+<details>
+	<summary>
+		Notes : 
+	</summary>
+	<ul>
+		<li>Restcontroller: ```@RestController```</li>
+		<li>Get: ```@GetMapping("/route")```</li>
+
+</details>
