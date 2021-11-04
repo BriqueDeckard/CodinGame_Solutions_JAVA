@@ -32,3 +32,5 @@ The user logs in with a POST request containing his username and password,
 The server returns a temporary / permanent authentication token,
 The user sends the token within each HTTP request via an HTTP header Authorization: Bearer TOKEN.
 When the user logs out, the token is cleared on server-side. 
+
+[blog-ocoto](https://blog.octo.com/securiser-une-api-rest-tout-ce-quil-faut-savoir/#private_public_resources)
