@@ -40,7 +40,7 @@
 # APPELS HTTP: 
 <details><summary>Angular: </summary>
 	
-	```HttpClient:``` + verbe.
+	HttpClient: + verbe.
 	
 Les méthodes retournent un observable auquel il faut s'abonner pour déclencher le traitement.
 </details>
@@ -51,7 +51,7 @@ Les méthodes retournent un observable auquel il faut s'abonner pour déclencher
 		});
 </details>
 <details><summary>React.js: </summary>
-	
+
 	Axios.get('URL').then((res) => {
 		    // Traitement avec res
 		});
