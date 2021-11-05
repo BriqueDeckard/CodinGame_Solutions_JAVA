@@ -45,11 +45,13 @@
 Les méthodes retournent un observable auquel il faut s'abonner pour déclencher le traitement.
 </details>
 <details><summary>Vue.js: </summary>
+
 	app.get('route', (req, res) => { 
 			// Traitement avec res
 		});
 </details>
 <details><summary>React.js: </summary>
+	
 	Axios.get('URL').then((res) => {
 		    // Traitement avec res
 		});
