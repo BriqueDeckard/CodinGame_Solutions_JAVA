@@ -17,6 +17,13 @@ There are two types of messaging patterns:
 - point to point
 - publish sbscribe (--> most of the messaging patterns)
 
+Permet de centraliser et de paralleliser le traitement des messages.
+Traitement asynchrone --> 
+
+### Message Broker Use Case
+The developers face the problem of successful data exchange. 
+Imagine you have your own application. For example, it's an online store. So, you permanently work in your technological scope, and one day you need to make the application interact with other apps. Previously, you would use simple "end points" for machine to machine communication. But nowadays we have special message brokers. They make the process of data exchange simple and reliable. These tools use different protocols that determine the message format. The protocols show how the message should be transmitted, processed, and consumed.
+
 ### Point to Point messaging system:
 
 In a point to point system, messages are persisted in a queue. One, or more consumers can consume the messages in the queue, but a particular message can be consumed by a maximum of ONE consumer only.
@@ -47,6 +54,28 @@ Kafka is suitable for both offline and online message consumption. Kafka message
 There are lots of Kafka-on-Windows tutorials, but most make the mistake of running Kafka directly on the JVM on Windows. Superficially, this appears to work, but there are limitations: Kafka uses specific features of POSIX to achieve high performance, so emulations—which happen on WSL 1—are insufficient. For example, the broker will crash when it rolls a segment file. Always run Kafka on Windows in a Linux environment backed by WSL 2.
 
 Another approach that works well is to run Kafka in Docker containers. Docker Desktop for Windows has been updated to use the WSL 2 back end, so Docker works exactly as it does on native Linux, without needing to spin up an entire VM.
+
+### Avantages: 
+- **Haut débit:**
+Kafka peut gérer des données à grande vitesse et à volume élevé. ( des milliers de messages par seconde)
+- **Faible latence:**
+Kafka peut gérer les messages avec une latence faible (quelques millisecondes)
+- **Tolerance de panne:**
+Avec la redondance, Kafka posddèe une capacité à résister au pannes de noeuds et de materiel au sein d'un cluster.
+- **Durabilité:**
+Les données sont persistées et peuvent être redondées.
+- **Evolutivité:**
+Kafka peut etre etendu sans aucun temps mort. La gestion des messages reste totalement transparente. Son architecture distribuée le rend totalement evolutif, grâce notemment à la replication et au partitionnement.
+- **Les capacités du broker:**
+Kafka peut performer en remplacement d'un broker plus traditionnel.
+
+### Inconvénients: 
+- **Reglage du message:**
+Le message doit etre immutable, les performances de kafka diminuent considerablement si le message doit etre modifié.
+- **Pas de selection de sujets génériques:**
+Il faut le nom exact du topic pour qu'un message lui parvienne. Par conséquent, pas de sujet "générique".
+- **Instabilité:**
+Lorsque le nombre de files d'attentes dans un cluster augmente considerablement, le comportement de Kafka peut être un peu maladroit.
 
 
 ### Components: 

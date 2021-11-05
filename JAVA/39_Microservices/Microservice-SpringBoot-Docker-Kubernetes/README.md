@@ -171,7 +171,7 @@ spec:
 For the other services that does not need to perform Load Balancing, simply change spec.type under Service into NodePort .
 
 Creating the Kubernetes resources is as simple as entering the command below. Make sure that you cd into the Kubernetes folder.
-kubectl create -f api-gateway.yml -f customer-service.yml -f order-service.yml -f payment-service.yml
+```kubectl create -f api-gateway.yml -f customer-service.yml -f order-service.yml -f payment-service.yml```
 
 Now you should be able to see the result when you enter http://localhost:8080/api/customer . If you try other ports, you will realise that those ports are not exposed outside of the Kubernetes cluster. This provides a layer of security and a single entry point (API Gateway).
 
