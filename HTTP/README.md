@@ -40,7 +40,7 @@
 # APPELS HTTP: 
 <details><summary>Angular: </summary>
 	
-	HttpClient: + verbe.
+	```HttpClient:``` + verbe.
 	
 Les méthodes retournent un observable auquel il faut s'abonner pour déclencher le traitement.
 </details>
