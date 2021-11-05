@@ -5,7 +5,7 @@
 It's just a folder that I use as a "shortcut" to remember important or useful things, such as :
  <ul>
   <li>Design patterns implementation ;</li>
-  <li>APIs implementation ; </li>
+  <li><a href="https://github.com/BriqueDeckard/Notes/tree/master/API">APIs</a> implementation ; </li>
   <li>Sorting methods implementations ;</li>
   <li>Search methods implementation ; </li>
  </ul>
@@ -16,12 +16,63 @@ It's just a folder that I use as a "shortcut" to remember important or useful th
  <br/>
 The covered languages and technologies are:
  <br/><br/>
+  <!-- #### ALGORITHMIQUE #### -->
+<details>
+ <summary>Algorithmic</summary>
+ <ul>
+  <li><a href="https://github.com/BriqueDeckard/Notes/tree/master/ALGORITHMIQUE/01_interpreteurLisp">Interpreteur LISP</a></li>
+ </ul>
+ </details>
+   <details>
+  <summary>Android / Java / Kotlin </summary>
+  <ul>
+   <li><a href="https://github.com/BriqueDeckard/Notes/tree/master/ANDROID/ANDROID_KOTLIN_Koin-DDD">DI with Koin </a></li>
+   <li><a href="https://github.com/BriqueDeckard/Notes/tree/master/ANDROID/ANDROID_KOTLIN_poc-BuildSrc">Dependencies management with BuildSrc</a></li>
+   <li><a href="https://github.com/BriqueDeckard/Notes/tree/master/ANDROID/ANDROID_KOTLIN_poc-modularization">Modularization</a></li>
+   <li><a href="https://github.com/BriqueDeckard/Notes/tree/master/ANDROID/Kotlin_poc_Room_relationship">Room-1</a></li>
+   <li><a href="https://github.com/BriqueDeckard/Notes/tree/master/ANDROID/ANDROID_KOTLIN_Room-Words">Room-2</a></li>
+   <li><a href="https://github.com/BriqueDeckard/Notes/tree/master/ANDROID/Kotlin_poc_database_singleton_inject_dao">Singleton DAO</a></li>
+   <li><a href="https://github.com/BriqueDeckard/Notes/tree/master/ANDROID/ANDROID_KOTLIN_poc-RoleGameAssistant">PoCs</a></li>
+  </ul>
+ </details>
+ <details><summary>Cloud:</summary>
+  <ul>
+   <li><a href="https://github.com/BriqueDeckard/Notes/tree/master/CLOUD">CLOUD details</a></li>
+  </ul>
+ </details>
+ <details>
+  <summary>Databases:</summary>
+  <ul><li><a href="https://github.com/BriqueDeckard/Notes/tree/master/DATABASES">Databases details</a></li></ul></details>
+ <details>
+  <summary>Decoupling</summary>
+  <ul>
+   <li><a href="https://github.com/BriqueDeckard/Notes/tree/master/ALGORITHMIQUE#coupling-">Decoupling</a></li>
+   <li><a href="https://github.com/BriqueDeckard/Notes/tree/master/ALGORITHMIQUE#interfaces">Interfaces</a></li>
+  </ul>
+  </details>
  <details>
   <summary>Docker</summary>
   <ul>
    <li><a href="https://github.com/BriqueDeckard/Notes/tree/master/DOCKER">ReadMe</a></li>
   </ul>
  </details>
+ <details>
+  <summary>Git: </summary>
+  <ul>
+   <li><a href="https://github.com/BriqueDeckard/Notes/tree/master/GIT">Git</a></li>
+   <li><a href="https://github.com/BriqueDeckard/Notes/tree/master/GIT#merge">Merge</a></li>
+   <li><a href="https://github.com/BriqueDeckard/Notes/tree/master/GIT#rebase">Rebase</a></li>
+  </ul>
+ </details>
+ <details>
+  <summary>Http: </summary>
+  <ul>
+   <li><a href="https://github.com/BriqueDeckard/Notes/tree/master/HTTP">HTTP</a></li>
+   <li><a href="https://github.com/BriqueDeckard/Notes/tree/master/HTTP#codes-http">Codes</a></li>
+   <li><a href="https://github.com/BriqueDeckard/Notes/tree/master/HTTP#appels-http">Appels</a></li>
+  </ul>
+ </details>
+ 
  <!-- #### DOTNET #### -->
 <details>
  <summary>.Net and C#</summary>
@@ -35,25 +86,8 @@ The covered languages and technologies are:
   <li><a href="https://github.com/BriqueDeckard/Notes/tree/master/DOT_NET/08_API">API</a></li>
  </ul>
 </details>
- <!-- #### ALGORITHMIQUE #### -->
-<details>
- <summary>Algorithmic</summary>
- <ul>
-  <li><a href="https://github.com/BriqueDeckard/Notes/tree/master/ALGORITHMIQUE/01_interpreteurLisp">Interpreteur LISP</a></li>
- </ul>
- </details>
-  <details>
-  <summary>Android / Java / Kotlin </summary>
-  <ul>
-   <li><a href="https://github.com/BriqueDeckard/Notes/tree/master/ANDROID/ANDROID_KOTLIN_Koin-DDD">DI with Koin </a></li>
-   <li><a href="https://github.com/BriqueDeckard/Notes/tree/master/ANDROID/ANDROID_KOTLIN_poc-BuildSrc">Dependencies management with BuildSrc</a></li>
-   <li><a href="https://github.com/BriqueDeckard/Notes/tree/master/ANDROID/ANDROID_KOTLIN_poc-modularization">Modularization</a></li>
-   <li><a href="https://github.com/BriqueDeckard/Notes/tree/master/ANDROID/Kotlin_poc_Room_relationship">Room-1</a></li>
-   <li><a href="https://github.com/BriqueDeckard/Notes/tree/master/ANDROID/ANDROID_KOTLIN_Room-Words">Room-2</a></li>
-   <li><a href="https://github.com/BriqueDeckard/Notes/tree/master/ANDROID/Kotlin_poc_database_singleton_inject_dao">Singleton DAO</a></li>
-   <li><a href="https://github.com/BriqueDeckard/Notes/tree/master/ANDROID/ANDROID_KOTLIN_poc-RoleGameAssistant">PoCs</a></li>
-  </ul>
- </details>
+
+
  <!-- #### DART #### -->
 <details>
  <summary>Dart</summary>
@@ -124,6 +158,14 @@ The covered languages and technologies are:
  </ul>
 </details>
  <details>
+  <summary>JSON Web Token:</summary>
+  <ul>
+   <li>
+    <a href="https://github.com/BriqueDeckard/Notes/tree/master/JWT">JWT principles</a>
+   </li>
+  </ul>
+ </details>
+ <details>
   <summary>Kafka: </summary>
   <ul><li><a href="https://github.com/BriqueDeckard/Notes/tree/master/KAFKA">Readme</a></li></ul>
  </details>
@@ -160,3 +202,9 @@ The covered languages and technologies are:
    <li><a href="https://github.com/BriqueDeckard/Notes/tree/master/SQL/PG_GestionVols">SQL queries</a></li>
   </ul>
   </details>
+ <details>
+  <summary>Testing</summary>
+  <ul>
+   <li><a href="https://github.com/BriqueDeckard/Notes/tree/master/TESTING">Testing</a></li>
+  </ul>
+ </details>
