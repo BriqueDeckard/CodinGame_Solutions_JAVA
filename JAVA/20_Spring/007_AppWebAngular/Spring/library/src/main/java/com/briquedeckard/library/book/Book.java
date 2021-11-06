@@ -17,6 +17,7 @@ import javax.persistence.OneToMany;
 import javax.persistence.Table;
 
 import com.briquedeckard.library.category.Category;
+import com.briquedeckard.library.loan.Loan;
 
 @Entity
 @Table(name = "BOOK")
