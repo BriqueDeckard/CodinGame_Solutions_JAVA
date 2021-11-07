@@ -26,7 +26,7 @@ public interface BookDao extends JpaRepository<Book, Integer> {
 	 * @param titleString
 	 * @return
 	 */
-	public List<Book> findByTitleIgnoreCase(String titleString);
+	public List<Book> findByTitleLikeIgnoreCase(String titleString);
 
 	@Query("SELECT b " //
 			+ "FROM Book b " //

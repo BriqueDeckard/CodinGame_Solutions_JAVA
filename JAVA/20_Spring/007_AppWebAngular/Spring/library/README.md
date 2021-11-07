@@ -1,4 +1,7 @@
 # Notes :
+
+[source](https://gkemayo.developpez.com/tutoriels/java/tutoriel-sur-creation-application-web-avec-angular7-et-spring-boot-2/)
+
 ## Annotations: 
 **Les différentes classes Java ci-dessus comportent plusieurs annotations :**
 
@@ -82,7 +85,8 @@ public interface MyDao extends JpaRepository<T, ID> {
 }
 ```
 
-### 3. l'utilisation des méthodes prédéfinies qui doivent respecter un certain format afin de permettre à Spring Data JPA de générer la requête JPQL par déduction du nom de la méthode et de ses paramètres d'entrées. 
+### 3. l'utilisation des méthodes prédéfinies ...
+... qui doivent respecter un certain format afin de permettre à Spring Data JPA de générer la requête JPQL par déduction du nom de la méthode et de ses paramètres d'entrées. 
 
 #### Exemple :
 **Appel:**
@@ -96,3 +100,46 @@ public interface MyDao extends JpaRepository<T, ID> {
     
 }
 ```
+
+## Services:
+Les classes de services de notre application Library sont celles qui font 
+directement appel aux DAO présentés précédemment, afin de récupérer les 
+données, les traiter si nécessaire et les faire transiter vers les 
+services de niveau supérieur qui en ont fait la demande (en l'occurrence
+ les contrôleurs REST que nous présenterons dans la section suivante).
+ Il s'agit donc d'une classe intermédiaire entre la classe DAO et la 
+classe Contrôleur qu'il faut implémenter afin de respecter la hiérarchie
+ des appels dans une application de type SOA (Service Oriented Architecture).
+
+## JavaMailSender: 
+```
+public class MailSender {
+                    
+    @Autowired
+    private JavaMailSender javaMailSender; 
+    
+    public void sendMail() throws MailException {
+      //... créer ici l'objet message (de type SimpleMailMessage ou MimeMessage) à envoyer
+      javaMailSender.send(message);
+    }
+}
+```
+
+## Controllers:
+Suite à la l'affichage de ces deux contrôleurs REST qui réalisent des opérations de création/modification/suppression/mise à jour d'un nouveau client/Prêts + l'envoi de mail à un client (CustomerRestController), vous remarquez qu'un bon nombre d'annotations Spring ont été utilisées. Elles sont possibles grâce au starter spring-boot-starter-web ajouté dans le pom.xl, qui à son tour injectera la dépendance Spring Webmvc correspondant à l'implémentation Spring d'API RESTful :
+
+- @RestController : permet de marquer une classe comme étant une qui exposera des ressources appelées web services ;
+- @RequestMapping : permet de spécifier l'URI d'un web service ou d'une classe représentant le Contrôleur REST ;
+- @GetMapping : marque une ressource (et donc un web service) comme accessible par la méthode GET de HTTP. Spécifie aussi l'URI de la ressource ;
+- @PostMapping : marque une ressource comme accessible par la méthode POST de HTTP. Spécifie aussi l'URI de la ressource ;
+- @PutMapping : marque une ressource comme accessible par la méthode PUT de HTTP. Spécifie aussi l'URI de la ressource ;
+- @DeleteMapping : marque une ressource comme accessible par la méthode DELETE de HTTP. Spécifie aussi l'URI de la ressource.
+
+
+En appliquant les définitions données ci-dessus, nous observons que notre application Library expose :
+
+pour le contrôleur CustomerRestController, sept web services représentés par les méthodes publiques suivantes : createNewCustomer, updateCustomer, deleteCustomer, searchCustomers, searchCustomerByEmail, searchBookByLastName, sendMailToCustomer ;
+pour le contrôleur LoanRestController, quatre web services représentés par les méthodes suivantes : searchAllBooksLoanBeforeThisDate, searchAllOpenedLoansOfThisCustomer, createNewLoan, closeLoan.
+Ces contrôleurs REST s'appuient sur les classes de services (exemple : CustomerService, LoanService) présentées plus haut pour faire appel aux classes DAO afin d'accéder à la base de données H2.
+
+Dans les classes CustomerRestController et LoanRestController, nous avons utilisé d'autres annotations fournies par Spring qui concourent à la mise en place complète de web services. À savoir, @RequestBody, @RequestParam, @PathVariable qui sont les moyens de passage de paramètres du client vers le serveur. Nous avons aussi utilisé l'objet ResponseEntity qui joue l'effet inverse permettant ainsi au serveur d'encapsuler les données qu'il renverra au client. Nous n'entrerons pas plus dans les détails, il existe de nombreux articles sur Internet qui s'étendent de long en large sur ces notions.

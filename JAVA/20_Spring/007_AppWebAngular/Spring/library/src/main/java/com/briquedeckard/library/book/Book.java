@@ -34,6 +34,12 @@ public class Book {
 
 	private Integer totalExamplaries;
 
+	private String author;
+
+	private Category category;
+
+	Set<Loan> loans = new HashSet<Loan>();
+
 	@Id
 	@GeneratedValue(strategy = GenerationType.AUTO)
 	@Column(name = "BOOK_ID")
@@ -117,11 +123,5 @@ public class Book {
 	public void setLoans(Set<Loan> loans) {
 		this.loans = loans;
 	}
-
-	private String author;
-
-	private Category category;
-
-	Set<Loan> loans = new HashSet<Loan>();
 
 }
