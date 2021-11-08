@@ -20,4 +20,14 @@ public class CategoryServiceImpl implements CategoryService {
 		return categoryDao.findAll();
 	}
 
+	@Override
+	public Category saveCategory(Category category) {
+		return categoryDao.save(category);
+	}
+
+	@Override
+	public Category findCategoryByLabel(String label) {
+		return categoryDao.findByLabelLikeIgnoreCase(label);
+	}
+
 }

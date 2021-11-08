@@ -8,6 +8,8 @@ import org.springframework.stereotype.Repository;
 import com.briquedeckard.library.category.Category;
 
 @Repository
-public interface CategoryDao extends JpaRepository<Category, String> {	
+public interface CategoryDao extends JpaRepository<Category, String> {
+
+	Category findByLabelLikeIgnoreCase(String label);
 
 }

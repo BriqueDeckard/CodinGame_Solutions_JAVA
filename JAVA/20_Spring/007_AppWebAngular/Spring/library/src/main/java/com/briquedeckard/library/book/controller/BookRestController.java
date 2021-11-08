@@ -29,8 +29,14 @@ import com.briquedeckard.library.book.service.impl.BookServiceImpl;
 import com.briquedeckard.library.category.Category;
 import com.briquedeckard.library.category.dto.CategoryDTO;
 
+import io.swagger.annotations.Api;
+import io.swagger.annotations.ApiOperation;
+import io.swagger.annotations.ApiResponse;
+import io.swagger.annotations.ApiResponses;
+
 @RestController
 @RequestMapping("/rest/book/api")
+@Api(value = "Book Rest Controller: contains all operations for managing books.")
 public class BookRestController {
 
 	public static final Logger LOGGER = LoggerFactory.getLogger(BookRestController.class);
@@ -39,6 +45,10 @@ public class BookRestController {
 	private BookServiceImpl bookService;
 
 	@PostMapping("/addBook")
+	@ApiOperation(value = "Add a new Book in the library", response = BookDTO.class)
+	@ApiResponses(value = { @ApiResponse(code = 409, message = "Conflict: the book already exist"),
+			@ApiResponse(code = 201, message = "Created: the book is successfully inserted"),
+			@ApiResponse(code = 304, message = "Not Modified: the book is unsuccessfully inserted") })
 	public ResponseEntity<BookDTO> createNewBook(@RequestBody BookDTO bookDTORequest) {
 		Book existingBook = bookService.findBookByIsbn(bookDTORequest.getIsbn());
 		if (existingBook != null) {
