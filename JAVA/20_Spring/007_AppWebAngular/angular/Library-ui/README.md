@@ -52,6 +52,18 @@ pour ajouter l'instruction suivante :
 --base-href /library-ui --proxy-config proxy.conf.json.
 ```
 
-Image non disponible
-La commande --base-href /library-ui, permet de marquer l'accessibilité de la page web principale sur le suffixe /library-ui. Exemple : la saisie de l’URL http://localhost:4200/library-ui permettra d'afficher le menu principal.
-La commande --proxy-config proxy-conf.json, permet d'indiquer l'adresse des différents serveurs côté back-end auxquels l'application cliente Angular peut être amenée à appeler. En d'autres termes, c'est dans ce fichier que l'on configure les URL des serveurs qui hébergent les API REST auxquels Library-ui va faire appel.
+- La commande --base-href /library-ui, permet de marquer l'accessibilité de la page web principale sur le suffixe /library-ui. Exemple : la saisie de l’URL http://localhost:4200/library-ui permettra d'afficher le menu principal.
+- La commande --proxy-config proxy-conf.json, permet d'indiquer l'adresse des différents serveurs côté back-end auxquels l'application cliente Angular peut être amenée à appeler. En d'autres termes, c'est dans ce fichier que l'on configure les URL des serveurs qui hébergent les API REST auxquels Library-ui va faire appel.
+
+#### 2. Création du fichier proxy-conf.json
+
+Dans le répertoire d'installation du projet Library-ui (voir capture ci-dessus) et au même niveau que le fichier package.json, créez le fichier de nom proxy-conf.json et ajoutez y le code suivant : 
+
+```json
+{
+    "/library/": {
+        "target": "http://localhost:8082",
+        "secure": "false"
+    }
+}
+```
