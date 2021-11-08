@@ -67,3 +67,6 @@ Dans le répertoire d'installation du projet Library-ui (voir capture ci-dessus)
     }
 }
 ```
+
+le contenu de ce fichier indique que le serveur back-end répond sur l'URL http://localhost:8082 en n'admettant uniquement les requêtes http contenant le préfixe /library. Cette configuration s'adapte donc aux URI de nos API REST exposés dans le projet Library côté back-end dans les contrôleurs REST.
+
