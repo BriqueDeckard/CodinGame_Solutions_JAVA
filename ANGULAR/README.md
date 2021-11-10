@@ -28,3 +28,13 @@ npm install --save --legacy-peer-deps:
 ```
 npm install --save --legacy-peer-deps
 ```
+
+### Code:
+
+#### *ngFor:
+
+With *ngFor, the <div> repeats for each product in the list.
+
+```
+*ngFor="let product of products"
+```
