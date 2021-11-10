@@ -2,12 +2,21 @@
 
 <div *ngFor="let product of products">
     <h3>
+        <!-- Link to the product -->
         <a [title]="product.name + ' details'">
             {{ product.name }}
         </a>
-        <p *ngIf="product.description">
-            Description: {{ product.description}}
-        </p>
-
     </h3>
+    
+    <!-- Description of the product -->
+    <p *ngIf="product.description">
+        Description: {{ product.description}}
+    </p>
+
+    <!-- Button to share the product -->
+    <button (click)="share()">
+        Share
+    </button>
+
+
 </div>

@@ -8,9 +8,12 @@ import { products } from '../products';
   styleUrls: ['./product-list.component.css']
 })
 export class ProductListComponent {
+  /**
+   * products property that contains imported data for each product from the products array in products.ts
+   */
   products = products;
 
   share() {
-    window.alert('The product has been shared!');
+    window.alert('ProductListComponent: The product has been shared!');
   }
 }
