@@ -2,9 +2,7 @@
 
 Angular is an application design framework and development platform for creating efficient and sophisticated single-page apps.
 
-## Notes:
-
-### Commands
+## Commands
 
 New project:
 
@@ -31,8 +29,8 @@ npm install --save --legacy-peer-deps:
 npm install --save --legacy-peer-deps
 ```
 
-### In the template.html:
-#### *ngFor:
+## In the template.html:
+### *ngFor:
 
 With *ngFor, the ```<div>``` repeats for each product in the list.
 
@@ -40,7 +38,7 @@ With *ngFor, the ```<div>``` repeats for each product in the list.
 *ngFor="let product of products"
 ```
 
-#### Interpolation: 
+### Interpolation: 
 
  Interpolation ```{{ }}``` lets you render the property value as text.
 
@@ -48,7 +46,7 @@ With *ngFor, the ```<div>``` repeats for each product in the list.
 {{ product.name }}
 ```
 
-#### @Component:
+### @Component:
 
 ```
 @Component({ ... })
@@ -56,9 +54,9 @@ With *ngFor, the ```<div>``` repeats for each product in the list.
 
 The @Component() definition also exports the class, ProductAlertsComponent, which handles functionality for the component.
 
-### In the component.ts:
+## In the component.ts:
 
-#### The selector: 
+### The selector: 
 
 ```
 selector: 'app-product-alerts',
@@ -67,7 +65,7 @@ selector: 'app-product-alerts',
 The selector, ```app-product-alerts```, identifies the component. 
 By convention, Angular component selectors begin with the prefix ```app-```, followed by the component name.
 
-#### The template:
+### The template:
 
 ```
 templateUrl: './product-alerts.component.html',
@@ -75,19 +73,27 @@ templateUrl: './product-alerts.component.html',
 
 The template and style filenames reference the component's HTML and CSS.
 
-#### @Input & @Output
+### @Input & @Output
 
 - ```@Input()``` allows the Component to get data from its parent Component.
 - ```@Output()``` allows the Component to emit an event when the value of the notify property changes.
 
  The parent acts when the child raises the event.
 
+- [Pass data to a child component](https://angular.io/start#pass-data-to-a-child-component)
+- [Pass data to a parent component](https://angular.io/start#pass-data-to-a-parent-component)
+
 ## Routing:
 
 You can add a route in ```app.module.ts```
 Like this : ```{ path: 'route/:entityId', component: NameOfTheComponent },```
 
-## Links:
+The ```[routerLink]``` directive in the HTML helps you to redirect user from an anchor element.
 
-- [Pass data to a child component](https://angular.io/start#pass-data-to-a-child-component)
-- [Pass data to a parent component](https://angular.io/start#pass-data-to-a-parent-component)
+```ActivatedRoute``` is specific to each component that the Angular Router loads. 
+ActivatedRoute contains information about the route and the route's parameters.
+
+By injecting ActivatedRoute, you are configuring the component to use a service. The Managing Data step covers services in more detail.
+
+ To access the route parameters, we use ```route.snapshot```, which is the ActivatedRouteSnapshot that contains information about the active route at that particular moment in time.
+
