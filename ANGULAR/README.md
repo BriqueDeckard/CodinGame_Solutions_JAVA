@@ -16,6 +16,8 @@ New component:
 ```
 ng g c name-of-the-component
 ```
+***The generator automatically added the component to the AppModule to make it available to other components in the application.***
+
 
 Run a project:
 
@@ -72,3 +74,15 @@ templateUrl: './product-alerts.component.html',
 ```
 
 The template and style filenames reference the component's HTML and CSS.
+
+#### @Input & @Output
+
+- ```@Input()``` allows the Component to get data from its parent Component.
+- ```@Output()``` allows the Component to emit an event when the value of the notify property changes.
+
+ The parent acts when the child raises the event.
+
+## Links:
+
+- [Pass data to a child component](https://angular.io/start#pass-data-to-a-child-component)
+- [Pass data to a parent component](https://angular.io/start#pass-data-to-a-parent-component)
