@@ -33,8 +33,16 @@ npm install --save --legacy-peer-deps
 
 #### *ngFor:
 
-With *ngFor, the <div> repeats for each product in the list.
+With *ngFor, the ```<div>``` repeats for each product in the list.
 
 ```
 *ngFor="let product of products"
+```
+
+#### Interpolation: 
+
+ Interpolation ```{{ }}``` lets you render the property value as text.
+
+```
+{{ product.name }}
 ```
