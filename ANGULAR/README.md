@@ -29,8 +29,7 @@ npm install --save --legacy-peer-deps:
 npm install --save --legacy-peer-deps
 ```
 
-### Code:
-
+### In the template.html:
 #### *ngFor:
 
 With *ngFor, the ```<div>``` repeats for each product in the list.
@@ -46,3 +45,30 @@ With *ngFor, the ```<div>``` repeats for each product in the list.
 ```
 {{ product.name }}
 ```
+
+#### @Component:
+
+```
+@Component({ ... })
+```
+
+The @Component() definition also exports the class, ProductAlertsComponent, which handles functionality for the component.
+
+### In the component.ts:
+
+#### The selector: 
+
+```
+selector: 'app-product-alerts',
+```
+
+The selector, ```app-product-alerts```, identifies the component. 
+By convention, Angular component selectors begin with the prefix ```app-```, followed by the component name.
+
+#### The template:
+
+```
+templateUrl: './product-alerts.component.html',
+```
+
+The template and style filenames reference the component's HTML and CSS.
