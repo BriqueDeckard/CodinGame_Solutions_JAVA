@@ -16,3 +16,9 @@ New component:
 ```
 ng g c name-of-the-component
 ```
+
+Run a project:
+
+```
+ng serve -o
+```
