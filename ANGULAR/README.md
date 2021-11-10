@@ -23,8 +23,8 @@ Run a project:
 ng serve -o
 ```
 
-
+npm install --save --legacy-peer-deps: 
+--> [LINK](https://stackoverflow.com/questions/66239691/what-does-npm-install-legacy-peer-deps-do-exactly-when-is-it-recommended-wh)
 ```
 npm install --save --legacy-peer-deps
 ```
---> [LINK](https://stackoverflow.com/questions/66239691/what-does-npm-install-legacy-peer-deps-do-exactly-when-is-it-recommended-wh)
