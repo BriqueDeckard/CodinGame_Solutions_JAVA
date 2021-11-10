@@ -82,6 +82,11 @@ The template and style filenames reference the component's HTML and CSS.
 
  The parent acts when the child raises the event.
 
+## Routing:
+
+You can add a route in ```app.module.ts```
+Like this : ```{ path: 'route/:entityId', component: NameOfTheComponent },```
+
 ## Links:
 
 - [Pass data to a child component](https://angular.io/start#pass-data-to-a-child-component)
