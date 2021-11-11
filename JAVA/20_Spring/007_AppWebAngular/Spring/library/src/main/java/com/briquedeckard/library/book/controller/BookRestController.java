@@ -12,6 +12,7 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.util.CollectionUtils;
+import org.springframework.web.bind.annotation.CrossOrigin;
 import org.springframework.web.bind.annotation.DeleteMapping;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PathVariable;
@@ -35,6 +36,7 @@ import io.swagger.annotations.ApiResponse;
 import io.swagger.annotations.ApiResponses;
 
 @RestController
+@CrossOrigin(origins = "http://localhost:4200")
 @RequestMapping("/rest/book/api")
 @Api(value = "Book Rest Controller: contains all operations for managing books.")
 public class BookRestController {
@@ -108,6 +110,22 @@ public class BookRestController {
 		}
 		// Return 204
 		return new ResponseEntity<List<BookDTO>>(HttpStatus.NO_CONTENT);
+	}
+
+	@GetMapping("/getAllBooks")
+	public ResponseEntity<List<BookDTO>> getAllBooks() {
+		List<Book> books = bookService.getAllBooks();
+		if (!CollectionUtils.isEmpty(books)) {
+			books.removeAll(Collections.singleton(null));
+			List<BookDTO> bookDTOs = books.stream().map(book -> {
+				return mapBookToBookDTO(book);
+			}).collect(Collectors.toList());
+			// Return 200
+			return new ResponseEntity<List<BookDTO>>(bookDTOs, HttpStatus.OK);
+		}
+		// Return 204
+		return new ResponseEntity<List<BookDTO>>(HttpStatus.NO_CONTENT);
+
 	}
 
 	@GetMapping("/searchByIsbn")

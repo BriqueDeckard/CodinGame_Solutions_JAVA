@@ -16,6 +16,7 @@ import org.springframework.mail.MailException;
 import org.springframework.mail.SimpleMailMessage;
 import org.springframework.mail.javamail.JavaMailSender;
 import org.springframework.util.StringUtils;
+import org.springframework.web.bind.annotation.CrossOrigin;
 import org.springframework.web.bind.annotation.DeleteMapping;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PathVariable;
@@ -32,6 +33,7 @@ import com.briquedeckard.library.customer.dto.CustomerDTO;
 import com.briquedeckard.library.customer.service.impl.CustomerServiceImpl;
 import com.briquedeckard.library.mail.MailDTO;
 
+@CrossOrigin(origins = "http://localhost:4200")
 @RestController
 @RequestMapping("/rest/customer/api")
 public class CustomerRestController {
@@ -121,6 +123,20 @@ public class CustomerRestController {
 	@GetMapping("/searchByLastName")
 	public ResponseEntity<List<CustomerDTO>> searchBookByLastName(@RequestParam("lastName") String lastName) {
 		List<Customer> customers = customerService.findCustomerByLastName(lastName);
+		// If there is a result, convert it and return it with a 200 - OK
+		if (customers != null) {
+			List<CustomerDTO> customerDTOs = customers.stream().map(customer -> {
+				return mapCustomerToCustomerDTO(customer);
+			}).collect(Collectors.toList());
+			return new ResponseEntity<List<CustomerDTO>>(customerDTOs, HttpStatus.OK);
+		}
+		// else return 201 - No content
+		return new ResponseEntity<List<CustomerDTO>>(HttpStatus.NO_CONTENT);
+	}
+
+	@GetMapping("/getAllCustomers")
+	public ResponseEntity<List<CustomerDTO>> getAllCustomers() {
+		List<Customer> customers = customerService.findAllCustomers();
 		// If there is a result, convert it and return it with a 200 - OK
 		if (customers != null) {
 			List<CustomerDTO> customerDTOs = customers.stream().map(customer -> {

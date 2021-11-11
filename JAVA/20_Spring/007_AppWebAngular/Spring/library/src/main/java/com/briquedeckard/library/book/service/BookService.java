@@ -68,4 +68,10 @@ public interface BookService {
 	 */
 	public List<Book> getBooksByCategory(String codeCategory);
 
+	/**
+	 * get all the books
+	 * @return
+	 */
+	List<Book> getAllBooks();
+
 }

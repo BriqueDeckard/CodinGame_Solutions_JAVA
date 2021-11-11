@@ -3,7 +3,7 @@ import { Component, OnInit } from '@angular/core';
 import { Input } from '@angular/core';
 // Allows to Pass data to a parent component
 import { Output, EventEmitter } from '@angular/core';
-import { Product } from '../products';
+import { Product } from '../models/products';
 /**
  * Child component of ProductListComponent
  */

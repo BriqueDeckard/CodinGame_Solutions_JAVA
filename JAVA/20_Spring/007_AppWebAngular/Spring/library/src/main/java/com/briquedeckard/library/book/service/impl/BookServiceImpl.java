@@ -59,4 +59,9 @@ public class BookServiceImpl implements BookService {
 		return bookDao.findByCategory(codeCategory);
 	}
 
+	@Override
+	public List<Book> getAllBooks() {
+		return bookDao.findAll();
+	}
+
 }
