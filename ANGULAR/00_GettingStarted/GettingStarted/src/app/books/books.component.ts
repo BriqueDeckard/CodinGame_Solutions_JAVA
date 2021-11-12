@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, Input, OnInit } from '@angular/core';
 import { Book } from '../models/books';
 import { BooksService } from '../services/books.service';
 
@@ -9,16 +9,8 @@ import { BooksService } from '../services/books.service';
 })
 export class BooksComponent implements OnInit {
 
-  books: Book[] | undefined;
+  @Input() book!: Book;
 
-  constructor(private bookService: BooksService) { }
-
-  ngOnInit(): void {
-    this.bookService.getBooks().subscribe(
-      (data) => {
-        this.books = data;
-      }
-    )
-  }
+  ngOnInit(): void { }
 
 }

@@ -1,8 +1,11 @@
 import { NgModule } from '@angular/core';
+import { CUSTOM_ELEMENTS_SCHEMA } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
 import { RouterModule } from '@angular/router';
 import { ReactiveFormsModule } from '@angular/forms';
 import { HttpClientModule } from '@angular/common/http';
+import { MatCardModule } from '@angular/material/card';
+import {MatGridListModule} from '@angular/material/grid-list';
 
 import { AppComponent } from './app.component';
 import { TopBarComponent } from './top-bar/top-bar.component';
@@ -14,6 +17,8 @@ import { CartComponent } from './cart/cart.component';
 import { ShippingComponent } from './shipping/shipping.component';
 import { BooksComponent } from './books/books.component';
 import { CustomerComponent } from './customer/customer.component';
+import { BookListComponent } from './book-list/book-list.component';
+import { HomeComponent } from './home/home.component';
 
 @NgModule({
   imports: [
@@ -22,19 +27,21 @@ import { CustomerComponent } from './customer/customer.component';
     ReactiveFormsModule,
     RouterModule.forRoot([
       // Root route
-      { path: '', component: ProductListComponent },
+      { path: '', component: HomeComponent },
       // Product route
       { path: 'products/:productId', component: ProductDetailsComponent },
       // Cart route
       { path: 'cart', component: CartComponent },
       // Shipping route
       { path: 'shipping', component: ShippingComponent },
-      // Books route
-      { path: 'books', component: BooksComponent },
+      // Books list route
+      { path: 'books', component: BookListComponent },
       // Customer route
       { path: 'customers', component: CustomerComponent }
     ]),
-    BrowserAnimationsModule
+    BrowserAnimationsModule,
+    MatCardModule,
+    MatGridListModule
   ],
   declarations: [
     AppComponent,
@@ -45,10 +52,13 @@ import { CustomerComponent } from './customer/customer.component';
     CartComponent,
     ShippingComponent,
     BooksComponent,
-    CustomerComponent
+    CustomerComponent,
+    BookListComponent,
+    HomeComponent
   ],
   bootstrap: [
     AppComponent
-  ]
+  ],
+  schemas: [CUSTOM_ELEMENTS_SCHEMA],
 })
 export class AppModule { }
