@@ -5,9 +5,6 @@ import org.springframework.boot.autoconfigure.SpringBootApplication;
 import org.springframework.context.annotation.Bean;
 import org.springframework.mail.javamail.JavaMailSender;
 import org.springframework.mail.javamail.JavaMailSenderImpl;
-import org.springframework.web.bind.annotation.CrossOrigin;
-import org.springframework.web.servlet.config.annotation.CorsRegistry;
-import org.springframework.web.servlet.config.annotation.WebMvcConfigurer;
 
 import springfox.documentation.builders.ApiInfoBuilder;
 import springfox.documentation.builders.PathSelectors;
@@ -46,7 +43,7 @@ import springfox.documentation.swagger2.annotations.EnableSwagger2;
  */
 @SpringBootApplication
 @EnableSwagger2
-public class LibraryApplication{
+public class LibraryApplication {
 	/**
 	 * Docket est le bean qui permet de configurer les données du rendu graphique de
 	 * la documentation JSON de notre application. Il propose un ensemble
@@ -81,7 +78,5 @@ public class LibraryApplication{
 	public static void main(String[] args) {
 		SpringApplication.run(LibraryApplication.class, args);
 	}
-	
-	
 
 }

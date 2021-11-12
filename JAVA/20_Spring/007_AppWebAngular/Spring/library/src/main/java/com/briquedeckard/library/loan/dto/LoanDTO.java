@@ -2,7 +2,7 @@ package com.briquedeckard.library.loan.dto;
 
 import java.time.LocalDate;
 
-import com.briquedeckard.library.book.dto.BookDTO;
+import com.briquedeckard.library.book.application.services.contracts.dto.BookDTO;
 import com.briquedeckard.library.customer.dto.CustomerDTO;
 
 import io.swagger.annotations.ApiModelProperty;

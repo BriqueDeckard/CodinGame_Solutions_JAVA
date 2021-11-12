@@ -9,7 +9,7 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 import org.springframework.web.util.UriComponentsBuilder;
 
-import com.briquedeckard.library.book.Book;
+import com.briquedeckard.library.book.domain.aggregates.Book;
 import com.briquedeckard.library.customer.Customer;
 import com.briquedeckard.library.loan.Loan;
 import com.briquedeckard.library.loan.LoanId;

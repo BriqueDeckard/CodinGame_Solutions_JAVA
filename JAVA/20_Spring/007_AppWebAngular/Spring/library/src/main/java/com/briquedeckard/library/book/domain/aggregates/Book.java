@@ -1,4 +1,4 @@
-package com.briquedeckard.library.book;
+package com.briquedeckard.library.book.domain.aggregates;
 
 import java.time.LocalDate;
 import java.util.HashSet;

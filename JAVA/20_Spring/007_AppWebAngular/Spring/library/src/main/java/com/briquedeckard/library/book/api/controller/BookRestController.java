@@ -1,11 +1,9 @@
-package com.briquedeckard.library.book.controller;
+package com.briquedeckard.library.book.api.controller;
 
-import java.time.LocalDate;
 import java.util.Collections;
 import java.util.List;
 import java.util.stream.Collectors;
 
-import org.modelmapper.ModelMapper;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -24,11 +22,11 @@ import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.RestController;
 import org.springframework.web.util.UriComponentsBuilder;
 
-import com.briquedeckard.library.book.Book;
-import com.briquedeckard.library.book.dto.BookDTO;
-import com.briquedeckard.library.book.service.impl.BookServiceImpl;
-import com.briquedeckard.library.category.Category;
-import com.briquedeckard.library.category.dto.CategoryDTO;
+import com.briquedeckard.library.book.application.services.contracts.BookApplicationService;
+import com.briquedeckard.library.book.application.services.contracts.dto.BookDTO;
+import com.briquedeckard.library.book.domain.aggregates.Book;
+import com.briquedeckard.library.book.domain.repository.BookRepository;
+import com.briquedeckard.library.book.domain.services.BookServiceImpl;
 
 import io.swagger.annotations.Api;
 import io.swagger.annotations.ApiOperation;
@@ -46,24 +44,26 @@ public class BookRestController {
 	@Autowired
 	private BookServiceImpl bookService;
 
+
+	@Autowired
+	private BookApplicationService bookApplicationService;
+
 	@PostMapping("/addBook")
 	@ApiOperation(value = "Add a new Book in the library", response = BookDTO.class)
 	@ApiResponses(value = { @ApiResponse(code = 409, message = "Conflict: the book already exist"),
 			@ApiResponse(code = 201, message = "Created: the book is successfully inserted"),
 			@ApiResponse(code = 304, message = "Not Modified: the book is unsuccessfully inserted") })
 	public ResponseEntity<BookDTO> createNewBook(@RequestBody BookDTO bookDTORequest) {
+
 		Book existingBook = bookService.findBookByIsbn(bookDTORequest.getIsbn());
 		if (existingBook != null) {
 			// return 409
 			return new ResponseEntity<BookDTO>(HttpStatus.CONFLICT);
 		}
 
-		// Create a request from the DTO
-		Book bookRequest = mapBookDTOToBook(bookDTORequest);
-
-		Book book = bookService.saveBook(bookRequest);
+		Book book = bookService.saveBook(bookDTORequest);
 		if (book != null && book.getId() != null) {
-			BookDTO bookDTO = mapBookToBookDTO(book);
+			BookDTO bookDTO = bookApplicationService.mapBookToBookDTO(book);
 			// Return 201
 			return new ResponseEntity<BookDTO>(bookDTO, HttpStatus.CREATED);
 		}
@@ -78,10 +78,9 @@ public class BookRestController {
 			return new ResponseEntity<BookDTO>(HttpStatus.NOT_FOUND);
 		}
 
-		Book bookRequest = mapBookDTOToBook(bookDtoRequest);
-		Book book = bookService.updateBook(bookRequest);
+		Book book = bookService.updateBook(bookDtoRequest);
 		if (book != null) {
-			BookDTO bookDTO = mapBookToBookDTO(book);
+			BookDTO bookDTO = bookApplicationService.mapBookToBookDTO(book);
 			return new ResponseEntity<BookDTO>(bookDTO, HttpStatus.OK);
 
 		}
@@ -103,7 +102,7 @@ public class BookRestController {
 		if (!CollectionUtils.isEmpty(books)) {
 			books.removeAll(Collections.singleton(null));
 			List<BookDTO> bookDTOs = books.stream().map(book -> {
-				return mapBookToBookDTO(book);
+				return bookApplicationService.mapBookToBookDTO(book);
 			}).collect(Collectors.toList());
 			// Return 200
 			return new ResponseEntity<List<BookDTO>>(bookDTOs, HttpStatus.OK);
@@ -118,7 +117,7 @@ public class BookRestController {
 		if (!CollectionUtils.isEmpty(books)) {
 			books.removeAll(Collections.singleton(null));
 			List<BookDTO> bookDTOs = books.stream().map(book -> {
-				return mapBookToBookDTO(book);
+				return bookApplicationService.mapBookToBookDTO(book);
 			}).collect(Collectors.toList());
 			// Return 200
 			return new ResponseEntity<List<BookDTO>>(bookDTOs, HttpStatus.OK);
@@ -133,29 +132,12 @@ public class BookRestController {
 			UriComponentsBuilder uriComponentBuilder) {
 		Book book = bookService.findBookByIsbn(isbn);
 		if (book != null) {
-			BookDTO bookDTO = mapBookToBookDTO(book);
+			BookDTO bookDTO = bookApplicationService.mapBookToBookDTO(book);
 			// Return 200
 			return new ResponseEntity<BookDTO>(bookDTO, HttpStatus.OK);
 		}
 		// Return 204
 		return new ResponseEntity<BookDTO>(HttpStatus.NO_CONTENT);
-	}
-
-	private BookDTO mapBookToBookDTO(Book book) {
-		ModelMapper mapper = new ModelMapper();
-		BookDTO bookDTO = mapper.map(book, BookDTO.class);
-		if (book.getCategory() != null) {
-			bookDTO.setCategory(new CategoryDTO(book.getCategory().getCode(), book.getCategory().getLabel()));
-		}
-		return bookDTO;
-	}
-
-	private Book mapBookDTOToBook(BookDTO bookDTO) {
-		ModelMapper mapper = new ModelMapper();
-		Book book = mapper.map(bookDTO, Book.class);
-		book.setCategory(new Category(bookDTO.getCategory().getCode(), ""));
-		book.setRegisterDate(LocalDate.now());
-		return book;
 	}
 
 }

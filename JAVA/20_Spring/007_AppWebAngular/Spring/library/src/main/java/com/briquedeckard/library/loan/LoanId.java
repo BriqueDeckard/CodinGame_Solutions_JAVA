@@ -7,7 +7,7 @@ import javax.persistence.Column;
 import javax.persistence.Embeddable;
 import javax.persistence.ManyToOne;
 
-import com.briquedeckard.library.book.Book;
+import com.briquedeckard.library.book.domain.aggregates.Book;
 import com.briquedeckard.library.customer.Customer;
 
 @Embeddable

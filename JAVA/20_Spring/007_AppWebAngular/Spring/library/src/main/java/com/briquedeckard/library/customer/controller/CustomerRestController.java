@@ -79,7 +79,7 @@ public class CustomerRestController {
 		// If the response was given, return 200 - OK
 		if (customerResponse != null) {
 			CustomerDTO customerDTO = mapCustomerToCustomerDTO(customerResponse);
-			return new ResponseEntity<CustomerDTO>(HttpStatus.OK);
+			return new ResponseEntity<CustomerDTO>(customerDTO, HttpStatus.OK);
 		}
 		// Else, return 304 - Not modified
 		return new ResponseEntity<CustomerDTO>(HttpStatus.NOT_MODIFIED);

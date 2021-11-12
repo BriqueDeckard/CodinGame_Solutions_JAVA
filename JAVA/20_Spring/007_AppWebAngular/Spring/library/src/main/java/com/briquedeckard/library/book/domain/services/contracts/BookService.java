@@ -1,8 +1,9 @@
-package com.briquedeckard.library.book.service;
+package com.briquedeckard.library.book.domain.services.contracts;
 
 import java.util.List;
 
-import com.briquedeckard.library.book.Book;
+import com.briquedeckard.library.book.application.services.contracts.dto.BookDTO;
+import com.briquedeckard.library.book.domain.aggregates.Book;
 
 /**
  * Services qui font directement appel aux DAO présentés précédemment, afin de
@@ -13,21 +14,6 @@ import com.briquedeckard.library.book.Book;
  *
  */
 public interface BookService {
-	/**
-	 * Save a book
-	 * 
-	 * @param book
-	 * @return
-	 */
-	public Book saveBook(Book book);
-
-	/**
-	 * Update a book.
-	 * 
-	 * @param book
-	 * @return
-	 */
-	public Book updateBook(Book book);
 
 	/**
 	 * Delete a book.
@@ -70,8 +56,25 @@ public interface BookService {
 
 	/**
 	 * get all the books
+	 * 
 	 * @return
 	 */
 	List<Book> getAllBooks();
+
+	/**
+	 * Save a book
+	 * 
+	 * @param book
+	 * @return
+	 */
+	Book saveBook(BookDTO book);
+
+	/**
+	 * Update a book.
+	 * 
+	 * @param book
+	 * @return
+	 */
+	Book updateBook(BookDTO book);
 
 }

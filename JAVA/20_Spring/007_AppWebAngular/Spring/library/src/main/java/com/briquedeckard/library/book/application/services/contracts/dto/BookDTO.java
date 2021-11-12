@@ -1,4 +1,4 @@
-package com.briquedeckard.library.book.dto;
+package com.briquedeckard.library.book.application.services.contracts.dto;
 
 import java.time.LocalDate;
 

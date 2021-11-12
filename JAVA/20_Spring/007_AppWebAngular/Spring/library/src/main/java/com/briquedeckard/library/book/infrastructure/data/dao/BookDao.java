@@ -1,4 +1,4 @@
-package com.briquedeckard.library.book.dao;
+package com.briquedeckard.library.book.infrastructure.data.dao;
 
 import java.util.List;
 
@@ -7,7 +7,7 @@ import org.springframework.data.jpa.repository.Query;
 import org.springframework.data.repository.query.Param;
 import org.springframework.stereotype.Repository;
 
-import com.briquedeckard.library.book.Book;
+import com.briquedeckard.library.book.domain.aggregates.Book;
 
 @Repository
 public interface BookDao extends JpaRepository<Book, Integer> {
