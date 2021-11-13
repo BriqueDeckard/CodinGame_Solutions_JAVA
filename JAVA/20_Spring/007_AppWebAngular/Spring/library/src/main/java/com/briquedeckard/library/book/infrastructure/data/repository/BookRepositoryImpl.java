@@ -3,6 +3,7 @@ package com.briquedeckard.library.book.infrastructure.data.repository;
 import java.util.List;
 
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Repository;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
 
@@ -12,7 +13,7 @@ import com.briquedeckard.library.book.domain.aggregates.Book;
 import com.briquedeckard.library.book.domain.repository.BookRepository;
 import com.briquedeckard.library.book.infrastructure.data.dao.BookDao;
 
-@Service("bookRepository")
+@Repository
 @Transactional
 public class BookRepositoryImpl implements BookRepository {
 

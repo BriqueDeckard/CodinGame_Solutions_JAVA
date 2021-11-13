@@ -3,6 +3,7 @@ package com.briquedeckard.library.book.application.services.impl;
 import java.time.LocalDate;
 
 import org.modelmapper.ModelMapper;
+import org.springframework.stereotype.Service;
 
 import com.briquedeckard.library.book.application.services.contracts.BookApplicationService;
 import com.briquedeckard.library.book.application.services.contracts.dto.BookDTO;
@@ -10,6 +11,7 @@ import com.briquedeckard.library.book.domain.aggregates.Book;
 import com.briquedeckard.library.category.Category;
 import com.briquedeckard.library.category.dto.CategoryDTO;
 
+@Service(value = "bookApplicationService")
 public class BookApplicationServiceImpl implements BookApplicationService {
 
 	@Override

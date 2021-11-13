@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { count } from 'rxjs';
 import { Book } from '../models/books';
 import { BooksService } from '../services/books.service';
 
@@ -24,24 +25,34 @@ export class BookListComponent implements OnInit {
   books: Book[] | undefined;
 
   constructor(private bookService: BooksService) { }
- 
+
 
   ngOnInit(): void {
-   
+
     this.bookService.getBooks().subscribe(
       (data) => {
-        var count = 4;
+        var countH = 8;
+        var countW = 8;
         data.forEach(element => {
-          if(count <= 0){
-            count = 4;
+          if (countH <= 0) {
+            countH = 8;
           }
-          
+          if (countW <= 0) {
+            countW = 8;
+          }
+
+          var h = Math.floor(Math.random() * countH);
+          var w = Math.floor(Math.random() * countW);
+
+          countW = countW - w;
+          countH = countH - h;
+
+          element.color = this.colors[Math.floor(Math.random() * this.colors.length)];
+          element.cols = h;
+          element.rows = w;
+
         });
-        data.forEach((x) => {
-          x.color = this.colors[Math.floor(Math.random() * this.colors.length)];
-          x.cols = Math.floor(Math.random() * 4);
-          x.rows = Math.floor(Math.random() * 4);
-        })
+
         this.books = data;
         this.exempleBooks = data;
       }
