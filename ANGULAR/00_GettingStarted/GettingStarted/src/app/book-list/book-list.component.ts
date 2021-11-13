@@ -48,8 +48,8 @@ export class BookListComponent implements OnInit {
           countH = countH - h;
 
           element.color = this.colors[Math.floor(Math.random() * this.colors.length)];
-          element.cols = h;
-          element.rows = w;
+          element.cols = 1;
+          element.rows = 2;
 
         });
 
