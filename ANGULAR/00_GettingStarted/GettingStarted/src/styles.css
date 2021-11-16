@@ -71,3 +71,7 @@ mat-grid-tile app-books {
 .tile:hover {
     opacity: 0.75;
 }
+
+mat-grid-list{
+    padding-left: 10mm;
+}

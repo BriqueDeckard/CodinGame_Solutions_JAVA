@@ -10,25 +10,35 @@ import { BooksService } from '../services/books.service';
 })
 export class BookListComponent implements OnInit {
 
-  exempleBooks: Book[] = [
-    { id: 10, title: 'Brume', cols: 1, rows: 2, color: '#4b3832', isbn: "AAB", releaseDate: new Date(), registerDate: new Date(), totalExamplaries: 10, author: "Stephen King", category: { code: "10", label: "10" } },
-    { id: 10, title: 'La tour sombre', cols: 2, rows: 2, color: '#854442', isbn: "AAB", releaseDate: new Date(), registerDate: new Date(), totalExamplaries: 10, author: "Stephen King", category: { code: "10", label: "10" } },
-    { id: 10, title: 'Slurp', cols: 1, rows: 4, color: '#be9b7b', isbn: "AAB", releaseDate: new Date(), registerDate: new Date(), totalExamplaries: 10, author: "Stephen King", category: { code: "10", label: "10" } },
-    { id: 10, title: 'Harry Potter', cols: 1, rows: 2, color: '#3c2f2f', isbn: "AAB", releaseDate: new Date(), registerDate: new Date(), totalExamplaries: 10, author: "Stephen King", category: { code: "10", label: "10" } },
-    { id: 10, title: 'Eragon', cols: 1, rows: 2, color: '#be9b7b', isbn: "AAB", releaseDate: new Date(), registerDate: new Date(), totalExamplaries: 10, author: "Stephen King", category: { code: "10", label: "10" } },
-    { id: 1, title: 'Maleville', cols: 1, rows: 1, color: '#4b3832', isbn: "AAB", releaseDate: new Date(), registerDate: new Date(), totalExamplaries: 10, author: "Stephen King", category: { code: "10", label: "10" } },
-    { id: 1, title: 'La horde', cols: 1, rows: 1, color: '#854442', isbn: "AAB", releaseDate: new Date(), registerDate: new Date(), totalExamplaries: 10, author: "Stephen King", category: { code: "10", label: "10" } },
-  ]
 
   colors = ['#4b3832', '#854442', '#be9b7b', '#3c2f2f']
 
-  books: Book[] | undefined;
+  books: Book[] = [];
+
+  option:Book|undefined;
+
+  dataHasChanged(book:Book){
+    console.log("Book: " + book)
+  }
 
   constructor(private bookService: BooksService) { }
 
 
   ngOnInit(): void {
+    this.subscribeToBooks();
+  }
 
+  optionChangedHandler(option: string) {
+    // Log ! 
+    console.log("Option changed");
+    var filteredBooks = this.books.filter((x) => x.title?.toLowerCase().includes(option.toLowerCase()));
+    filteredBooks.forEach((x) => {
+      console.log("Book: " + x);
+    });
+
+  }
+
+  private subscribeToBooks() {
     this.bookService.getBooks().subscribe(
       (data) => {
         var countH = 8;
@@ -52,11 +62,9 @@ export class BookListComponent implements OnInit {
           element.rows = 2;
 
         });
-
+        console.log("data: " + data.length);
         this.books = data;
-        this.exempleBooks = data;
       }
     );
   }
-
 }

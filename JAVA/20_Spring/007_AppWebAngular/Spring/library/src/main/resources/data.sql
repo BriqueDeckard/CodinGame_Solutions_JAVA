@@ -63,5 +63,6 @@ INSERT INTO book (author, isbn, register_date, release_date, title, total_exampl
 INSERT INTO book (author, isbn, register_date, release_date, title, total_examplaries, cat_code) VALUES ('Stephen KING', 'KIN-CAI', '1995-04-06', '2001-11-09', 'Ca, il est revenu', 12, 'THR');
 INSERT INTO book (author, isbn, register_date, release_date, title, total_examplaries, cat_code) VALUES ('J.R.R TOLKIEN', 'TOL-SD1', '1995-04-06', '2001-11-09', 'Le seigneur des annéeaux 1', 12, 'FAN');
 INSERT INTO book (author, isbn, register_date, release_date, title, total_examplaries, cat_code) VALUES ('J.R.R TOLKIEN', 'TOL-SD2', '1995-04-06', '2001-11-09', 'Le seigneur des annéeaux 2', 12, 'FAN');
+INSERT INTO book (author, isbn, register_date, release_date, title, total_examplaries, cat_code) VALUES ('J.R.R TOLKIEN', 'TOL-SD3', '1995-04-06', '2001-11-09', 'Le seigneur des annéeaux 3', 12, 'FAN');
 
 COMMIT;

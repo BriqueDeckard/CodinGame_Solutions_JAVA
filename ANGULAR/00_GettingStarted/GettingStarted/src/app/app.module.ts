@@ -5,7 +5,10 @@ import { RouterModule } from '@angular/router';
 import { ReactiveFormsModule } from '@angular/forms';
 import { HttpClientModule } from '@angular/common/http';
 import { MatCardModule } from '@angular/material/card';
-import {MatGridListModule} from '@angular/material/grid-list';
+import { MatFormFieldModule } from '@angular/material/form-field';
+import { MatAutocompleteModule } from '@angular/material/autocomplete';
+import { MatGridListModule } from '@angular/material/grid-list';
+import { MatInputModule} from '@angular/material/input';
 
 import { AppComponent } from './app.component';
 import { TopBarComponent } from './top-bar/top-bar.component';
@@ -19,6 +22,9 @@ import { BooksComponent } from './books/books.component';
 import { CustomerComponent } from './customer/customer.component';
 import { BookListComponent } from './book-list/book-list.component';
 import { HomeComponent } from './home/home.component';
+import { SearchBookComponent } from './search-book/search-book.component';
+import { BookCardsListComponent } from './book-cards-list/book-cards-list.component';
+import { BookTilesListComponent } from './book-tiles-list/book-tiles-list.component';
 
 @NgModule({
   imports: [
@@ -41,7 +47,10 @@ import { HomeComponent } from './home/home.component';
     ]),
     BrowserAnimationsModule,
     MatCardModule,
-    MatGridListModule
+    MatGridListModule,
+    MatAutocompleteModule,
+    MatFormFieldModule,
+    MatInputModule
   ],
   declarations: [
     AppComponent,
@@ -54,7 +63,10 @@ import { HomeComponent } from './home/home.component';
     BooksComponent,
     CustomerComponent,
     BookListComponent,
-    HomeComponent
+    HomeComponent,
+    SearchBookComponent,
+    BookCardsListComponent,
+    BookTilesListComponent
   ],
   bootstrap: [
     AppComponent
