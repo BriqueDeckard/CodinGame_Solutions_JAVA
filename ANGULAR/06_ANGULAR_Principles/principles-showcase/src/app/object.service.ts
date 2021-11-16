@@ -1,4 +1,5 @@
 import { Injectable } from '@angular/core';
+import { Observable, of } from 'rxjs';
 import { SomeObjectInterface } from './models/SomeObjectInterface';
 
 export const OBJECTS: SomeObjectInterface[] = [
@@ -29,5 +30,15 @@ export class ObjectService {
   getSomeOnjects(): SomeObjectInterface[] {
     return OBJECTS;
 
+  }
+
+  getSomeObjectsAsync(): Observable<SomeObjectInterface[]> {
+    const objects = of(OBJECTS);
+    return objects;
+  }
+
+  getSomeObjectById(id:number): Observable<SomeObjectInterface>{
+    const oneObject = OBJECTS.find( o => o.id === id)!;
+    return of(oneObject);
   }
 }
