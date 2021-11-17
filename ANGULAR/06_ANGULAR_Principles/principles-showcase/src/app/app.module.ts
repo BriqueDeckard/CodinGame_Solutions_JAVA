@@ -1,5 +1,5 @@
 import { NgModule } from '@angular/core';
-import { FormsModule } from '@angular/forms';
+import {FormsModule, ReactiveFormsModule} from '@angular/forms';
 import { BrowserModule } from '@angular/platform-browser';
 
 import { AppRoutingModule } from './app-routing.module';
@@ -12,6 +12,15 @@ import { ObjectDetailsComponent } from './object-details/object-details.componen
 import { GetObjectAsyncComponent } from './get-object-async/get-object-async.component';
 import { MenuBarComponent } from './menu-bar/menu-bar.component';
 import { HomeComponent } from './home/home.component';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import { AutocompleteComponent } from './autocomplete/autocomplete.component';
+import { MatAutocompleteModule } from '@angular/material/autocomplete';
+import { MatFormFieldModule } from '@angular/material/form-field';
+import {MatInput, MatInputModule} from '@angular/material/input';
+import {FormControl} from '@angular/forms';
+import { MatIconModule } from '@angular/material/icon';
+import {MatBadgeModule} from '@angular/material/badge';
+import { HighlightModule, HIGHLIGHT_OPTIONS } from 'ngx-highlightjs';
 
 @NgModule({
   declarations: [
@@ -23,14 +32,39 @@ import { HomeComponent } from './home/home.component';
     ObjectDetailsComponent,
     GetObjectAsyncComponent,
     MenuBarComponent,
-    HomeComponent
+    HomeComponent,
+    AutocompleteComponent
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
-    FormsModule
+    FormsModule,
+    ReactiveFormsModule,
+    BrowserAnimationsModule,
+    MatFormFieldModule,
+    MatAutocompleteModule,
+    MatInputModule,
+    MatIconModule,
+    MatBadgeModule,
+    HighlightModule
   ],
-  providers: [],
-  bootstrap: [AppComponent]
+  exports: [
+    MatAutocompleteModule,
+    MatFormFieldModule,
+    MatInputModule,
+    MatBadgeModule,
+    HighlightModule
+    
+  ],
+  providers: [
+    {
+      provide: HIGHLIGHT_OPTIONS,
+      useValue: {
+        coreLibraryLoader: () => import('highlight.js/lib/core'),
+      }
+
+    }
+  ],
+  bootstrap: [AppComponent],
 })
 export class AppModule { }

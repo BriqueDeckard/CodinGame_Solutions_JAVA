@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { MatIconModule } from '@angular/material/icon'
 
 @Component({
   selector: 'app-menu-bar',
@@ -7,6 +8,8 @@ import { Component, OnInit } from '@angular/core';
 })
 export class MenuBarComponent implements OnInit {
 
+
+  badgeContent = 6;
 
   links = { name:"show", link:"/show-object"}
 
