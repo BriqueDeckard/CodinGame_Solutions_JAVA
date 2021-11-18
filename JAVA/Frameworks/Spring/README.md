@@ -1,6 +1,7 @@
 # Notes : 
 
-[source](https://gkemayo.developpez.com/tutoriels/java/tutoriel-sur-creation-application-web-avec-angular7-et-spring-boot-2/)  
+**>** [source](https://gkemayo.developpez.com/tutoriels/java/tutoriel-sur-creation-application-web-avec-angular7-et-spring-boot-2/)  
+**>** [Building a Restful Web Service](https://spring.io/guides/gs/rest-service/)
 
 ## Annotations:
 
