@@ -1,34 +1,42 @@
 # SQL:
-[UsefulQuery](https://github.com/BriqueDeckard/Notes/blob/master/DATABASES/SQL/README.md#useful-)
-[Database](https://github.com/BriqueDeckard/Notes/blob/master/DATABASES/SQL/README.md#database-)
-- [Create](https://github.com/BriqueDeckard/Notes/blob/master/DATABASES/SQL/README.md#create-)
-- [Drop](https://github.com/BriqueDeckard/Notes/blob/master/DATABASES/SQL/README.md#drop)
-[Tables](https://github.com/BriqueDeckard/Notes/blob/master/DATABASES/SQL/README.md#tables-)
-- [Create](https://github.com/BriqueDeckard/Notes/blob/master/DATABASES/SQL/README.md#create)
-- [Update](https://github.com/BriqueDeckard/Notes/blob/master/DATABASES/SQL/README.md#update)
-- [Delete](https://github.com/BriqueDeckard/Notes/blob/master/DATABASES/SQL/README.md#delete)
-[CRUD](https://github.com/BriqueDeckard/Notes/blob/master/DATABASES/SQL/README.md#crud-)
-- [Create](https://github.com/BriqueDeckard/Notes/blob/master/DATABASES/SQL/README.md#create-insert)
-- [Read](https://github.com/BriqueDeckard/Notes/blob/master/DATABASES/SQL/README.md#read-select-)
-- [Update](https://github.com/BriqueDeckard/Notes/blob/master/DATABASES/SQL/README.md#update-update-)
-- [Delete](https://github.com/BriqueDeckard/Notes/blob/master/DATABASES/SQL/README.md#delete-delete)
-[Jointures](https://github.com/BriqueDeckard/Notes/blob/master/DATABASES/SQL/README.md#jointures)
-[Sous requêtes](https://github.com/BriqueDeckard/Notes/blob/master/DATABASES/SQL/README.md#sous-requ%C3%AAtes)
-[Fonctions](https://github.com/BriqueDeckard/Notes/blob/master/DATABASES/SQL/README.md#fonctions)
-[Procedures Stockées](https://github.com/BriqueDeckard/Notes/blob/master/DATABASES/SQL/README.md#procedures-stock%C3%A9es)
-[Triggers](https://github.com/BriqueDeckard/Notes/blob/master/DATABASES/SQL/README.md#triggers)
+[UsefulQuery](#Useful)
 
-## Database : 
-### Create :
+[Database](#Database)
+- [Create](#DatabaseCreate)
+- [Drop](#DatabaseDrop)
+
+[Tables](#Tables)
+- [Create](#TablesCreate)
+- [Update](#TablesUpdate)
+- [Delete](#TablesDelete)
+
+[CRUD](#crud)
+- [Create](#CRUDInsert)
+- [Read](#CRUDRead)
+- [Update](#CRUDUpdate)
+- [Delete](#CRUDDelete)
+
+[Jointures](#Jointures)
+
+[Sous requêtes](#SousRequetes)
+
+[Fonctions](#Fonctions)
+
+[Procedures Stockées](#Procedures)
+
+[Triggers](#Trigges)
+
+## Database : <a name="Database"></a>
+### Create :<a name="DatabaseCreate"></a>
 ```SQL
 CREATE DATABASE IF NOT EXISTS ma_base
 ```
-### Drop:
+### Drop:<a name="DatabaseDrop"></a>
 ```SQL
 DROP DATABASE ma_base
 ```
-## Tables :
-### Create:
+## Tables :<a name="Tables"></a>
+### Create:<a name="TablesCreate"></a>
 ```SQL
 CREATE TABLE nom_de_la_table
 (
@@ -38,7 +46,7 @@ CREATE TABLE nom_de_la_table
     colonne4 type_donnees
 )
 ```
-#### Constraints : 
+#### Constraints : <a name="TablesConstraints"></a>
 - ```NOT NULL``` : empêche d’enregistrer une valeur nulle pour une colonne.
 - ```DEFAULT``` : attribuer une valeur par défaut si aucune données n’est indiquée pour cette colonne lors de l’ajout d’une ligne dans la table.
 - ```PRIMARY KEY``` : indiquer si cette colonne est considérée comme clé primaire pour un index.
@@ -49,18 +57,18 @@ CREATE TABLE `nom_de_la_table` (
   [...]
 );
 ```
-### Update: 
+### Update: <a name="TablesUpdate"></a>
 #### Alter :
 ```SQL
 ALTER TABLE nom_table
 instruction
 ```
-### Delete:
+### Delete:<a name="TablesDelete"></a>
 ```SQL
 DROP TABLE nom_table
 ```
 
-### Useful : 
+### Useful : <a name="Useful"></a>
 > Cette requête imaginaire sert principale d’aide-mémoire pour savoir dans quel ordre sont utilisé chacun des commandes au sein d’une requête SELECT.
 ```SQL
 SELECT *
@@ -74,14 +82,14 @@ LIMIT count
 OFFSET start
 ```
 
-## CRUD :
-### (Create) Insert: 
+## CRUD :<a name="CRUD"></a>
+### (Create) Insert: <a name="CRUDInsert"></a>
 
 ```SQL
 INSERT INTO nom_table VALUES ('valeur 1', 'valeur 2', ...)
 ```
 
-### (Read) Select :
+### (Read) Select :<a name="CRUDRead"></a>
 
 ```SQL
 SELECT nom_du_champ FROM nom_table
@@ -143,7 +151,7 @@ FROM table
 ORDER BY colonne1
 ```
 
-### (Update) Update :
+### (Update) Update : <a name="CRUDUpdate"></a>
 ```SQL
 UPDATE table
 SET nom_colonne_1 = 'nouvelle valeur'
@@ -168,13 +176,13 @@ MERGE INTO table1
 - WHEN MATCHED permet de définir la condition de mise à jour lorsque la condition est vérifiée
 - WHEN NOT MATCHED permet de définir la condition d’insertion lorsque la condition n’est pas vérifiée
 
-### (Delete) Delete: 
+### (Delete) Delete: <a name="CRUDDelete"></a>
 ```SQL
 DELETE FROM `table`
 WHERE condition
 ```
 
-## Jointures
+## Jointures <a name="Jointures"></a>
 
 - **INNER JOIN** : jointure interne pour retourner les enregistrements quand la condition est vrai dans les 2 tables. C’est l’une des jointures les plus communes. Cette commande retourne les enregistrements lorsqu’il y a au moins une ligne dans chaque colonne qui correspond à la condition.
 ```SQL
@@ -238,7 +246,7 @@ INTERSECT
 SELECT * FROM `table2`
 ```
 
-## Sous requêtes:
+## Sous requêtes: <a name="SousRequetes"></a>
 ### Requête imbriquée qui retourne un seul résultat: 
 ```SQL
 SELECT *
@@ -259,7 +267,7 @@ WHERE `nom_colonne` IN (
     WHERE `cle_etrangere` = 36
   )
 ```
-## Fonctions:
+## Fonctions: <a name="Fonctions"></a>
 - ```SUM()``` calculer la somme d’un set de résultat
 - ```MAX()``` obtenir le résultat maximum (fonctionne bien pour un entier)
 - ```MIN()``` obtenir le résultat minimum
@@ -272,7 +280,7 @@ WHERE `nom_colonne` IN (
 - ```CONCAT()``` concaténer des chaînes de caractères
 - ```CURRENT_DATE()``` date actuelle
 
-## Procedures stockées:
+## Procedures stockées: <a name="Procedure"></a>
 [SQL.SH](https://sql.sh/cours/procedure-stockee)
 ## Triggers
 [SQL.SH](https://sql.sh/cours/create-trigger)
