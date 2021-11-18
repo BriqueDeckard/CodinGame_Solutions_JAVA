@@ -6,7 +6,6 @@ body {
     padding-left: 5mm;
 }
 
-
 code {
     background-color: darkslategrey;
     color: mintcream;
@@ -80,6 +79,7 @@ p {
     border-radius: 4px 0 0 4px;
 }
 */
+
 input {
     padding: .5rem;
 }
@@ -101,4 +101,36 @@ body {
 
 .example-full-width {
     width: 100%;
+}
+
+section {
+    display: table;
+}
+
+.example-label {
+    display: table-cell;
+    font-size: 14px;
+    margin-left: 8px;
+    min-width: 120px;
+}
+
+.example-button-row {
+    display: table-cell;
+    width: 490px;
+}
+
+.example-button-row .mat-button-base {
+    margin: 8px 8px 8px 0;
+}
+
+.example-flex-container {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+
+.example-button-container {
+    display: flex;
+    justify-content: center;
+    width: 120px;
 }

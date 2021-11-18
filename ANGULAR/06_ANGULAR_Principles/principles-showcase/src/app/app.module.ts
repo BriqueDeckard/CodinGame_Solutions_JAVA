@@ -21,6 +21,10 @@ import {FormControl} from '@angular/forms';
 import { MatIconModule } from '@angular/material/icon';
 import {MatBadgeModule} from '@angular/material/badge';
 import { HighlightModule, HIGHLIGHT_OPTIONS } from 'ngx-highlightjs';
+import {MatBottomSheetModule} from '@angular/material/bottom-sheet';
+import {MatListModule} from '@angular/material/list';
+import { BottomSheetExampleComponent } from './bottom-sheet-example/bottom-sheet-example.component';
+import { ButtonsComponent } from './buttons/buttons.component';
 
 @NgModule({
   declarations: [
@@ -33,7 +37,9 @@ import { HighlightModule, HIGHLIGHT_OPTIONS } from 'ngx-highlightjs';
     GetObjectAsyncComponent,
     MenuBarComponent,
     HomeComponent,
-    AutocompleteComponent
+    AutocompleteComponent,
+    BottomSheetExampleComponent,
+    ButtonsComponent
   ],
   imports: [
     BrowserModule,
@@ -46,14 +52,18 @@ import { HighlightModule, HIGHLIGHT_OPTIONS } from 'ngx-highlightjs';
     MatInputModule,
     MatIconModule,
     MatBadgeModule,
-    HighlightModule
+    HighlightModule,
+    MatBottomSheetModule,
+    MatListModule
   ],
   exports: [
     MatAutocompleteModule,
     MatFormFieldModule,
     MatInputModule,
     MatBadgeModule,
-    HighlightModule
+    HighlightModule,
+    MatBottomSheetModule,
+    MatListModule
     
   ],
   providers: [
