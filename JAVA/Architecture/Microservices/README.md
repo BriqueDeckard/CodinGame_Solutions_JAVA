@@ -1,5 +1,7 @@
 # Notes on microservices
 
+[Talend](https://www.talend.com/fr/resources/guide-microservices/)
+
 ## Problematic
 
 1. Availability : available all the time
@@ -31,3 +33,49 @@ The microservice architecture proposes to divide an application into small servi
 		<li>Get: ```@GetMapping("/route")```</li>
 	</ul>
 </details>
+
+Methode pour concevoir une application comme un ensemble de services modulaires à la granularité assez fine. Chaque module répond à un objectif métier spécifique et communique avec les autres modules via, eventullement via une api (API REST, SOAP, AMQP et JMS.).
+
+## Les microservices devraient respecter les lignes directrices suivantes :
+
+- **Base de codes** :
+ 
+> Chaque microservice a besoin d'une base de codes unique qui est suivie dans le contrôle de révision. Les microservices ne doivent pas partager de bases de codes.
+
+- **Dépendances** : 
+ 
+> Chaque microservice doit déclarer, isoler et emballer explicitement ses dépendances.
+
+- **Configuration** : 
+
+> la configuration de l'application (par exemple, les informations d'identification) peut changer entre les déploiements. Stockez ces données de configuration en dehors du microservice, de sorte que le microservice utilise la configuration appropriée propre à l'environnement de déploiement.
+
+- **Services de support** : 
+
+> Les clients doivent consommer des microservices via des URL sur le réseau, et les microservices ne doivent pas faire de distinction entre les services locaux et les services tiers.
+
+- **Créer, libérer et exécuter** : 
+
+> traitez chaque étape du processus de développement et de déploiement d'applications comme une étape distincte. Au stade de la construction, le code est traduit en un groupe exécutable (build). Au cours de la phase de version, la construction se combine à la configuration actuelle du déploiement (développement, test, préparation ou production). Lors de l'exécution, l'application s'exécute dans l'environnement d'exécution par rapport à la version sélectionnée.
+
+- **Processus** : 
+
+> Les microservices sont apatrides et suivent le modèle de partage. L'état n'existe que dans un cache externe ou une banque de données.
+
+- **Liaison de port** : 
+> un microservice s'exécute dans un conteneur et expose toutes ses interfaces via des ports qui écoutent les demandes.
+
+- **Concurrence** : 
+> un processus de microservice s'adapte pour répondre à une demande plus élevée en ajoutant des copies en cours d'exécution du microservice. Un moteur d'orchestration de conteneurs peut vous aider dans ce processus.
+
+- **Disposabilité** : 
+> Les processus de microservice peuvent être démarrés ou arrêtés immédiatement chaque fois que nécessaire.
+
+- **Parité de développement et de production** : 
+> Maintenir les environnements de développement et de production aussi semblables que possible.
+
+- **Journaux** : 
+> les journaux sont gérés en tant que flux d'événements. Un microservice écrit des journaux dans son flux d'événements, qui est ordonné par le temps et non rempli. Le microservice ne doit jamais gérer le routage ou le stockage de son flux de sortie, et il ne doit pas gérer les fichiers journaux.
+
+- **Processus d'administration** : 
+> les tâches de maintenance et d'administration doivent être exécutées en tant que processus ponctuels (par exemple, migration de base de données) sur un environnement identique à celui des microservices.
