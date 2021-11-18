@@ -38,12 +38,17 @@
 </details>
 
 # APPELS HTTP: 
-<details><summary>Angular: </summary>
-	
-	HttpClient: + verbe.
+Angular : 
+```typescript
+ getBooks() {
+    return this.http.get<Book[]>('http://localhost:8080/rest/book/api/getAllBooks');
+  }
+```
+
+```HttpClient``` + ```verbe```
 	
 Les méthodes retournent un observable auquel il faut s'abonner pour déclencher le traitement.
-</details>
+
 <details><summary>Vue.js: </summary>
 
 	app.get('route', (req, res) => { 
