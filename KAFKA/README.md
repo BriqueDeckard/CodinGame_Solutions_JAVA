@@ -4,7 +4,11 @@
 
 [Confluent](https://www.confluent.io/blog/set-up-and-run-kafka-on-windows-linux-wsl-2/)
 
-[source: https://www.confluent.io/blog/kafka-client-cannot-connect-to-broker-on-aws-on-docker-etc/](https://www.confluent.io/blog/kafka-client-cannot-connect-to-broker-on-aws-on-docker-etc/)
+[kafka-client-cannot-connect-to-broker-on-aws-on-docker-etc/](https://www.confluent.io/blog/kafka-client-cannot-connect-to-broker-on-aws-on-docker-etc/)
+
+[analyticsinsights](https://analyticsinsights.io/aoache-kafka/)
+
+[wiki](https://fr.wikipedia.org/wiki/Apache_Kafka)
 __
 [download Kafka](https://kafka.apache.org/downloads)
 
