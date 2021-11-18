@@ -12,6 +12,12 @@
 __
 [download Kafka](https://kafka.apache.org/downloads)
 
+## Summary :
+- [Execution](#execution)
+- [Avantages](#avantages)
+- [Inconvénients](#inconvénients)
+- [api](#api)
+- [composants](#components)
 
 ## Introduction: 
 
@@ -66,6 +72,7 @@ Another approach that works well is to run Kafka in Docker containers. Docker De
 La fonction première d’Apache Kafka est d’optimiser la transmission et le traitement des flux de données qui sont directement échangés entre le destinataire de données et la source. Kafka fait office d’instance de messagerie entre l’émetteur et le récepteur, et propose des solutions permettant de résoudre les problèmes généralement associés à ce type de connexion.
 
 **Une puissante plateforme de streaming associée à une vaste panoplie de fonctionnalités.**
+<a name="execution"></a>
 
 L’exécution d’Apache Kafka se fait en tant que Cluster (grappe de serveurs) sur un ou plusieurs serveurs, pouvant concerner différents centres de calculs. Les différents nœuds du cluster, que l’on appelle aussi Broker, stockent et catégorisent les flux de données en topics. Les données sont ensuite réparties en partitions avant d’être répliquées et distribuées dans le cluster avec un horodateur. 
 
@@ -74,6 +81,7 @@ Les applications qui éditent des données dans une grappe de serveurs Kafka son
 
 
 ### Avantages: 
+<a name="avantages">
 - **Haut débit:**
 Kafka peut gérer des données à grande vitesse et à volume élevé. ( des milliers de messages par seconde)
 - **Faible latence:**
@@ -88,6 +96,7 @@ Kafka peut etre etendu sans aucun temps mort. La gestion des messages reste tota
 Kafka peut performer en remplacement d'un broker plus traditionnel.
 
 ### Inconvénients: 
+<a name="inconvénients">
 - **Reglage du message:**
 Le message doit etre immutable, les performances de kafka diminuent considerablement si le message doit etre modifié.
 - **Pas de selection de sujets génériques:**
@@ -96,6 +105,7 @@ Il faut le nom exact du topic pour qu'un message lui parvienne. Par conséquent,
 Lorsque le nombre de files d'attentes dans un cluster augmente considerablement, le comportement de Kafka peut être un peu maladroit.
 
 ### Apis: 
+<a name="api">
 Kafka comprend cinq APIs de base :
 
 #### Producer API:
@@ -111,7 +121,7 @@ Kafka comprend cinq APIs de base :
 
 La communication entre les applications-client et les différents serveurs du Cluster Apache se fait au moyen d’un protocole, simple et performant, indépendant d’un langage de programmation, sur une base TCL. 
 
-### Components: 
+### Components: <a name="components">
 
 #### Brokers:
 - Brokers are the components that are responsible for maintaining the pub-lished data. Each broker hae zero or more partitions per topic. Assume, if there are N partitions in a topic and N number of brokers, each broker will have one partition.
