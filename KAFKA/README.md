@@ -20,6 +20,8 @@ There are two types of messaging patterns:
 Permet de centraliser et de paralleliser le traitement des messages.
 Traitement asynchrone --> 
 
+Kafka est utilisé principalement pour la mise en place de « data pipeline » temps réel mais ce n'est pas sa seule application possible dans le monde de l'entreprise. Il est aussi de plus en plus utilisé dans les architectures micro services comme système d’échange, dans la supervision temps réel et dans l’IOT15. Kafka apporte sa capacité à ingérer et diffuser une grande quantité de données, couplé à un framework de data stream processing, il permet le traitement complexe et en temps réel des données.
+
 ### Message Broker Use Case
 The developers face the problem of successful data exchange. 
 Imagine you have your own application. For example, it's an online store. So, you permanently work in your technological scope, and one day you need to make the application interact with other apps. Previously, you would use simple "end points" for machine to machine communication. But nowadays we have special message brokers. They make the process of data exchange simple and reliable. These tools use different protocols that determine the message format. The protocols show how the message should be transmitted, processed, and consumed.
@@ -55,6 +57,18 @@ There are lots of Kafka-on-Windows tutorials, but most make the mistake of runni
 
 Another approach that works well is to run Kafka in Docker containers. Docker Desktop for Windows has been updated to use the WSL 2 back end, so Docker works exactly as it does on native Linux, without needing to spin up an entire VM.
 
+**Principale fonction est la centralisation des flux de données.**
+
+La fonction première d’Apache Kafka est d’optimiser la transmission et le traitement des flux de données qui sont directement échangés entre le destinataire de données et la source. Kafka fait office d’instance de messagerie entre l’émetteur et le récepteur, et propose des solutions permettant de résoudre les problèmes généralement associés à ce type de connexion.
+
+**Une puissante plateforme de streaming associée à une vaste panoplie de fonctionnalités.**
+
+L’exécution d’Apache Kafka se fait en tant que Cluster (grappe de serveurs) sur un ou plusieurs serveurs, pouvant concerner différents centres de calculs. Les différents nœuds du cluster, que l’on appelle aussi Broker, stockent et catégorisent les flux de données en topics. Les données sont ensuite réparties en partitions avant d’être répliquées et distribuées dans le cluster avec un horodateur. 
+
+Les applications qui éditent des données dans une grappe de serveurs Kafka sont désignés comme producteurs (producer), tandis que toutes les applications qui lisent les données d'un cluster Kafka sont appelées des consommateurs (consumer). La composante centrale à laquelle accèdent producteurs et consommateurs lors du traitement des flux de données est une bibliothèque Java portant le nom de Kafka Stream.
+
+
+
 ### Avantages: 
 - **Haut débit:**
 Kafka peut gérer des données à grande vitesse et à volume élevé. ( des milliers de messages par seconde)
@@ -77,6 +91,21 @@ Il faut le nom exact du topic pour qu'un message lui parvienne. Par conséquent,
 - **Instabilité:**
 Lorsque le nombre de files d'attentes dans un cluster augmente considerablement, le comportement de Kafka peut être un peu maladroit.
 
+### Apis: 
+Kafka comprend cinq APIs de base :
+
+#### Producer API:
+> Permet aux applications d'envoyer des flux de données aux topics du cluster Kafka.
+#### Consumer API:
+> Permet aux applications de lire des flux de données à partir des topics du cluster Kafka.
+#### Streams API: 
+> Permet de transformer des flux de données en topic de sortie.
+#### Connect API:
+> Permet d'implémenter des connecteurs qui récupèrent les données d'un système source ou d'une application vers Kafka ou qui poussent de Kafka vers une application.
+#### AdminClient API: 
+> Permet de gérer et d'inspecter les topics, les brokers, et les autres objets Kafka .
+
+La communication entre les applications-client et les différents serveurs du Cluster Apache se fait au moyen d’un protocole, simple et performant, indépendant d’un langage de programmation, sur une base TCL. 
 
 ### Components: 
 
