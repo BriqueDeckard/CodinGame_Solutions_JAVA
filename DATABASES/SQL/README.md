@@ -1,4 +1,22 @@
 # SQL:
+[UsefulQuery](https://github.com/BriqueDeckard/Notes/blob/master/DATABASES/SQL/README.md#useful-)
+[Database](https://github.com/BriqueDeckard/Notes/blob/master/DATABASES/SQL/README.md#database-)
+- [Create](https://github.com/BriqueDeckard/Notes/blob/master/DATABASES/SQL/README.md#create-)
+- [Drop](https://github.com/BriqueDeckard/Notes/blob/master/DATABASES/SQL/README.md#drop)
+[Tables](https://github.com/BriqueDeckard/Notes/blob/master/DATABASES/SQL/README.md#tables-)
+- [Create](https://github.com/BriqueDeckard/Notes/blob/master/DATABASES/SQL/README.md#create)
+- [Update](https://github.com/BriqueDeckard/Notes/blob/master/DATABASES/SQL/README.md#update)
+- [Delete](https://github.com/BriqueDeckard/Notes/blob/master/DATABASES/SQL/README.md#delete)
+[CRUD](https://github.com/BriqueDeckard/Notes/blob/master/DATABASES/SQL/README.md#crud-)
+- [Create](https://github.com/BriqueDeckard/Notes/blob/master/DATABASES/SQL/README.md#create-insert)
+- [Read](https://github.com/BriqueDeckard/Notes/blob/master/DATABASES/SQL/README.md#read-select-)
+- [Update](https://github.com/BriqueDeckard/Notes/blob/master/DATABASES/SQL/README.md#update-update-)
+- [Delete](https://github.com/BriqueDeckard/Notes/blob/master/DATABASES/SQL/README.md#delete-delete)
+[Jointures](https://github.com/BriqueDeckard/Notes/blob/master/DATABASES/SQL/README.md#jointures)
+[Sous requêtes](https://github.com/BriqueDeckard/Notes/blob/master/DATABASES/SQL/README.md#sous-requ%C3%AAtes)
+[Fonctions](https://github.com/BriqueDeckard/Notes/blob/master/DATABASES/SQL/README.md#fonctions)
+[Procedures Stockées](https://github.com/BriqueDeckard/Notes/blob/master/DATABASES/SQL/README.md#procedures-stock%C3%A9es)
+[Triggers](https://github.com/BriqueDeckard/Notes/blob/master/DATABASES/SQL/README.md#triggers)
 
 ## Database : 
 ### Create :
@@ -242,17 +260,17 @@ WHERE `nom_colonne` IN (
   )
 ```
 ## Fonctions:
--```SUM()``` calculer la somme d’un set de résultat
--```MAX()``` obtenir le résultat maximum (fonctionne bien pour un entier)
--```MIN()``` obtenir le résultat minimum
--```COUNT()``` compter le nombre de lignes dans un résultat
--```ROUND()``` arrondir la valeur
--```UPPER()``` afficher une chaîne en majuscule
--```LOWER()``` afficher une chaîne en minuscule
--```NOW()``` date et heure actuelle
--```RAND()``` retourner un nombre aléatoire
--```CONCAT()``` concaténer des chaînes de caractères
--```CURRENT_DATE()``` date actuelle
+- ```SUM()``` calculer la somme d’un set de résultat
+- ```MAX()``` obtenir le résultat maximum (fonctionne bien pour un entier)
+- ```MIN()``` obtenir le résultat minimum
+- ```COUNT()``` compter le nombre de lignes dans un résultat
+- ```ROUND()``` arrondir la valeur
+- ```UPPER()``` afficher une chaîne en majuscule
+- ```LOWER()``` afficher une chaîne en minuscule
+- ```NOW()``` date et heure actuelle
+- ```RAND()``` retourner un nombre aléatoire
+- ```CONCAT()``` concaténer des chaînes de caractères
+- ```CURRENT_DATE()``` date actuelle
 
 ## Procedures stockées:
 [SQL.SH](https://sql.sh/cours/procedure-stockee)
