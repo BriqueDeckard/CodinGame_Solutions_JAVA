@@ -1,23 +1,26 @@
-package com.bd.notes.domain.aggregates.payload.request;
+package com.bd.notes.domain.aggregates.payload.request.signup;
 
 import java.util.Set;
 
-import javax.validation.constraints.Email;
-import javax.validation.constraints.NotBlank;
-import javax.validation.constraints.Size;
+import javax.validation.constraints.*;
 
-public class SignupRequest {
+import com.fasterxml.jackson.annotation.JsonProperty;
+
+public class SignupRequestDTO {
+	@JsonProperty("username")
 	@NotBlank
 	@Size(min = 3, max = 20)
 	private String username;
-
+	
+	@JsonProperty("email")
 	@NotBlank
 	@Size(max = 50)
 	@Email
 	private String email;
 
 	private Set<String> role;
-
+	
+	@JsonProperty("password")
 	@NotBlank
 	@Size(min = 6, max = 40)
 	private String password;

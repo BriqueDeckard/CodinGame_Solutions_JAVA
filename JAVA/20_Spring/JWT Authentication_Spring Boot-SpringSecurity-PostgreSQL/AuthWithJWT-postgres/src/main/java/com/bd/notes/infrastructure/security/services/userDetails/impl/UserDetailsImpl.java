@@ -1,4 +1,4 @@
-package com.bd.notes.infrastructure.security.services;
+package com.bd.notes.infrastructure.security.services.userDetails.impl;
 
 import java.util.Collection;
 import java.util.List;
@@ -12,6 +12,21 @@ import org.springframework.security.core.userdetails.UserDetails;
 import com.bd.notes.domain.aggregates.user.User;
 import com.fasterxml.jackson.annotation.JsonIgnore;
 
+/**
+ * Provides core user information.
+ * 
+ * Implementations are not used directly by Spring Security for security
+ * purposes. Theysimply store user information which is later encapsulated into
+ * Authenticationobjects. This allows non-security related user information
+ * (such as email addresses,telephone numbers etc) to be stored in a convenient
+ * location.
+ * 
+ * Concrete implementations must take particular care to ensure the non-null
+ * contractdetailed for each method is enforced.
+ * 
+ * @author pierr
+ *
+ */
 public class UserDetailsImpl implements UserDetails {
 
 	/**
@@ -23,25 +38,9 @@ public class UserDetailsImpl implements UserDetails {
 	private String username;
 	private String email;
 
-	public Long getId() {
-		return id;
-	}
-
-	public void setId(Long id) {
-		this.id = id;
-	}
-
-	public String getEmail() {
-		return email;
-	}
-
-	public void setEmail(String email) {
-		this.email = email;
-	}
-
 	@JsonIgnore
 	private String password;
-
+	// Represents all authorities granted to an Authentication object. 
 	private Collection<? extends GrantedAuthority> authorities;
 
 	public UserDetailsImpl(Long id, String username, String email, String password,
@@ -57,9 +56,26 @@ public class UserDetailsImpl implements UserDetails {
 		// Convert Set<Role> into
 		// List<GrantedAuthority>.
 		List<GrantedAuthority> authorities = user.getRoles().stream()
-				.map(role -> new SimpleGrantedAuthority(role.getName().name())).collect(Collectors.toList());
+				.map(role -> new SimpleGrantedAuthority(role.getName().name()))//
+				.collect(Collectors.toList());
 
 		return new UserDetailsImpl(user.getId(), user.getUsername(), user.getEmail(), user.getPassword(), authorities);
+	}
+
+	public Long getId() {
+		return id;
+	}
+
+	public void setId(Long id) {
+		this.id = id;
+	}
+
+	public String getEmail() {
+		return email;
+	}
+
+	public void setEmail(String email) {
+		this.email = email;
 	}
 
 	@Override

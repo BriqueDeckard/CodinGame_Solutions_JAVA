@@ -1,4 +1,4 @@
-package com.bd.notes.tests.controller;
+package com.bd.notes.api.controllers.test;
 
 import org.springframework.security.access.prepost.PreAuthorize;
 import org.springframework.web.bind.annotation.CrossOrigin;

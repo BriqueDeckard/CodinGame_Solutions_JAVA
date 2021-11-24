@@ -1,4 +1,4 @@
-package com.bd.notes.domain.repository;
+package com.bd.notes.domain.repository.user;
 
 import java.util.Optional;
 

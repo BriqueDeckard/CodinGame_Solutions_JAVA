@@ -1,0 +1,12 @@
+{"properties": [
+  {
+    "name": "com.bd.notes.jwtExpirationMs",
+    "type": "java.lang.String",
+    "description": "A description for 'com.bd.notes.jwtExpirationMs'"
+  },
+  {
+    "name": "com.bd.notes.jwtSecret",
+    "type": "java.lang.String",
+    "description": "A description for 'com.bd.notes.jwtSecret'"
+  }
+]}

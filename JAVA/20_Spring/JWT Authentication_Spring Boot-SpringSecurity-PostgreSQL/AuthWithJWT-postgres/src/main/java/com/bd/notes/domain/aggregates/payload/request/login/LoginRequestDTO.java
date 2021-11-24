@@ -1,8 +1,8 @@
-package com.bd.notes.domain.aggregates.payload.request;
+package com.bd.notes.domain.aggregates.payload.request.login;
 
 import javax.validation.constraints.NotBlank;
 
-public class LoginRequest {
+public class LoginRequestDTO {
 	@NotBlank
 	private String username;
 
