@@ -2,6 +2,11 @@ package com.bd.notes.infrastructure.security.exception;
 
 public class EmailExistsException extends Exception {
 
+	/**
+	 * 
+	 */
+	private static final long serialVersionUID = -6009066483962623465L;
+
 	public EmailExistsException() {
 		super();
 		// TODO Auto-generated constructor stub

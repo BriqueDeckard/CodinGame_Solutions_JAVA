@@ -56,7 +56,7 @@ public class AuthEntryPointJwt implements AuthenticationEntryPoint {
 
 		// write the value
 		final ObjectMapper mapper = new ObjectMapper();
-		mapper.writeValue(response.getOutputStream(), mapper);
+		mapper.writeValue(response.getOutputStream(), body);
 
 		// HttpServletResponse.SC_UNAUTHORIZED is the 401 Status code. It indicates that
 		// the request requires HTTP authentication.

@@ -2,6 +2,11 @@ package com.bd.notes.infrastructure.security.exception;
 
 public class UsernameExistsException extends Exception {
 
+	/**
+	 * 
+	 */
+	private static final long serialVersionUID = 6539846833432205866L;
+
 	public UsernameExistsException() {
 		super();
 		// TODO Auto-generated constructor stub

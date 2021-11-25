@@ -1,7 +1,5 @@
 package com.bd.notes.infrastructure.security.services.signup;
 
-import org.springframework.stereotype.Service;
-
 import com.bd.notes.domain.aggregates.payload.request.signup.SignupRequestDTO;
 import com.bd.notes.infrastructure.security.exception.EmailExistsException;
 import com.bd.notes.infrastructure.security.exception.UsernameExistsException;

@@ -36,27 +36,6 @@ public class JwtUtils {
 		return generateJwtTokenFromAuthent(authentication);
 	}
 
-	private String generateJwtTokenFromAuthent(Authentication authentication) {
-		UserDetailsImpl userPrincipal = (UserDetailsImpl) authentication.getPrincipal();
-
-		return Jwts.builder() // JwtBuilder builds compact jwt strings
-				.setSubject((userPrincipal.getUsername())) // Set the claims
-				.setIssuedAt(new Date()) // identifies the time at which the JWT was issued
-				.setExpiration(new Date((new Date()).getTime() + jwtExpirationMs)) // Set the jwt claims expiration
-																					// value
-				.signWith(SignatureAlgorithm.HS512, jwtSecret) // Sign the JWT
-				.compact(); // Build JWT
-	}
-
-	public String getUserNameFromJwtToken(String token) {
-		return Jwts // Factory to create instance of JWT
-				.parser() // Used to parse JWT string
-				.setSigningKey(jwtSecret) // set the signing key to verify JWT signature
-				.parseClaimsJws(token) // parse and return the claims
-				.getBody() // return a claims instance
-				.getSubject(); // return the value
-	}
-
 	public boolean validateJwtToken(String authToken) {
 		try {
 			// Try to parse the token
@@ -86,4 +65,41 @@ public class JwtUtils {
 
 		return false;
 	}
+
+	public String generateJwtToken(UserDetailsImpl userPrincipal) {
+		return generateTokenFromUsername(userPrincipal.getUsername());
+	}
+
+	public String generateTokenFromUsername(String username) {
+		return Jwts //
+				.builder() //
+				.setSubject(username) //
+				.setIssuedAt(new Date()) //
+				.setExpiration(new Date((new Date()).getTime() + jwtExpirationMs)) //
+				.signWith(SignatureAlgorithm.HS512, jwtSecret) //
+				.compact();
+	}
+
+// --- Ancienne version : Avant le refresh ---
+	private String generateJwtTokenFromAuthent(Authentication authentication) {
+		UserDetailsImpl userPrincipal = (UserDetailsImpl) authentication.getPrincipal();
+
+		return Jwts.builder() // JwtBuilder builds compact jwt strings
+				.setSubject((userPrincipal.getUsername())) // Set the claims
+				.setIssuedAt(new Date()) // identifies the time at which the JWT was issued
+				.setExpiration(new Date((new Date()).getTime() + jwtExpirationMs)) // Set jwt claims expiration value
+				.signWith(SignatureAlgorithm.HS512, jwtSecret) // Sign the JWT
+				.compact(); // Build JWT
+	}
+// --- ---- ---
+
+	public String getUserNameFromJwtToken(String token) {
+		return Jwts // Factory to create instance of JWT
+				.parser() // Used to parse JWT string
+				.setSigningKey(jwtSecret) // set the signing key to verify JWT signature
+				.parseClaimsJws(token) // parse and return the claims
+				.getBody() // return a claims instance
+				.getSubject(); // return the value
+	}
+
 }
