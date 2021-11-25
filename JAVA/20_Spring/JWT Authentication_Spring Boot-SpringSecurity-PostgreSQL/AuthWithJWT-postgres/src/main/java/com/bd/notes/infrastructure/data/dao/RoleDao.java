@@ -1,4 +1,4 @@
-package com.bd.notes.domain.repository.role;
+package com.bd.notes.infrastructure.data.dao;
 
 import java.util.Optional;
 
@@ -9,7 +9,7 @@ import com.bd.notes.domain.aggregates.role.Role;
 import com.bd.notes.domain.aggregates.role.RoleEnum;
 
 @Repository
-public interface RoleRepository extends JpaRepository<Role, Integer> {
+public interface RoleDao extends JpaRepository<Role, Integer> {
 
 	/**
 	 * Find a role by its name

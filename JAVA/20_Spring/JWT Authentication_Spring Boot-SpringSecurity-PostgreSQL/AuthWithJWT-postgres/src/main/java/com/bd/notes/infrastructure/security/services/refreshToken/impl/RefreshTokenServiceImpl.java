@@ -11,8 +11,8 @@ import org.springframework.beans.factory.annotation.Value;
 import org.springframework.stereotype.Service;
 
 import com.bd.notes.domain.aggregates.token.RefreshToken;
-import com.bd.notes.domain.repository.token.RefreshTokenRepository;
-import com.bd.notes.domain.repository.user.UserRepository;
+import com.bd.notes.infrastructure.data.dao.RefreshTokenDao;
+import com.bd.notes.infrastructure.data.dao.UserDao;
 import com.bd.notes.infrastructure.security.exception.TokenRefreshException;
 import com.bd.notes.infrastructure.security.services.refreshToken.RefreshTokenService;
 
@@ -22,10 +22,10 @@ public class RefreshTokenServiceImpl implements RefreshTokenService {
 	private Long refreshTokenDurationMs;
 
 	@Autowired
-	private RefreshTokenRepository refreshTokenRepository;
+	private RefreshTokenDao refreshTokenRepository;
 
 	@Autowired
-	private UserRepository userRepository;
+	private UserDao userRepository;
 
 	@Override
 	public Optional<RefreshToken> findByToken(String token) {

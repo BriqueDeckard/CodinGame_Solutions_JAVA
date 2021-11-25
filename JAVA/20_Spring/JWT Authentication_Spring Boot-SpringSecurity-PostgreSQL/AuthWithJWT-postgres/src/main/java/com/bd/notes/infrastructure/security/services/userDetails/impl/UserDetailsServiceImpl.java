@@ -9,7 +9,7 @@ import org.springframework.security.core.userdetails.UsernameNotFoundException;
 import org.springframework.stereotype.Service;
 
 import com.bd.notes.domain.aggregates.user.User;
-import com.bd.notes.domain.repository.user.UserRepository;
+import com.bd.notes.infrastructure.data.dao.UserDao;
 
 /**
  * @author pierr
@@ -19,7 +19,7 @@ import com.bd.notes.domain.repository.user.UserRepository;
 public class UserDetailsServiceImpl implements UserDetailsService {
 
 	@Autowired
-	UserRepository userRepository;
+	UserDao userRepository;
 
 	/**
 	 *

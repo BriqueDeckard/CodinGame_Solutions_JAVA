@@ -1,4 +1,4 @@
-package com.bd.notes.domain.repository.user;
+package com.bd.notes.infrastructure.data.dao;
 
 import java.util.Optional;
 
@@ -14,7 +14,7 @@ import com.bd.notes.domain.aggregates.user.User;
  *
  */
 @Repository
-public interface UserRepository extends JpaRepository<User, Long> {
+public interface UserDao extends JpaRepository<User, Long> {
 	/**
 	 * Find an user by its user name
 	 * 

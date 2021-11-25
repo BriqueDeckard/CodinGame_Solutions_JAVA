@@ -11,8 +11,8 @@ import com.bd.notes.domain.aggregates.payload.request.signup.SignupRequestDTO;
 import com.bd.notes.domain.aggregates.role.Role;
 import com.bd.notes.domain.aggregates.role.RoleEnum;
 import com.bd.notes.domain.aggregates.user.User;
-import com.bd.notes.domain.repository.role.RoleRepository;
-import com.bd.notes.domain.repository.user.UserRepository;
+import com.bd.notes.infrastructure.data.dao.RoleDao;
+import com.bd.notes.infrastructure.data.dao.UserDao;
 import com.bd.notes.infrastructure.security.exception.EmailExistsException;
 import com.bd.notes.infrastructure.security.exception.UsernameExistsException;
 import com.bd.notes.infrastructure.security.services.signup.SignupService;
@@ -21,10 +21,10 @@ import com.bd.notes.infrastructure.security.services.signup.SignupService;
 public class SignupServiceImpl implements SignupService {
 
 	@Autowired
-	UserRepository userRepository;
+	UserDao userRepository;
 
 	@Autowired
-	RoleRepository roleRepository;
+	RoleDao roleRepository;
 
 	@Autowired
 	PasswordEncoder encoder;
