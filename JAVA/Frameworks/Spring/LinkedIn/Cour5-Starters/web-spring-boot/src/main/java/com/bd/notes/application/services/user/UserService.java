@@ -12,7 +12,7 @@ public interface UserService {
 
 	List<User> getUsersByLastName(String lastName);
 
-	void addUser(User user);
+	User addUser(User user);
 
 	void deleteUser(Long id);
 

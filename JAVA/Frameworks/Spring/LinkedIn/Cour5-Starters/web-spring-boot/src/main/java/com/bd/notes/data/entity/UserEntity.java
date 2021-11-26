@@ -20,6 +20,10 @@ public class UserEntity implements User, Serializable {
 	@GeneratedValue(strategy = GenerationType.AUTO)
 	private long id;
 
+	public UserEntity() {
+
+	}
+
 	public UserEntity(long id, String firstName, String lastName) {
 		super();
 		this.id = id;

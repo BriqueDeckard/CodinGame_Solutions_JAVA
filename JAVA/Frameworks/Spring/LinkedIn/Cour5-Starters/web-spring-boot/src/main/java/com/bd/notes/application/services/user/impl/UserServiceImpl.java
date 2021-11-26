@@ -40,8 +40,8 @@ public class UserServiceImpl implements UserService {
 	}
 
 	@Override
-	public void addUser(User user) {
-		repository.save(mapper.mapDomainEntityToJpaEntity(user));
+	public User addUser(User user) {		
+		return mapper.mapJpaEntityToDomainEntity(repository.save(mapper.mapDomainEntityToJpaEntity(user)));
 	}
 
 	@Override
