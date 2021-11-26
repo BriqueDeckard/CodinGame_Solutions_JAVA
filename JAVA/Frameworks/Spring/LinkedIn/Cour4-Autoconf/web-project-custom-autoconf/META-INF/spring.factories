@@ -1,0 +1,2 @@
+org.springframwork.boot.autoconfigure.EnableAutoConfiguration
+com.bd.notes.autoconfigure.LoggerAutoConfiguration
