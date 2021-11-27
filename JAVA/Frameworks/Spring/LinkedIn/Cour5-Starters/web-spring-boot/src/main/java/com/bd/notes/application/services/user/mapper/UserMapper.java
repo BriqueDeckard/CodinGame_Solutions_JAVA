@@ -7,11 +7,11 @@ import com.bd.notes.domain.aggregates.user.User;
 
 public interface UserMapper {
 
-	User mapJpaEntityToDomainEntity(UserEntity entity);
+	User mapDatabaseEntityToDomainEntity(UserEntity entity);
 
-	UserEntity mapDomainEntityToJpaEntity(User user);
+	UserEntity mapDomainEntityToDatabaseEntity(User user);
 
-	List<User> mapJpaEntitiesToDomainEnties(Iterable<UserEntity> entities);
+	List<User> mapDatabaseEntitiesToDomainEnties(Iterable<UserEntity> entities);
 
 	List<UserEntity> mapDomainEntitiesToJpaEntities(List<User> entities);
 

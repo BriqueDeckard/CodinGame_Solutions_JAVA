@@ -7,23 +7,23 @@ import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
 
-import com.bd.notes.application.services.user.UserService;
-import com.bd.notes.domain.aggregates.user.User;
+import com.bd.notes.application.contracts.UserDTO;
+import com.bd.notes.application.services.user.UserApplicationService;
 
 @Controller
 @RequestMapping("/web/") // intercepte toutes les requêtes de l'application
 public class UserController {
-	private final UserService userService;
+	private final UserApplicationService userApplicationService;
 
-	public UserController(UserService userService) {
+	public UserController(UserApplicationService userService) {
 		super();
-		this.userService = userService;
+		this.userApplicationService = userService;
 	}
 
 	@GetMapping("users") // intercepte "GET~/users"
 	public String getUsers(Model model) {
 		// Récupère la liste des users
-		List<User> users = userService.getAllUsers();
+		List<UserDTO> users = userApplicationService.getAllUsers();
 		// on la passe au modele
 		model.addAttribute("users", users);
 		// on retourne une vue

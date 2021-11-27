@@ -4,10 +4,6 @@ import java.util.List;
 import java.util.stream.Collectors;
 import java.util.stream.StreamSupport;
 
-import org.slf4j.Logger;
-import org.slf4j.LoggerFactory;
-import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.DeleteMapping;
 import org.springframework.web.bind.annotation.GetMapping;
@@ -19,17 +15,17 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
 import com.bd.notes.application.contracts.UserDTO;
-import com.bd.notes.application.services.user.UserService;
+import com.bd.notes.application.exceptions.EntityNotFoundException;
+import com.bd.notes.application.services.user.UserApplicationService;
 import com.bd.notes.domain.aggregates.user.User;
-import com.bd.notes.domain.aggregates.user.impl.UserImpl;
 
 @RestController
 @RequestMapping("api/user") // intercepte toutes les requêtes de l'application
 public class UserRestController {
 
-	private final UserService userService;
+	private final UserApplicationService userService;
 
-	public UserRestController(UserService userService) {
+	public UserRestController(UserApplicationService userService) {
 		super();
 		this.userService = userService;
 
@@ -48,18 +44,22 @@ public class UserRestController {
 
 	@PostMapping // intercepte "POST~/rest/
 	public User addUser(@RequestBody UserDTO dto) {
-		User user = userService.addUser(new UserImpl( //
-				dto.getFirstName(), //
-				dto.getLastName(), //
-				0));
+		User user = userService.addUser(dto);
 		dto.setId(user.getId());
 		return dto;
 	}
 
 	@GetMapping(path = "{id}") // intercepte "GET~/rest/{id}"
 	public User getUserById(@PathVariable("id") Long id) {
-		User user = userService.findUserById(id);
-		return new UserDTO(user.getFirstName(), user.getLastName(), user.getId());
+		User user;
+		try {
+			user = userService.findUserById(id);
+			return new UserDTO(user.getFirstName(), user.getLastName(), user.getId());
+		} catch (EntityNotFoundException e) {
+			e.printStackTrace();
+			return null;
+		}
+
 	}
 
 	@DeleteMapping(path = "{id}") // intercepte "GET~/rest/{id}"

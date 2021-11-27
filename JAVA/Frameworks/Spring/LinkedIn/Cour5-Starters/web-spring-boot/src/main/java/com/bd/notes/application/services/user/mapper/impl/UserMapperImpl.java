@@ -14,7 +14,7 @@ import com.bd.notes.domain.aggregates.user.impl.UserImpl;
 @Service
 public class UserMapperImpl implements UserMapper {
 	@Override
-	public User mapJpaEntityToDomainEntity(UserEntity entity) {
+	public User mapDatabaseEntityToDomainEntity(UserEntity entity) {
 		return new UserImpl(//
 				entity.getFirstName(), //
 				entity.getLastName(), //
@@ -23,16 +23,16 @@ public class UserMapperImpl implements UserMapper {
 	}
 
 	@Override
-	public List<User> mapJpaEntitiesToDomainEnties(Iterable<UserEntity> entities) {
-		return StreamSupport//
-				.stream(entities.spliterator(), false)//
-				.map(user -> mapJpaEntityToDomainEntity(user)) //
+	public List<User> mapDatabaseEntitiesToDomainEnties(Iterable<UserEntity> entities) {
+		return StreamSupport //
+				.stream(entities.spliterator(), false) //
+				.map(user -> mapDatabaseEntityToDomainEntity(user)) //
 				.collect(Collectors.toList());
 	}
 
 	@Override
-	public UserEntity mapDomainEntityToJpaEntity(User user) {
-		return new UserEntity(//
+	public UserEntity mapDomainEntityToDatabaseEntity(User user) {
+		return new UserEntity( //
 				user.getId(), //
 				user.getFirstName(), //
 				user.getLastName() //
@@ -41,9 +41,9 @@ public class UserMapperImpl implements UserMapper {
 
 	@Override
 	public List<UserEntity> mapDomainEntitiesToJpaEntities(List<User> entities) {
-		return entities//
+		return entities //
 				.stream() //
-				.map(user -> mapDomainEntityToJpaEntity(user))//
+				.map(user -> mapDomainEntityToDatabaseEntity(user))//
 				.collect(Collectors.toList());
 
 	}
