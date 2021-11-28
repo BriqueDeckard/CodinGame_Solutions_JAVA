@@ -1,4 +1,4 @@
-package com.bd.notes.data.entity;
+package com.bd.notes.infrastructure.data.entity;
 
 import java.io.Serializable;
 

@@ -10,10 +10,10 @@ import com.bd.notes.application.contracts.UserDTO;
 import com.bd.notes.application.exceptions.EntityNotFoundException;
 import com.bd.notes.application.services.user.UserApplicationService;
 import com.bd.notes.application.services.user.mapper.UserMapper;
-import com.bd.notes.data.entity.UserEntity;
-import com.bd.notes.data.repository.UserRepository;
 import com.bd.notes.domain.aggregates.user.User;
 import com.bd.notes.domain.factory.user.UserFactory;
+import com.bd.notes.infrastructure.data.entity.UserEntity;
+import com.bd.notes.infrastructure.data.repository.UserRepository;
 
 @Service
 public class UserApplicationServiceImpl implements UserApplicationService {

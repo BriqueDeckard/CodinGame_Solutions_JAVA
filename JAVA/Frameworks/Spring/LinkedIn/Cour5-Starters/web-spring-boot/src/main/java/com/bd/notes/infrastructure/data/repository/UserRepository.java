@@ -1,10 +1,10 @@
-package com.bd.notes.data.repository;
+package com.bd.notes.infrastructure.data.repository;
 
 import java.util.Collection;
 
 import org.springframework.data.repository.CrudRepository;
 
-import com.bd.notes.data.entity.UserEntity;
+import com.bd.notes.infrastructure.data.entity.UserEntity;
 
 public interface UserRepository extends CrudRepository<UserEntity, Long> {
 

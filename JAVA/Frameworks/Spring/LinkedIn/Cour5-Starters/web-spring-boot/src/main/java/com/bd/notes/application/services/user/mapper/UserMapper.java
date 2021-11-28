@@ -2,8 +2,8 @@ package com.bd.notes.application.services.user.mapper;
 
 import java.util.List;
 
-import com.bd.notes.data.entity.UserEntity;
 import com.bd.notes.domain.aggregates.user.User;
+import com.bd.notes.infrastructure.data.entity.UserEntity;
 
 public interface UserMapper {
 

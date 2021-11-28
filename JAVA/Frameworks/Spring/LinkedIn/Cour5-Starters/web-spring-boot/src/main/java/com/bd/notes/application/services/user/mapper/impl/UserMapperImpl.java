@@ -7,9 +7,9 @@ import java.util.stream.StreamSupport;
 import org.springframework.stereotype.Service;
 
 import com.bd.notes.application.services.user.mapper.UserMapper;
-import com.bd.notes.data.entity.UserEntity;
 import com.bd.notes.domain.aggregates.user.User;
 import com.bd.notes.domain.aggregates.user.impl.UserImpl;
+import com.bd.notes.infrastructure.data.entity.UserEntity;
 
 @Service
 public class UserMapperImpl implements UserMapper {
