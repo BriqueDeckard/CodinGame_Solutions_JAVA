@@ -2,7 +2,7 @@ package com.bd.notes.application.services.user;
 
 import java.util.List;
 
-import com.bd.notes.application.contracts.UserDTO;
+import com.bd.notes.application.contracts.dto.user.UserDTO;
 import com.bd.notes.application.exceptions.EntityNotFoundException;
 
 public interface UserApplicationService {
@@ -18,5 +18,7 @@ public interface UserApplicationService {
 	void deleteUser(Long id);
 
 	void updateUser(UserDTO user) throws Exception;
+	
+	String someDomainOperation();
 
 }

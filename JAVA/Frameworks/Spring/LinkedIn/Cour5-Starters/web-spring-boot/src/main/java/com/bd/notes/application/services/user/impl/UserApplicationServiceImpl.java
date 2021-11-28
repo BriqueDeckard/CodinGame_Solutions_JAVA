@@ -6,12 +6,13 @@ import java.util.stream.Collectors;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
-import com.bd.notes.application.contracts.UserDTO;
+import com.bd.notes.application.contracts.dto.user.UserDTO;
 import com.bd.notes.application.exceptions.EntityNotFoundException;
 import com.bd.notes.application.services.user.UserApplicationService;
 import com.bd.notes.application.services.user.mapper.UserMapper;
 import com.bd.notes.domain.aggregates.user.User;
 import com.bd.notes.domain.factory.user.UserFactory;
+import com.bd.notes.domain.service.UserDomainService;
 import com.bd.notes.infrastructure.data.entity.UserEntity;
 import com.bd.notes.infrastructure.data.repository.UserRepository;
 
@@ -21,11 +22,23 @@ public class UserApplicationServiceImpl implements UserApplicationService {
 	@Autowired
 	private UserMapper mapper;
 
+	public UserApplicationServiceImpl(UserMapper mapper, UserRepository repository, UserFactory factory,
+			UserDomainService domainService) {
+		super();
+		this.mapper = mapper;
+		this.repository = repository;
+		this.factory = factory;
+		this.domainService = domainService;
+	}
+
 	@Autowired
 	private UserRepository repository;
 
 	@Autowired
 	private UserFactory factory;
+
+	@Autowired
+	private UserDomainService domainService;
 
 	@Override
 	public List<UserDTO> getAllUsers() {
@@ -40,7 +53,7 @@ public class UserApplicationServiceImpl implements UserApplicationService {
 		// Find the user
 		UserEntity entity = repository.findById(id).orElse(null);
 		// Check for null
-		if(entity == null) {
+		if (entity == null) {
 			throw new EntityNotFoundException(id.toString());
 		}
 		// map
@@ -70,7 +83,7 @@ public class UserApplicationServiceImpl implements UserApplicationService {
 		user = mapper.mapDatabaseEntityToDomainEntity(entity);
 		// create dto from user
 		dto = factory.createDTO(user);
-		return  dto;
+		return dto;
 	}
 
 	@Override
@@ -89,6 +102,11 @@ public class UserApplicationServiceImpl implements UserApplicationService {
 
 		this.repository.save(oldEntity);
 
+	}
+
+	@Override
+	public String someDomainOperation() {
+		return domainService.domainOperation();
 	}
 
 }

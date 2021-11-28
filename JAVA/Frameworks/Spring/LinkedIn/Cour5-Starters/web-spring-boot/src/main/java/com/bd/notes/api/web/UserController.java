@@ -7,7 +7,7 @@ import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
 
-import com.bd.notes.application.contracts.UserDTO;
+import com.bd.notes.application.contracts.dto.user.UserDTO;
 import com.bd.notes.application.services.user.UserApplicationService;
 
 @Controller

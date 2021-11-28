@@ -14,7 +14,8 @@ import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
-import com.bd.notes.application.contracts.UserDTO;
+import com.bd.notes.application.contracts.dto.user.UserRequest;
+import com.bd.notes.application.contracts.dto.user.UserResponse;
 import com.bd.notes.application.exceptions.EntityNotFoundException;
 import com.bd.notes.application.services.user.UserApplicationService;
 import com.bd.notes.domain.aggregates.user.User;
@@ -35,7 +36,7 @@ public class UserRestController {
 	public List<User> getUsers(Model model) {
 		// Comme c'est un controller REST, on retourne directement la liste
 		return StreamSupport.stream(this.userService.getAllUsers().spliterator(), false) //
-				.map(user -> new UserDTO( //
+				.map(user -> new UserResponse( //
 						user.getFirstName(), //
 						user.getLastName(), //
 						user.getId()))
@@ -43,18 +44,18 @@ public class UserRestController {
 	}
 
 	@PostMapping // intercepte "POST~/rest/
-	public User addUser(@RequestBody UserDTO dto) {
-		User user = userService.addUser(dto);
-		dto.setId(user.getId());
-		return dto;
+	public User addUser(@RequestBody UserRequest request) {
+		User user = userService.addUser(request);
+		request.setId(user.getId());
+		return request;
 	}
 
 	@GetMapping(path = "{id}") // intercepte "GET~/rest/{id}"
-	public User getUserById(@PathVariable("id") Long id) {
+	public UserResponse getUserById(@PathVariable("id") Long id) {
 		User user;
 		try {
 			user = userService.findUserById(id);
-			return new UserDTO(user.getFirstName(), user.getLastName(), user.getId());
+			return new UserResponse(user.getFirstName(), user.getLastName(), user.getId());
 		} catch (EntityNotFoundException e) {
 			e.printStackTrace();
 			return null;
@@ -68,7 +69,7 @@ public class UserRestController {
 	}
 
 	@PutMapping
-	public void updateUser(@RequestBody UserDTO user) throws Exception {
+	public void updateUser(@RequestBody UserRequest user) throws Exception {
 		try {
 			userService.updateUser(user);
 		} catch (Exception e) {

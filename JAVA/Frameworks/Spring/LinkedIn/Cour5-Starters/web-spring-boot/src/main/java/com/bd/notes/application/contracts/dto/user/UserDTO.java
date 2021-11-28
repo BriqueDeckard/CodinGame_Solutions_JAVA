@@ -1,8 +1,8 @@
-package com.bd.notes.application.contracts;
+package com.bd.notes.application.contracts.dto.user;
 
 import com.bd.notes.domain.aggregates.user.User;
 
-public class UserDTO implements User {
+public abstract class UserDTO implements User {
 
 	private String firstName;
 	private String lastName;
