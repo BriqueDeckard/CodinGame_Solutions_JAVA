@@ -6,6 +6,12 @@ Avant une PR, il faut recuperer la progression de DEV sur la branche locale FEAT
 
 There are a few methodologies, and it depends on the branching strategy that you are using. On a project-by-project basis, I would pick one strategy and stick with it, but the one that works best depends on what you are looking for.
 
+# Pull
+To pull all the repositories in a folder : 
+```
+find . -mindepth 1 -maxdepth 1 -type d -print -exec git -C {} pull \;
+```
+
 # Merge vs Rebase:
 
 Un git merge ne devrait être utilisé que pour la récupération fonctionnelle, intégrale et finale d’une branche dans une autre, afin de préserver un graphe d’historique sémantiquement cohérent et utile, lequel représente une véritable valeur ajoutée.
