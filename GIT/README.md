@@ -54,3 +54,8 @@ From the branch:
 This REWRITES history and is destructive. The original commits on the branch are discarded and recreated (they will look similar (same comment, file and authorship), but will have different commit-ids and commit-time. It makes history more 'linear'.
 
 --> attention au git push --force. Il vaut mieux regler les conflits un par uns, commit par commit.
+
+## Reset:
+
+Discarding all local commits on this branch
+In order to discard all local commits on this branch, to make the local branch identical to the "upstream" of this branch, simply run ```git reset --hard @{u}```
